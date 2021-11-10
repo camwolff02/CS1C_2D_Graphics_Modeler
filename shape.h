@@ -1,15 +1,18 @@
 #ifndef _SHAPE_
 #define _SHAPE_
 
-#include "project.h"
+enum ShapeType {Line=1, Polyline, Polygon, Rectangle, Square,  Ellipse, Circle, Text};
 
 //our abstract class
 //Finish and implement later, just getting the basics started
 class Shape {
 public:
 
-  //default constructor
-  Shape();
+  //default constructor - commented out - do we need this?
+  //Shape();
+
+  //alt constructor - might need to add more params, unsure of what QT stuff might be needed
+  Shape(ShapeType type, int id) : shapeID{type} , id{id} {};
 
   /*We were told to disable these*/
   //copy constructor
@@ -37,9 +40,11 @@ public:
 private:
 
 //include a pointer to a QPainter class (from qt library), this is our aggregation - ADD LATER
-//shape id:
+//shape type id:
+ShapeType shapeID;
+
+//Number ID, not shape type
 int id;
-//create an Enum type here for the Shape's type
 
 };
 
