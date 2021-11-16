@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>574</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuLogin">
+    <property name="title">
+     <string>Login</string>
+    </property>
+    <addaction name="actionLogin"/>
+    <addaction name="actionLogout"/>
+   </widget>
+   <widget class="QMenu" name="menuAdd_Shape">
+    <property name="title">
+     <string>Add Shape</string>
+    </property>
+    <addaction name="actionLine"/>
+    <addaction name="actionPolyline"/>
+    <addaction name="actionPolygon"/>
+    <addaction name="actionRectangle"/>
+    <addaction name="actionEllipse"/>
+    <addaction name="actionText"/>
+   </widget>
+   <widget class="QMenu" name="menuReports">
+    <property name="title">
+     <string>Reports</string>
+    </property>
+    <addaction name="actionMain_Report"/>
+    <addaction name="actionArea_Report"/>
+    <addaction name="actionPerimeter_Report"/>
+   </widget>
+   <widget class="QMenu" name="menuContact_Us">
+    <property name="title">
+     <string>Contact Us</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuLogin"/>
+   <addaction name="menuAdd_Shape"/>
+   <addaction name="menuReports"/>
+   <addaction name="menuContact_Us"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionLine"/>
+   <addaction name="actionPolyline"/>
+   <addaction name="actionPolygon"/>
+   <addaction name="actionRectangle"/>
+   <addaction name="actionEllipse"/>
+   <addaction name="actionText"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/output-onlinepngtools.png</normaloff>:/images/output-onlinepngtools.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionLogin">
+   <property name="text">
+    <string>Login</string>
+   </property>
+  </action>
+  <action name="actionLogout">
+   <property name="text">
+    <string>Logout</string>
+   </property>
+  </action>
+  <action name="actionLine">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/output-onlinepngtools (3).png</normaloff>:/images/output-onlinepngtools (3).png</iconset>
+   </property>
+   <property name="text">
+    <string>Line</string>
+   </property>
+  </action>
+  <action name="actionPolyline">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/output-onlinepngtools (4).png</normaloff>:/images/output-onlinepngtools (4).png</iconset>
+   </property>
+   <property name="text">
+    <string>Polyline</string>
+   </property>
+  </action>
+  <action name="actionPolygon">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/output-onlinepngtools (14).png</normaloff>:/images/output-onlinepngtools (14).png</iconset>
+   </property>
+   <property name="text">
+    <string>Polygon</string>
+   </property>
+  </action>
+  <action name="actionRectangle">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/output-onlinepngtools (12).png</normaloff>:/images/output-onlinepngtools (12).png</iconset>
+   </property>
+   <property name="text">
+    <string>Rectangle</string>
+   </property>
+  </action>
+  <action name="actionEllipse">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/output-onlinepngtools (9).png</normaloff>:/images/output-onlinepngtools (9).png</iconset>
+   </property>
+   <property name="text">
+    <string>Ellipse</string>
+   </property>
+  </action>
+  <action name="actionText">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/output-onlinepngtools (11).png</normaloff>:/images/output-onlinepngtools (11).png</iconset>
+   </property>
+   <property name="text">
+    <string>Text</string>
+   </property>
+  </action>
+  <action name="actionMain_Report">
+   <property name="text">
+    <string>Main Report</string>
+   </property>
+  </action>
+  <action name="actionArea_Report">
+   <property name="text">
+    <string>Area Report</string>
+   </property>
+  </action>
+  <action name="actionPerimeter_Report">
+   <property name="text">
+    <string>Perimeter Report</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/output-onlinepngtools (16).png</normaloff>:/images/output-onlinepngtools (16).png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
