@@ -1,6 +1,10 @@
 #ifndef _SHAPE_
 #define _SHAPE_
 
+/*Author: Christopher Schrader
+ Editors: <list your names here>
+*/
+
 enum ShapeType {Line=1, Polyline, Polygon, Rectangle, Square,  Ellipse, Circle, Text};
 
 //our abstract class
