@@ -4,22 +4,19 @@
 enum ShapeType {Line=1, Polyline, Polygon, Rectangle, Square,  Ellipse, Circle, Text};
 
 //our abstract class
-//Finish and implement later, just getting the basics started
 class Shape {
 public:
+  //default constructor
+  Shape() : qpainterPTR{new QPainter}, shapeID{1}, id{0} {};
 
-  //default constructor - commented out - do we need this?
-  //Shape();
-
-  //alt constructor - might need to add more params, unsure of what QT stuff might be needed
-  Shape(ShapeType type, int id) : shapeID{type} , id{id} {};
+  //alt constructor - might need to add more params for setPen and setBrush.
+  Shape(ShapeType type, int id) : qpainterPTR{new QPainter}, shapeID{type} , id{id} {};
 
   /*We were told to disable these*/
   //copy constructor
   Shape(const Shape& rhs) = delete;
   //copy assignment
   Shape& operator=(const Shape& rhs) = delete;
-
 
   //overload comparison operators
 
@@ -34,12 +31,19 @@ public:
   virtual double getPerimeter() = 0;
   virtual double getArea() = 0;
 
+  //public methods to change shape proerties - these will invoke our qpainterPTR
+  void setShapeType(ShapeType type);
+  //invoke qpainterPTR.setPen(pen) with pen being the QPen pen we make using these parameters
+  void setPen(Qt::GlobalColor color, int size, Qt::PenStyle style, qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle);
+  //invoke qpainterPTR.setBrush(brush) with brush being the QBrush brush we make using these parameters
+  void setBrush(Qt::GlobalColor color, Qt::BrushStyle brushStyle);
+
   //destructor
   virtual ~Shape();
 
 private:
-
-//include a pointer to a QPainter class (from qt library), this is our aggregation - ADD LATER
+//aggregation
+QPainter* qpainterPTR;
 //shape type id:
 ShapeType shapeID;
 
