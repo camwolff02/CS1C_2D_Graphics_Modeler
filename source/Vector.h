@@ -164,8 +164,9 @@ public:
         {
             // allocate new space
             T *p = new T[newalloc];
-            // copy old elements
-            copy(elem, elem + size_v, p);
+            // copy old elements (do a move)
+            for (int i = 0; i < size_v; ++i)
+		    p[i] = std::move(elem[i]);
             // deallocate old space
             delete[] elem;
             // reset elem
