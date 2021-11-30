@@ -23,6 +23,10 @@ void Shape::setBrush(Qt::GlobalColor color, Qt::BrushStyle brushStyle){
 
 }
 
+void Shape::setShapeType(ShapeType type){
+  shapeID = type;
+}
+
 //destructor
 virtual Shape::~Shape(){
   delete qpainterPTR;
