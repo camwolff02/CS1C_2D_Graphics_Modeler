@@ -11,10 +11,12 @@ enum ShapeType {Line=1, Polyline, Polygon, Rectangle, Square,  Ellipse, Circle, 
 class Shape {
 public:
   //default constructor
-  Shape() : qpainterPTR{new QPainter}, shapeID{1}, id{0} {};
+  //change nullptr after we make a qpainter in main or window
+  Shape() : qpainterPTR{nullptr}, shapeID{1}, id{0} {};
 
+  //change nullptr after we make a qpainter in main or window
   //alt constructor - might need to add more params for setPen and setBrush.
-  Shape(ShapeType type, int id) : qpainterPTR{new QPainter}, shapeID{type} , id{id} {};
+  Shape(ShapeType type, int id) : qpainterPTR{nullptr}, shapeID{type} , id{id} {};
 
   /*We were told to disable these*/
   //copy constructor
