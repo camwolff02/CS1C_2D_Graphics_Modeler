@@ -50,14 +50,6 @@
     <addaction name="actionEllipse"/>
     <addaction name="actionText"/>
    </widget>
-   <widget class="QMenu" name="menuReports">
-    <property name="title">
-     <string>Reports</string>
-    </property>
-    <addaction name="actionMain_Report"/>
-    <addaction name="actionArea_Report"/>
-    <addaction name="actionPerimeter_Report"/>
-   </widget>
    <widget class="QMenu" name="menuContact_Us">
     <property name="title">
      <string>Contact Us</string>
@@ -66,7 +58,6 @@
    <addaction name="menuFile"/>
    <addaction name="menuLogin"/>
    <addaction name="menuAdd_Shape"/>
-   <addaction name="menuReports"/>
    <addaction name="menuContact_Us"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -164,21 +155,6 @@
    </property>
    <property name="text">
     <string>Text</string>
-   </property>
-  </action>
-  <action name="actionMain_Report">
-   <property name="text">
-    <string>Main Report</string>
-   </property>
-  </action>
-  <action name="actionArea_Report">
-   <property name="text">
-    <string>Area Report</string>
-   </property>
-  </action>
-  <action name="actionPerimeter_Report">
-   <property name="text">
-    <string>Perimeter Report</string>
    </property>
   </action>
   <action name="actionSave">
