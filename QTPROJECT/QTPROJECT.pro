@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     canvas.cpp \
     ellipse.cpp \
+    globals.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
 HEADERS += \
     canvas.h \
     ellipse.h \
+    globals.h \
     login.h \
     mainwindow.h \
     shape.h

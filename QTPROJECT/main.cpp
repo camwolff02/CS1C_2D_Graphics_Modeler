@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     login l;
     l.setWindowTitle("Login");
     l.show();
-    return l.exec();
+    return b.exec();
 
     QApplication a(argc, argv);
     MainWindow w;

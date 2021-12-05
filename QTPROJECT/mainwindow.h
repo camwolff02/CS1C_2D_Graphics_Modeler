@@ -19,6 +19,8 @@ public:
 private slots:
     void on_actionLogout_triggered();
 
+    void on_actionLine_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

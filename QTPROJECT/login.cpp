@@ -1,5 +1,7 @@
 #include "login.h"
 #include "ui_login.h"
+#include "globals.h"
+
 #include <QMessageBox>
 
 login::login(QWidget *parent) :
@@ -34,7 +36,11 @@ void login::on_loginButton_clicked()
     {
         QMessageBox::information(this, "Login", "Logging in as admin");
 
+        // set the admin to true here, doesnt need to be set in guest login obviously
+        isAdmin = true;
+
         //hide();
+
         // ISSUE - having issue closing previous tab, login ui wont hide when i want to only show mainPage
 
         mainPage = new MainWindow(this);

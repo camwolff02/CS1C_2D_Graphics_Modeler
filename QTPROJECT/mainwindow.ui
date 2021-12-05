@@ -92,6 +92,10 @@
    <addaction name="actionText"/>
   </widget>
   <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/output-onlinepngtools.png</normaloff>:/images/output-onlinepngtools.png</iconset>
+   </property>
    <property name="text">
     <string>Open</string>
    </property>
@@ -164,6 +168,10 @@
    </property>
   </action>
   <action name="actionSave">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/output-onlinepngtools (1).png</normaloff>:/images/output-onlinepngtools (1).png</iconset>
+   </property>
    <property name="text">
     <string>Save</string>
    </property>
