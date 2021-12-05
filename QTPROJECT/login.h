@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QString>
+#include "mainwindow.h"
 
 namespace Ui {
 class login;
@@ -21,6 +22,7 @@ private slots:
 
 private:
     Ui::login *ui;
+    QMainWindow *mainPage;
 };
 
 #endif // LOGIN_H

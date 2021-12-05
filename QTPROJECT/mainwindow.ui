@@ -31,7 +31,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>24</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -45,9 +45,8 @@
    </widget>
    <widget class="QMenu" name="menuLogin">
     <property name="title">
-     <string>Login</string>
+     <string>Logout</string>
     </property>
-    <addaction name="actionLogin"/>
     <addaction name="actionLogout"/>
    </widget>
    <widget class="QMenu" name="menuAdd_Shape">
@@ -112,7 +111,7 @@
   </action>
   <action name="actionLine">
    <property name="icon">
-    <iconset>
+    <iconset resource="icons.qrc">
      <normaloff>:/images/output-onlinepngtools (3).png</normaloff>:/images/output-onlinepngtools (3).png</iconset>
    </property>
    <property name="text">
@@ -121,7 +120,7 @@
   </action>
   <action name="actionPolyline">
    <property name="icon">
-    <iconset>
+    <iconset resource="icons.qrc">
      <normaloff>:/images/output-onlinepngtools (4).png</normaloff>:/images/output-onlinepngtools (4).png</iconset>
    </property>
    <property name="text">
@@ -130,7 +129,7 @@
   </action>
   <action name="actionPolygon">
    <property name="icon">
-    <iconset>
+    <iconset resource="icons.qrc">
      <normaloff>:/images/output-onlinepngtools (14).png</normaloff>:/images/output-onlinepngtools (14).png</iconset>
    </property>
    <property name="text">
@@ -139,7 +138,7 @@
   </action>
   <action name="actionRectangle">
    <property name="icon">
-    <iconset>
+    <iconset resource="icons.qrc">
      <normaloff>:/images/output-onlinepngtools (12).png</normaloff>:/images/output-onlinepngtools (12).png</iconset>
    </property>
    <property name="text">
@@ -148,7 +147,7 @@
   </action>
   <action name="actionEllipse">
    <property name="icon">
-    <iconset>
+    <iconset resource="icons.qrc">
      <normaloff>:/images/output-onlinepngtools (9).png</normaloff>:/images/output-onlinepngtools (9).png</iconset>
    </property>
    <property name="text">
@@ -157,7 +156,7 @@
   </action>
   <action name="actionText">
    <property name="icon">
-    <iconset>
+    <iconset resource="icons.qrc">
      <normaloff>:/images/output-onlinepngtools (11).png</normaloff>:/images/output-onlinepngtools (11).png</iconset>
    </property>
    <property name="text">
@@ -186,6 +185,8 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

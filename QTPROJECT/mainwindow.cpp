@@ -13,3 +13,8 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::on_actionLogout_triggered()
+{
+    hide();    // will hide the mainpage and reopen the login screen
+}
+

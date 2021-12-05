@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     canvas.cpp \
     ellipse.cpp \
+    login.cpp \
     main.cpp \
     mainwindow.cpp \
     shape.cpp
@@ -20,6 +21,7 @@ SOURCES += \
 HEADERS += \
     canvas.h \
     ellipse.h \
+    login.h \
     mainwindow.h \
     shape.h
     canvas.h
@@ -27,6 +29,7 @@ HEADERS += \
 
 
 FORMS += \
+    login.ui \
     mainwindow.ui
 
 # Default rules for deployment.
