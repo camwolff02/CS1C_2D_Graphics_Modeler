@@ -21,6 +21,16 @@ private slots:
 
     void on_actionLine_triggered();
 
+    void on_actionPolyline_triggered();
+
+    void on_actionPolygon_triggered();
+
+    void on_actionRectangle_triggered();
+
+    void on_actionEllipse_triggered();
+
+    void on_actionText_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
