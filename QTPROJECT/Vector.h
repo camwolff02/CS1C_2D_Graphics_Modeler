@@ -22,7 +22,7 @@ class vector
     NOTE: elem[n] is vector component n for all n >= 0 AND n < size_v
           size_v = the number of items stored in the vector
           space = available storage capacity of the vector where size_v <= space
-          if size_v < space there is space for (space - size_v) elements after 
+          if size_v < space there is space for (space - size_v) elements after
           elem[size_v-1]
     */
 
@@ -33,29 +33,29 @@ private:
 
 public:
     // default constructor
-    vector() 
+    vector()
         : size_v{0}
         , elem{nullptr}
-        , space{0} 
+        , space{0}
     {
     }
 
     // alternate constructor
-    explicit vector(int s) 
+    explicit vector(int s)
         : size_v{0}
         , elem{new T[s]}
-        , space{s} 
+        , space{s}
     {
     }
 
     // copy constructor (deep copy)
-    vector(const vector &src) 
+    vector(const vector &src)
         : size_v{src.size_v}
         , elem{new T[src.space]}
-        , space{src.space} 
+        , space{src.space}
     {
         // copy elements - std::copy() algorithm
-        copy(src.elem, src.elem + size_v, elem); 
+        copy(src.elem, src.elem + size_v, elem);
     }
 
     // move constructor
@@ -74,11 +74,11 @@ public:
     // destructor
     ~vector() noexcept
     {
-        delete[] elem; 
+        delete[] elem;
     }
 
     // copy assignment
-    vector &operator=(const vector &src) 
+    vector &operator=(const vector &src)
     {
         // check for self assignment
         if (this != &src)
@@ -121,12 +121,12 @@ public:
         return *this;
     }
 
-    T& operator[](int n) 
+    T& operator[](int n)
     {
         return elem[n]; // access: return reference
     }
 
-    const T& operator[](int n) const 
+    const T& operator[](int n) const
     {
         return elem[n];
     }
@@ -135,12 +135,12 @@ public:
 
     int capacity() const { return space; }
 
-    void resize(int newsize) 
+    void resize(int newsize)
     {
         // if newsize is smaller or equal to capacity, reserve will do nothing
         reserve(newsize);
         // check for making vector smaller
-        if (newsize < size_v) 
+        if (newsize < size_v)
             size_v = newsize;
     }
 
@@ -152,9 +152,9 @@ public:
         else if (size_v == space)
             reserve(2 * space); // get more space
         // add newObj at end
-        elem[size_v] = newObj; 
-        // increase the size (size_v is the number of elements) 
-        ++size_v;          
+        elem[size_v] = newObj;
+        // increase the size (size_v is the number of elements)
+        ++size_v;
     }
 
     void reserve(int newalloc)
@@ -207,10 +207,10 @@ public:
         return &elem[size_v];
     }
 
-    // insert a new element val before p 
+    // insert a new element val before p
     iterator insert(iterator p, const T& newObj)
     {
-        // check that iterator is in bounds 
+        // check that iterator is in bounds
         if (p >= begin() && p < end())
         {
             // where to insert (index is distance between p and begin())

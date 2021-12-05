@@ -1,6 +1,8 @@
 #ifndef _SHAPE_
 #define _SHAPE_
 
+#include <QPainter>
+
 /*Author: Christopher Schrader
  Editors: <list your names here>
 */
@@ -10,13 +12,9 @@ enum ShapeType {Line=1, Polyline, Polygon, Rectangle, Square,  Ellipse, Circle, 
 //our abstract class
 class Shape {
 public:
-  //default constructor
-  //change nullptr after we make a qpainter in main or window
-  Shape() : qpainterPTR{nullptr}, shapeID{1}, id{0} {};
 
-  //change nullptr after we make a qpainter in main or window
-  //alt constructor - might need to add more params for setPen and setBrush.
-  Shape(ShapeType type, int id) : qpainterPTR{nullptr}, shapeID{type} , id{id} {};
+  //alt constructor
+  Shape(QPainter *painterPTR, ShapeType type, int id) : qpainterPTR{painterPTR}, shapeID{type} , id{id} {};
 
   /*We were told to disable these*/
   //copy constructor
@@ -32,7 +30,7 @@ public:
   bool operator<(const Shape& rhs);
 
   //pure virtual functions, override in derived classes
-  virtual void draw() = 0;
+  virtual void draw(const int x, const int y) = 0;
   virtual void move(const int x, const int y) = 0;
   virtual double getPerimeter() = 0;
   virtual double getArea() = 0;
@@ -43,6 +41,9 @@ public:
   void setPen(Qt::GlobalColor color, int size, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle);
   //invoke qpainterPTR.setBrush(brush) with brush being the QBrush brush we make using these parameters
   void setBrush(Qt::GlobalColor color, Qt::BrushStyle brushStyle);
+
+  //return our qpainter
+  QPainter* getPainter();
 
   //destructor
   virtual ~Shape();

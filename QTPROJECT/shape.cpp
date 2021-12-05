@@ -2,7 +2,7 @@
 
 
 
-void Shape::setPen(Qt::GlobalColor color, int size, Qt::PenStyle style, qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle){
+void Shape::setPen(Qt::GlobalColor color, int size, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle){
   QPen pen;
   pen.setColor(color);
   pen.setWidth(size);
@@ -10,7 +10,7 @@ void Shape::setPen(Qt::GlobalColor color, int size, Qt::PenStyle style, qt::PenC
   pen.setCapStyle(capStyle);
   pen.setJoinStyle(joinStyle);
 
-  qpainterPTR.setPen(pen)
+  qpainterPTR->setPen(pen);
 
 }
 
@@ -19,7 +19,7 @@ void Shape::setBrush(Qt::GlobalColor color, Qt::BrushStyle brushStyle){
   brush.setColor(color);
   brush.setStyle(brushStyle);
 
-  qpainterPTR.setBrush(brush)
+  qpainterPTR->setBrush(brush);
 
 }
 
@@ -27,7 +27,11 @@ void Shape::setShapeType(ShapeType type){
   shapeID = type;
 }
 
+QPainter* Shape::getPainter(){
+    return qpainterPTR;
+}
+
 //destructor
-virtual Shape::~Shape(){
-  delete qpainterPTR;
+Shape::~Shape(){
+    //unused so far
 }

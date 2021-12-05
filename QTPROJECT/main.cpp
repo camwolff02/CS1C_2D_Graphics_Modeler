@@ -9,5 +9,4 @@ int main(int argc, char *argv[])
     w.show();
     return a.exec();
 
-    //Note to other developers: this is probably where we'd want to read in from shapes.txt by calling the parser now
 }

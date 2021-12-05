@@ -13,14 +13,25 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="Canvas" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1000</width>
+      <height>500</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -82,10 +93,6 @@
    <addaction name="actionText"/>
   </widget>
   <action name="actionOpen">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/images/output-onlinepngtools.png</normaloff>:/images/output-onlinepngtools.png</iconset>
-   </property>
    <property name="text">
     <string>Open</string>
    </property>
@@ -105,7 +112,7 @@
   </action>
   <action name="actionLine">
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset>
      <normaloff>:/images/output-onlinepngtools (3).png</normaloff>:/images/output-onlinepngtools (3).png</iconset>
    </property>
    <property name="text">
@@ -114,7 +121,7 @@
   </action>
   <action name="actionPolyline">
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset>
      <normaloff>:/images/output-onlinepngtools (4).png</normaloff>:/images/output-onlinepngtools (4).png</iconset>
    </property>
    <property name="text">
@@ -123,7 +130,7 @@
   </action>
   <action name="actionPolygon">
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset>
      <normaloff>:/images/output-onlinepngtools (14).png</normaloff>:/images/output-onlinepngtools (14).png</iconset>
    </property>
    <property name="text">
@@ -132,7 +139,7 @@
   </action>
   <action name="actionRectangle">
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset>
      <normaloff>:/images/output-onlinepngtools (12).png</normaloff>:/images/output-onlinepngtools (12).png</iconset>
    </property>
    <property name="text">
@@ -141,7 +148,7 @@
   </action>
   <action name="actionEllipse">
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset>
      <normaloff>:/images/output-onlinepngtools (9).png</normaloff>:/images/output-onlinepngtools (9).png</iconset>
    </property>
    <property name="text">
@@ -150,7 +157,7 @@
   </action>
   <action name="actionText">
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset>
      <normaloff>:/images/output-onlinepngtools (11).png</normaloff>:/images/output-onlinepngtools (11).png</iconset>
    </property>
    <property name="text">
@@ -158,10 +165,6 @@
    </property>
   </action>
   <action name="actionSave">
-   <property name="icon">
-    <iconset resource="icons.qrc">
-     <normaloff>:/images/output-onlinepngtools (16).png</normaloff>:/images/output-onlinepngtools (16).png</iconset>
-   </property>
    <property name="text">
     <string>Save</string>
    </property>
@@ -175,8 +178,14 @@
    </property>
   </action>
  </widget>
- <resources>
-  <include location="icons.qrc"/>
- </resources>
+ <customwidgets>
+  <customwidget>
+   <class>Canvas</class>
+   <extends>QWidget</extends>
+   <header>canvas.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
  <connections/>
 </ui>

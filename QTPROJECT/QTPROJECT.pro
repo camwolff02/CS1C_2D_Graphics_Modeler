@@ -9,11 +9,22 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    canvas.cpp \
+    ellipse.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    shape.cpp
+    canvas.cpp
+    shape.cpp
 
 HEADERS += \
-    mainwindow.h
+    canvas.h \
+    ellipse.h \
+    mainwindow.h \
+    shape.h
+    canvas.h
+    shape.h
+
 
 FORMS += \
     mainwindow.ui
