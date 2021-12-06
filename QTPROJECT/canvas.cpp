@@ -1,6 +1,7 @@
 #include "canvas.h"
 #include "ellipse.h"
 #include "text.h"
+#include "polyline.h"
 
 Canvas::Canvas(QWidget *parent) : QWidget(parent) {
 
@@ -32,4 +33,11 @@ void Canvas::paintEvent(QPaintEvent *event) {
     myStd::Text text(&painter, "hello world", font, Qt::red);
 
     text.draw(50, 50);
+
+    myStd::Polyline poly(&painter, 0);
+    poly.addPoint(QPoint(50,50));
+    poly.addPoint(QPoint(100,200));
+    poly.addPoint(QPoint(200,954));
+    poly.addPoint(QPoint(50,20));
+    poly.draw(0,0);
 }

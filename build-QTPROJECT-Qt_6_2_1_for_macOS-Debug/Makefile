@@ -60,13 +60,15 @@ SOURCES       = ../QTPROJECT/addLines.cpp \
 		../QTPROJECT/login.cpp \
 		../QTPROJECT/main.cpp \
 		../QTPROJECT/mainwindow.cpp \
+		../QTPROJECT/polyline.cpp \
 		../QTPROJECT/shape.cpp \
 		../QTPROJECT/text.cpp qrc_icons.cpp \
 		moc_addLines.cpp \
 		moc_canvas.cpp \
 		moc_contactus.cpp \
 		moc_login.cpp \
-		moc_mainwindow.cpp
+		moc_mainwindow.cpp \
+		moc_polyline.cpp
 OBJECTS       = addLines.o \
 		canvas.o \
 		contactus.o \
@@ -75,6 +77,7 @@ OBJECTS       = addLines.o \
 		login.o \
 		main.o \
 		mainwindow.o \
+		polyline.o \
 		shape.o \
 		text.o \
 		qrc_icons.o \
@@ -82,7 +85,8 @@ OBJECTS       = addLines.o \
 		moc_canvas.o \
 		moc_contactus.o \
 		moc_login.o \
-		moc_mainwindow.o
+		moc_mainwindow.o \
+		moc_polyline.o
 DIST          = ../../../../Qt/6.2.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/features/device_config.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/common/unix.conf \
@@ -340,6 +344,7 @@ DIST          = ../../../../Qt/6.2.1/macos/mkspecs/features/spec_pre.prf \
 		../QTPROJECT/globals.h \
 		../QTPROJECT/login.h \
 		../QTPROJECT/mainwindow.h \
+		../QTPROJECT/polyline.h \
 		../QTPROJECT/shape.h \
 		../QTPROJECT/text.h ../QTPROJECT/addLines.cpp \
 		../QTPROJECT/canvas.cpp \
@@ -349,6 +354,7 @@ DIST          = ../../../../Qt/6.2.1/macos/mkspecs/features/spec_pre.prf \
 		../QTPROJECT/login.cpp \
 		../QTPROJECT/main.cpp \
 		../QTPROJECT/mainwindow.cpp \
+		../QTPROJECT/polyline.cpp \
 		../QTPROJECT/shape.cpp \
 		../QTPROJECT/text.cpp
 QMAKE_TARGET  = QTPROJECT
@@ -916,8 +922,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../QTPROJECT/icons.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../QTPROJECT/addLines.h ../QTPROJECT/canvas.h ../QTPROJECT/contactus.h ../QTPROJECT/ellipse.h ../QTPROJECT/globals.h ../QTPROJECT/login.h ../QTPROJECT/mainwindow.h ../QTPROJECT/shape.h ../QTPROJECT/text.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../QTPROJECT/addLines.cpp ../QTPROJECT/canvas.cpp ../QTPROJECT/contactus.cpp ../QTPROJECT/ellipse.cpp ../QTPROJECT/globals.cpp ../QTPROJECT/login.cpp ../QTPROJECT/main.cpp ../QTPROJECT/mainwindow.cpp ../QTPROJECT/shape.cpp ../QTPROJECT/text.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../QTPROJECT/addLines.h ../QTPROJECT/canvas.h ../QTPROJECT/contactus.h ../QTPROJECT/ellipse.h ../QTPROJECT/globals.h ../QTPROJECT/login.h ../QTPROJECT/mainwindow.h ../QTPROJECT/polyline.h ../QTPROJECT/shape.h ../QTPROJECT/text.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../QTPROJECT/addLines.cpp ../QTPROJECT/canvas.cpp ../QTPROJECT/contactus.cpp ../QTPROJECT/ellipse.cpp ../QTPROJECT/globals.cpp ../QTPROJECT/login.cpp ../QTPROJECT/main.cpp ../QTPROJECT/mainwindow.cpp ../QTPROJECT/polyline.cpp ../QTPROJECT/shape.cpp ../QTPROJECT/text.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../QTPROJECT/addLines.ui ../QTPROJECT/contactus.ui ../QTPROJECT/login.ui ../QTPROJECT/mainwindow.ui $(DISTDIR)/
 
 
@@ -965,9 +971,9 @@ qrc_icons.cpp: ../QTPROJECT/icons.qrc \
 		../QTPROJECT/output-onlinepngtools\ (11).png
 	/Users/christopherschrader/Qt/6.2.1/macos/libexec/rcc -name icons ../QTPROJECT/icons.qrc -o qrc_icons.cpp
 
-compiler_moc_header_make_all: moc_addLines.cpp moc_canvas.cpp moc_contactus.cpp moc_login.cpp moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_addLines.cpp moc_canvas.cpp moc_contactus.cpp moc_login.cpp moc_mainwindow.cpp moc_polyline.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_addLines.cpp moc_canvas.cpp moc_contactus.cpp moc_login.cpp moc_mainwindow.cpp
+	-$(DEL_FILE) moc_addLines.cpp moc_canvas.cpp moc_contactus.cpp moc_login.cpp moc_mainwindow.cpp moc_polyline.cpp
 moc_addLines.cpp: ../QTPROJECT/addLines.h \
 		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/qdialog.h \
@@ -1018,6 +1024,13 @@ moc_mainwindow.cpp: ../QTPROJECT/mainwindow.h \
 		../QTPROJECT/mainwindow.h \
 		../../../../Qt/6.2.1/macos/libexec/moc
 	/Users/christopherschrader/Qt/6.2.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=11 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/christopherschrader/Qt/6.2.1/macos/mkspecs/macx-clang -I'/Users/christopherschrader/Desktop/cs1c project/CS1C_2D_Graphics_Modeler/QTPROJECT' -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtWidgets.framework/Headers -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtGui.framework/Headers -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/christopherschrader/Qt/6.2.1/macos/lib ../QTPROJECT/mainwindow.h -o moc_mainwindow.cpp
+
+moc_polyline.cpp: ../QTPROJECT/polyline.h \
+		../QTPROJECT/shape.h \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/QPainter \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/qpainter.h \
+		../../../../Qt/6.2.1/macos/libexec/moc
+	/Users/christopherschrader/Qt/6.2.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=11 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/christopherschrader/Qt/6.2.1/macos/mkspecs/macx-clang -I'/Users/christopherschrader/Desktop/cs1c project/CS1C_2D_Graphics_Modeler/QTPROJECT' -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtWidgets.framework/Headers -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtGui.framework/Headers -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/christopherschrader/Qt/6.2.1/macos/lib ../QTPROJECT/polyline.h -o moc_polyline.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1083,7 +1096,10 @@ canvas.o: ../QTPROJECT/canvas.cpp ../QTPROJECT/canvas.h \
 		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/QPainter \
 		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/qpainter.h \
 		../QTPROJECT/Vector.h \
-		../QTPROJECT/ellipse.h
+		../QTPROJECT/ellipse.h \
+		../QTPROJECT/text.h \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/QFont \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/qfont.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o canvas.o ../QTPROJECT/canvas.cpp
 
 contactus.o: ../QTPROJECT/contactus.cpp ../QTPROJECT/contactus.h \
@@ -1155,6 +1171,12 @@ mainwindow.o: ../QTPROJECT/mainwindow.cpp ../QTPROJECT/mainwindow.h \
 		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../QTPROJECT/mainwindow.cpp
 
+polyline.o: ../QTPROJECT/polyline.cpp ../QTPROJECT/polyline.h \
+		../QTPROJECT/shape.h \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/QPainter \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/qpainter.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o polyline.o ../QTPROJECT/polyline.cpp
+
 shape.o: ../QTPROJECT/shape.cpp ../QTPROJECT/shape.h \
 		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/QPainter \
 		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/qpainter.h
@@ -1165,7 +1187,9 @@ text.o: ../QTPROJECT/text.cpp ../QTPROJECT/text.h \
 		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/QPainter \
 		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/qpainter.h \
 		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/QObject \
-		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/qobject.h
+		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/QFont \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/qfont.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o text.o ../QTPROJECT/text.cpp
 
 qrc_icons.o: qrc_icons.cpp 
@@ -1185,6 +1209,9 @@ moc_login.o: moc_login.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
+
+moc_polyline.o: moc_polyline.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_polyline.o moc_polyline.cpp
 
 ####### Install
 

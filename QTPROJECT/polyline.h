@@ -1,26 +1,27 @@
-#ifndef TEXT_H
-#define TEXT_H
+#ifndef POLYLINE_H
+#define POLYLINE_H
 
 #include "shape.h"
 #include <QObject>
-#include <QFont>
 
 namespace myStd{
 
-class Text : public Shape {
-public:
+class Polyline : public Shape {
 
-    Text(QPainter *painter, QString msg, QFont font, Qt::GlobalColor color, int id=-1);
+public:
+    Polyline(QPainter *painter, int id=-1);
 
     virtual void draw(const int x, const int y) override;
     virtual void move(const int x, const int y) override;
     virtual double getPerimeter() override;
     virtual double getArea() override;
 
+    void addPoint(QPoint point);
+
 private:
-    QString text;
+    std::vector<QPoint> points;
 };
 
-
 }
-#endif // TEXT_H
+
+#endif // POLYLINE_H

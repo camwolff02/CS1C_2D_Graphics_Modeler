@@ -17,6 +17,7 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    polyline.cpp \
     shape.cpp \
     text.cpp
     canvas.cpp
@@ -30,6 +31,7 @@ HEADERS += \
     globals.h \
     login.h \
     mainwindow.h \
+    polyline.h \
     shape.h \
     text.h
     canvas.h

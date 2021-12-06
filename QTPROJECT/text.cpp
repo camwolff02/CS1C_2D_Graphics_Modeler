@@ -10,7 +10,6 @@ Text::Text(QPainter *painter, QString msg, QFont font, Qt::GlobalColor color, in
 
 }
 
-
 void Text::draw(const int x, const int y) {
 
     getPainter()->drawText(x, y, text);
