@@ -64,6 +64,7 @@
     <property name="title">
      <string>Contact Us</string>
     </property>
+    <addaction name="actionTeam_Info"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuLogin"/>
@@ -182,6 +183,11 @@
   <action name="actionQuit">
    <property name="text">
     <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionTeam_Info">
+   <property name="text">
+    <string>Team Info</string>
    </property>
   </action>
  </widget>

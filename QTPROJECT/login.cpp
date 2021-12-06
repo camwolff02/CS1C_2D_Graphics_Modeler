@@ -25,10 +25,6 @@ void login::on_loginButton_clicked()
     //  USERNAME : admin
     //  PASSWORD : password
 
-    //SAVED GUEST INFO USE FOR GUEST
-    //  USERNAME : guest
-    //  PASSWORD : holypandas
-
     // ^^ CASE SENSITIVE LOGIN
     // MAY CREATE A GUEST BUTTON INSTEAD OF A GUEST LOGIN MORE FITTING?
 
@@ -46,17 +42,18 @@ void login::on_loginButton_clicked()
         mainPage = new MainWindow(this);
         mainPage->show();
     }
-    else if(username == "guest" && password == "holypandas")
-    {
-        QMessageBox::information(this, "Login", "Logging in as a guest");
-
-        mainPage = new MainWindow(this);
-        mainPage->show();
-    }
     else
     {
         QMessageBox::warning(this, "Login", "Username or password is incorrect");
 
     }
+}
+
+void login::on_guestButton_pressed()
+{
+    QMessageBox::information(this, "Login", "Logging in as a guest");
+
+    mainPage = new MainWindow(this);
+    mainPage->show();
 }
 

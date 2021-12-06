@@ -31,6 +31,8 @@ private slots:
 
     void on_actionText_triggered();
 
+    void on_actionTeam_Info_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

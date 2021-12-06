@@ -12,5 +12,7 @@
         <file>output-onlinepngtools (14).png</file>
         <file>output-onlinepngtools (15).png</file>
         <file>output-onlinepngtools (16).png</file>
+        <file>logo</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

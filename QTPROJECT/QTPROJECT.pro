@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     addLines.cpp \
     canvas.cpp \
+    contactus.cpp \
     ellipse.cpp \
     globals.cpp \
     login.cpp \
@@ -23,6 +24,7 @@ SOURCES += \
 HEADERS += \
     addLines.h \
     canvas.h \
+    contactus.h \
     ellipse.h \
     globals.h \
     login.h \
@@ -34,6 +36,7 @@ HEADERS += \
 
 FORMS += \
     addLines.ui \
+    contactus.ui \
     login.ui \
     mainwindow.ui
 

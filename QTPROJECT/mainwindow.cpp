@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "globals.h"
 #include "addLines.h"
+#include "contactus.h"
 
 #include <QMessageBox>
 
@@ -100,5 +101,13 @@ void MainWindow::on_actionText_triggered()
     {
         QMessageBox::warning(this, "Error", "Insufficient permissions");
     }
+}
+
+void MainWindow::on_actionTeam_Info_triggered()
+{
+    contactus contact;
+    contact.setModal(true);
+    contact.setWindowTitle("Team Info");
+    contact.exec();
 }
 

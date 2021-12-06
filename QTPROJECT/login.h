@@ -20,6 +20,8 @@ public:
 private slots:
     void on_loginButton_clicked();
 
+    void on_guestButton_pressed();
+
 private:
     Ui::login *ui;
     QMainWindow *mainPage;
