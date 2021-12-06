@@ -1,6 +1,14 @@
 #include "shape.h"
 
+bool Shape::operator==(const Shape& rhs)
+{
+    return id == rhs.id;
+}
 
+bool Shape::operator<(const Shape& rhs)
+{
+    return id < rhs.id;
+}
 
 void Shape::setPen(Qt::GlobalColor color, int size, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle){
   QPen pen;
@@ -33,5 +41,8 @@ QPainter* Shape::getPainter(){
 
 //destructor
 Shape::~Shape(){
-    //unused so far
+    --shapeCount;
 }
+
+//initialize static shapeCount member to 0
+int Shape::shapeCount = 0;
