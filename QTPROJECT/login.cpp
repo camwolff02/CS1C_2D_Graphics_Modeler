@@ -35,7 +35,7 @@ void login::on_loginButton_clicked()
         // set the admin to true here, doesnt need to be set in guest login obviously
         isAdmin = true;
 
-        //hide();
+        //close();
 
         // ISSUE - having issue closing previous tab, login ui wont hide when i want to only show mainPage
 
@@ -53,6 +53,8 @@ void login::on_guestButton_pressed()
 {
     QMessageBox::information(this, "Login", "Logging in as a guest");
 
+    //close();
+   // hide();
     mainPage = new MainWindow(this);
     mainPage->show();
 }
