@@ -52,25 +52,35 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../QTPROJECT/canvas.cpp \
+SOURCES       = ../QTPROJECT/addLines.cpp \
+		../QTPROJECT/canvas.cpp \
+		../QTPROJECT/contactus.cpp \
 		../QTPROJECT/ellipse.cpp \
 		../QTPROJECT/globals.cpp \
 		../QTPROJECT/login.cpp \
 		../QTPROJECT/main.cpp \
 		../QTPROJECT/mainwindow.cpp \
-		../QTPROJECT/shape.cpp qrc_icons.cpp \
+		../QTPROJECT/shape.cpp \
+		../QTPROJECT/text.cpp qrc_icons.cpp \
+		moc_addLines.cpp \
 		moc_canvas.cpp \
+		moc_contactus.cpp \
 		moc_login.cpp \
 		moc_mainwindow.cpp
-OBJECTS       = canvas.o \
+OBJECTS       = addLines.o \
+		canvas.o \
+		contactus.o \
 		ellipse.o \
 		globals.o \
 		login.o \
 		main.o \
 		mainwindow.o \
 		shape.o \
+		text.o \
 		qrc_icons.o \
+		moc_addLines.o \
 		moc_canvas.o \
+		moc_contactus.o \
 		moc_login.o \
 		moc_mainwindow.o
 DIST          = ../../../../Qt/6.2.1/macos/mkspecs/features/spec_pre.prf \
@@ -294,6 +304,7 @@ DIST          = ../../../../Qt/6.2.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/features/qt_config.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/macx-clang/qmake.conf \
 		../../../../Qt/6.2.1/macos/mkspecs/features/spec_post.prf \
+		../QTPROJECT/.qmake.stash \
 		../../../../Qt/6.2.1/macos/mkspecs/features/exclusive_builds.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/features/mac/sdk.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/features/toolchain.prf \
@@ -322,18 +333,24 @@ DIST          = ../../../../Qt/6.2.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/features/exceptions.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/features/yacc.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/features/lex.prf \
-		../QTPROJECT/QTPROJECT.pro ../QTPROJECT/canvas.h \
+		../QTPROJECT/QTPROJECT.pro ../QTPROJECT/addLines.h \
+		../QTPROJECT/canvas.h \
+		../QTPROJECT/contactus.h \
 		../QTPROJECT/ellipse.h \
 		../QTPROJECT/globals.h \
 		../QTPROJECT/login.h \
 		../QTPROJECT/mainwindow.h \
-		../QTPROJECT/shape.h ../QTPROJECT/canvas.cpp \
+		../QTPROJECT/shape.h \
+		../QTPROJECT/text.h ../QTPROJECT/addLines.cpp \
+		../QTPROJECT/canvas.cpp \
+		../QTPROJECT/contactus.cpp \
 		../QTPROJECT/ellipse.cpp \
 		../QTPROJECT/globals.cpp \
 		../QTPROJECT/login.cpp \
 		../QTPROJECT/main.cpp \
 		../QTPROJECT/mainwindow.cpp \
-		../QTPROJECT/shape.cpp
+		../QTPROJECT/shape.cpp \
+		../QTPROJECT/text.cpp
 QMAKE_TARGET  = QTPROJECT
 DESTDIR       = 
 TARGET        = QTPROJECT.app/Contents/MacOS/QTPROJECT
@@ -342,7 +359,7 @@ TARGET        = QTPROJECT.app/Contents/MacOS/QTPROJECT
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 10.15.4
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/christopherschrader/Desktop/cs1c project/CS1C_2D_Graphics_Modeler/build-QTPROJECT-Qt_6_2_1_for_macOS-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64 arm64
 EXPORT_DEFAULT_ARCHS = x86_64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_DEFAULT_ARCHS), $(EXPORT_DEFAULT_ARCHS), $(EXPORT_VALID_ARCHS))))
@@ -354,7 +371,7 @@ include /Users/christopherschrader/Qt/6.2.1/macos/mkspecs/features/mac/sdk.mk
 first: all
 ####### Build rules
 
-QTPROJECT.app/Contents/MacOS/QTPROJECT: ui_login.h ui_mainwindow.h $(OBJECTS)  
+QTPROJECT.app/Contents/MacOS/QTPROJECT: ui_addLines.h ui_contactus.h ui_login.h ui_mainwindow.h $(OBJECTS)  
 	@test -d QTPROJECT.app/Contents/MacOS/ || mkdir -p QTPROJECT.app/Contents/MacOS/
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
@@ -579,6 +596,7 @@ Makefile: ../QTPROJECT/QTPROJECT.pro ../../../../Qt/6.2.1/macos/mkspecs/macx-cla
 		../../../../Qt/6.2.1/macos/mkspecs/features/qt_config.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/macx-clang/qmake.conf \
 		../../../../Qt/6.2.1/macos/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../../Qt/6.2.1/macos/mkspecs/features/exclusive_builds.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/features/mac/sdk.prf \
 		../../../../Qt/6.2.1/macos/mkspecs/features/toolchain.prf \
@@ -834,6 +852,7 @@ Makefile: ../QTPROJECT/QTPROJECT.pro ../../../../Qt/6.2.1/macos/mkspecs/macx-cla
 ../../../../Qt/6.2.1/macos/mkspecs/features/qt_config.prf:
 ../../../../Qt/6.2.1/macos/mkspecs/macx-clang/qmake.conf:
 ../../../../Qt/6.2.1/macos/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../../Qt/6.2.1/macos/mkspecs/features/exclusive_builds.prf:
 ../../../../Qt/6.2.1/macos/mkspecs/features/mac/sdk.prf:
 ../../../../Qt/6.2.1/macos/mkspecs/features/toolchain.prf:
@@ -897,9 +916,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../QTPROJECT/icons.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../QTPROJECT/canvas.h ../QTPROJECT/ellipse.h ../QTPROJECT/globals.h ../QTPROJECT/login.h ../QTPROJECT/mainwindow.h ../QTPROJECT/shape.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../QTPROJECT/canvas.cpp ../QTPROJECT/ellipse.cpp ../QTPROJECT/globals.cpp ../QTPROJECT/login.cpp ../QTPROJECT/main.cpp ../QTPROJECT/mainwindow.cpp ../QTPROJECT/shape.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../QTPROJECT/login.ui ../QTPROJECT/mainwindow.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../QTPROJECT/addLines.h ../QTPROJECT/canvas.h ../QTPROJECT/contactus.h ../QTPROJECT/ellipse.h ../QTPROJECT/globals.h ../QTPROJECT/login.h ../QTPROJECT/mainwindow.h ../QTPROJECT/shape.h ../QTPROJECT/text.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../QTPROJECT/addLines.cpp ../QTPROJECT/canvas.cpp ../QTPROJECT/contactus.cpp ../QTPROJECT/ellipse.cpp ../QTPROJECT/globals.cpp ../QTPROJECT/login.cpp ../QTPROJECT/main.cpp ../QTPROJECT/mainwindow.cpp ../QTPROJECT/shape.cpp ../QTPROJECT/text.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../QTPROJECT/addLines.ui ../QTPROJECT/contactus.ui ../QTPROJECT/login.ui ../QTPROJECT/mainwindow.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -909,6 +928,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r QTPROJECT.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -933,6 +953,7 @@ qrc_icons.cpp: ../QTPROJECT/icons.qrc \
 		../QTPROJECT/output-onlinepngtools\ (1).png \
 		../QTPROJECT/output-onlinepngtools\ (8).png \
 		../QTPROJECT/output-onlinepngtools\ (4).png \
+		../QTPROJECT/logo \
 		../QTPROJECT/output-onlinepngtools.png \
 		../QTPROJECT/output-onlinepngtools\ (9).png \
 		../QTPROJECT/output-onlinepngtools\ (12).png \
@@ -944,9 +965,15 @@ qrc_icons.cpp: ../QTPROJECT/icons.qrc \
 		../QTPROJECT/output-onlinepngtools\ (11).png
 	/Users/christopherschrader/Qt/6.2.1/macos/libexec/rcc -name icons ../QTPROJECT/icons.qrc -o qrc_icons.cpp
 
-compiler_moc_header_make_all: moc_canvas.cpp moc_login.cpp moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_addLines.cpp moc_canvas.cpp moc_contactus.cpp moc_login.cpp moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_canvas.cpp moc_login.cpp moc_mainwindow.cpp
+	-$(DEL_FILE) moc_addLines.cpp moc_canvas.cpp moc_contactus.cpp moc_login.cpp moc_mainwindow.cpp
+moc_addLines.cpp: ../QTPROJECT/addLines.h \
+		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Qt/6.2.1/macos/libexec/moc
+	/Users/christopherschrader/Qt/6.2.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=11 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/christopherschrader/Qt/6.2.1/macos/mkspecs/macx-clang -I'/Users/christopherschrader/Desktop/cs1c project/CS1C_2D_Graphics_Modeler/QTPROJECT' -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtWidgets.framework/Headers -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtGui.framework/Headers -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/christopherschrader/Qt/6.2.1/macos/lib ../QTPROJECT/addLines.h -o moc_addLines.cpp
+
 moc_canvas.cpp: ../QTPROJECT/canvas.h \
 		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -961,6 +988,12 @@ moc_canvas.cpp: ../QTPROJECT/canvas.h \
 		../QTPROJECT/ellipse.h \
 		../../../../Qt/6.2.1/macos/libexec/moc
 	/Users/christopherschrader/Qt/6.2.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=11 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/christopherschrader/Qt/6.2.1/macos/mkspecs/macx-clang -I'/Users/christopherschrader/Desktop/cs1c project/CS1C_2D_Graphics_Modeler/QTPROJECT' -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtWidgets.framework/Headers -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtGui.framework/Headers -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/christopherschrader/Qt/6.2.1/macos/lib ../QTPROJECT/canvas.h -o moc_canvas.cpp
+
+moc_contactus.cpp: ../QTPROJECT/contactus.h \
+		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Qt/6.2.1/macos/libexec/moc
+	/Users/christopherschrader/Qt/6.2.1/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=11 -D__clang_minor__=0 -D__clang_patchlevel__=3 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/christopherschrader/Qt/6.2.1/macos/mkspecs/macx-clang -I'/Users/christopherschrader/Desktop/cs1c project/CS1C_2D_Graphics_Modeler/QTPROJECT' -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtWidgets.framework/Headers -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtGui.framework/Headers -I/Users/christopherschrader/Qt/6.2.1/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/christopherschrader/Qt/6.2.1/macos/lib ../QTPROJECT/contactus.h -o moc_contactus.cpp
 
 moc_login.cpp: ../QTPROJECT/login.h \
 		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/QDialog \
@@ -990,9 +1023,17 @@ compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_login.h ui_mainwindow.h
+compiler_uic_make_all: ui_addLines.h ui_contactus.h ui_login.h ui_mainwindow.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_login.h ui_mainwindow.h
+	-$(DEL_FILE) ui_addLines.h ui_contactus.h ui_login.h ui_mainwindow.h
+ui_addLines.h: ../QTPROJECT/addLines.ui \
+		../../../../Qt/6.2.1/macos/libexec/uic
+	/Users/christopherschrader/Qt/6.2.1/macos/libexec/uic ../QTPROJECT/addLines.ui -o ui_addLines.h
+
+ui_contactus.h: ../QTPROJECT/contactus.ui \
+		../../../../Qt/6.2.1/macos/libexec/uic
+	/Users/christopherschrader/Qt/6.2.1/macos/libexec/uic ../QTPROJECT/contactus.ui -o ui_contactus.h
+
 ui_login.h: ../QTPROJECT/login.ui \
 		../../../../Qt/6.2.1/macos/libexec/uic
 	/Users/christopherschrader/Qt/6.2.1/macos/libexec/uic ../QTPROJECT/login.ui -o ui_login.h
@@ -1025,6 +1066,12 @@ compiler_clean: compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
+addLines.o: ../QTPROJECT/addLines.cpp ../QTPROJECT/addLines.h \
+		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		ui_addLines.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o addLines.o ../QTPROJECT/addLines.cpp
+
 canvas.o: ../QTPROJECT/canvas.cpp ../QTPROJECT/canvas.h \
 		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/QObject \
 		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/qobject.h \
@@ -1038,6 +1085,12 @@ canvas.o: ../QTPROJECT/canvas.cpp ../QTPROJECT/canvas.h \
 		../QTPROJECT/Vector.h \
 		../QTPROJECT/ellipse.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o canvas.o ../QTPROJECT/canvas.cpp
+
+contactus.o: ../QTPROJECT/contactus.cpp ../QTPROJECT/contactus.h \
+		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		ui_contactus.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o contactus.o ../QTPROJECT/contactus.cpp
 
 ellipse.o: ../QTPROJECT/ellipse.cpp ../QTPROJECT/ellipse.h \
 		../QTPROJECT/shape.h \
@@ -1083,7 +1136,21 @@ mainwindow.o: ../QTPROJECT/mainwindow.cpp ../QTPROJECT/mainwindow.h \
 		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/qstring.h \
 		ui_mainwindow.h \
+		../QTPROJECT/canvas.h \
+		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/qobject.h \
+		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/QWidget \
+		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/QPixmap \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/qpixmap.h \
+		../QTPROJECT/shape.h \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/QPainter \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/qpainter.h \
+		../QTPROJECT/Vector.h \
+		../QTPROJECT/ellipse.h \
 		../QTPROJECT/globals.h \
+		../QTPROJECT/addLines.h \
+		../QTPROJECT/contactus.h \
 		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
 		../../../../Qt/6.2.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../QTPROJECT/mainwindow.cpp
@@ -1093,11 +1160,25 @@ shape.o: ../QTPROJECT/shape.cpp ../QTPROJECT/shape.h \
 		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/qpainter.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o shape.o ../QTPROJECT/shape.cpp
 
+text.o: ../QTPROJECT/text.cpp ../QTPROJECT/text.h \
+		../QTPROJECT/shape.h \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/QPainter \
+		../../../../Qt/6.2.1/macos/lib/QtGui.framework/Headers/qpainter.h \
+		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/QObject \
+		../../../../Qt/6.2.1/macos/lib/QtCore.framework/Headers/qobject.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o text.o ../QTPROJECT/text.cpp
+
 qrc_icons.o: qrc_icons.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_icons.o qrc_icons.cpp
 
+moc_addLines.o: moc_addLines.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_addLines.o moc_addLines.cpp
+
 moc_canvas.o: moc_canvas.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_canvas.o moc_canvas.cpp
+
+moc_contactus.o: moc_contactus.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_contactus.o moc_contactus.cpp
 
 moc_login.o: moc_login.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_login.o moc_login.cpp

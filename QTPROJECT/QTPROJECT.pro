@@ -17,7 +17,8 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    shape.cpp
+    shape.cpp \
+    text.cpp
     canvas.cpp
     shape.cpp
 
@@ -29,7 +30,8 @@ HEADERS += \
     globals.h \
     login.h \
     mainwindow.h \
-    shape.h
+    shape.h \
+    text.h
     canvas.h
     shape.h
 

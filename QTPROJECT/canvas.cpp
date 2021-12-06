@@ -1,5 +1,6 @@
 #include "canvas.h"
 #include "ellipse.h"
+#include "text.h"
 
 Canvas::Canvas(QWidget *parent) : QWidget(parent) {
 
@@ -26,4 +27,9 @@ void Canvas::paintEvent(QPaintEvent *event) {
     myStd::Ellipse firstShape(&painter, 0, 200, 100);
 
     firstShape.draw(500, 250);
+
+    QFont font("times", 24);
+    myStd::Text text(&painter, "hello world", font, Qt::red);
+
+    text.draw(50, 50);
 }

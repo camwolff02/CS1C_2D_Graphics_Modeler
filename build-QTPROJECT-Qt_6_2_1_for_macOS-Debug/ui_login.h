@@ -34,6 +34,7 @@ public:
     QLineEdit *passwordBox;
     QPushButton *loginButton;
     QLabel *label_2;
+    QPushButton *guestButton;
 
     void setupUi(QDialog *login)
     {
@@ -92,6 +93,9 @@ public:
         label_2->setFont(font);
         label_2->setCursor(QCursor(Qt::ArrowCursor));
         label_2->setAcceptDrops(false);
+        guestButton = new QPushButton(login);
+        guestButton->setObjectName(QString::fromUtf8("guestButton"));
+        guestButton->setGeometry(QRect(240, 270, 151, 23));
 
         retranslateUi(login);
 
@@ -105,6 +109,7 @@ public:
         label->setText(QCoreApplication::translate("login", "<html><head/><body><p><span style=\" font-weight:600;\">Password</span></p></body></html>", nullptr));
         loginButton->setText(QCoreApplication::translate("login", "Login", nullptr));
         label_2->setText(QCoreApplication::translate("login", "<html><head/><body><p align=\"center\"><span style=\" font-size:24pt;\">2D Graphics Modeler Inc.</span></p><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Created by: The Holy Pandas</span></p></body></html>", nullptr));
+        guestButton->setText(QCoreApplication::translate("login", "Continue as a Guest", nullptr));
     } // retranslateUi
 
 };
