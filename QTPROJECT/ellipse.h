@@ -9,7 +9,6 @@ class Ellipse : public Shape {
 public:
     Ellipse(QPainter *painter, int id = 0, int width=0, int height=0) : Shape{painter, ShapeType::Ellipse, id} , shape{0, 0, width, height} {};
 
-
     virtual void draw(const int x, const int y) override;
     virtual void move(const int x, const int y) override;
     virtual double getPerimeter() override;
