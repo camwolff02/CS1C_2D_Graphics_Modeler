@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     addLines.cpp \
+    addrectangles.cpp \
     canvas.cpp \
     contactus.cpp \
     ellipse.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
 
 HEADERS += \
     addLines.h \
+    addrectangles.h \
     canvas.h \
     contactus.h \
     ellipse.h \
@@ -40,6 +42,7 @@ HEADERS += \
 
 FORMS += \
     addLines.ui \
+    addrectangles.ui \
     contactus.ui \
     login.ui \
     mainwindow.ui

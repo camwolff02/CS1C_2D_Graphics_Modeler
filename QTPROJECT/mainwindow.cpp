@@ -3,6 +3,7 @@
 #include "globals.h"
 #include "addLines.h"
 #include "contactus.h"
+#include "addrectangles.h"
 
 #include <QMessageBox>
 
@@ -77,7 +78,12 @@ void MainWindow::on_actionRectangle_triggered()
 {
     if (isAdmin)
     {
+        addRectangles addRect;
+        addRect.setModal(true);
+        addRect.setWindowTitle("Add Rectangle");
+        addRect.exec();
         // this is an admin only command, will add the code for adding rectangle here
+        // currently displays rectangle ui
     }
     else
     {
