@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addLines.cpp \
     canvas.cpp \
     ellipse.cpp \
     globals.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
     shape.cpp
 
 HEADERS += \
+    addLines.h \
     canvas.h \
     ellipse.h \
     globals.h \
@@ -31,6 +33,7 @@ HEADERS += \
 
 
 FORMS += \
+    addLines.ui \
     login.ui \
     mainwindow.ui
 

@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "globals.h"
+#include "addLines.h"
+
 #include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -27,7 +29,12 @@ void MainWindow::on_actionLine_triggered()
 {
     if (isAdmin)
     {
+        addLines addLine;
+        addLine.setModal(true);
+        addLine.setWindowTitle("Add Line");
+        addLine.exec();
         // this is an admin only command, will add the code for adding line here
+        // currently displays line ui
     }
     else
     {
