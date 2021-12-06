@@ -1,26 +1,27 @@
-#ifndef _ELLIPSE_
-#define _ELLIPSE_
+#ifndef POLYLINE_H
+#define POLYLINE_H
 
 #include "shape.h"
+#include <QObject>
 
 namespace myStd{
 
-class Ellipse : public Shape {
+class Polyline : public Shape {
+
 public:
-    Ellipse(QPainter *painter, int id = -1, int width=0, int height=0) : Shape{painter, ShapeType::Ellipse, id} , shape{0, 0, width, height} {};
+    Polyline(QPainter *painter, int id=-1);
 
     virtual void draw(const int x, const int y) override;
     virtual void move(const int x, const int y) override;
     virtual double getPerimeter() override;
     virtual double getArea() override;
 
+    void addPoint(QPoint point);
 
 private:
-  QRect shape;
-
+    std::vector<QPoint> points;
 };
 
 }
 
-
-#endif
+#endif // POLYLINE_H

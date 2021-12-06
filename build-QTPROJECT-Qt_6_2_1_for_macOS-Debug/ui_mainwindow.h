@@ -36,6 +36,7 @@ public:
     QAction *actionText;
     QAction *actionSave;
     QAction *actionQuit;
+    QAction *actionTeam_Info;
     QWidget *centralwidget;
     Canvas *widget;
     QMenuBar *menubar;
@@ -97,6 +98,8 @@ public:
         actionSave->setIcon(icon7);
         actionQuit = new QAction(MainWindow);
         actionQuit->setObjectName(QString::fromUtf8("actionQuit"));
+        actionTeam_Info = new QAction(MainWindow);
+        actionTeam_Info->setObjectName(QString::fromUtf8("actionTeam_Info"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         widget = new Canvas(centralwidget);
@@ -137,6 +140,7 @@ public:
         menuAdd_Shape->addAction(actionRectangle);
         menuAdd_Shape->addAction(actionEllipse);
         menuAdd_Shape->addAction(actionText);
+        menuContact_Us->addAction(actionTeam_Info);
         toolBar->addAction(actionOpen);
         toolBar->addAction(actionSave);
         toolBar->addSeparator();
@@ -172,6 +176,7 @@ public:
         actionSave->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+S", nullptr));
 #endif // QT_CONFIG(shortcut)
         actionQuit->setText(QCoreApplication::translate("MainWindow", "Quit", nullptr));
+        actionTeam_Info->setText(QCoreApplication::translate("MainWindow", "Team Info", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuLogin->setTitle(QCoreApplication::translate("MainWindow", "Logout", nullptr));
         menuAdd_Shape->setTitle(QCoreApplication::translate("MainWindow", "Add Shape", nullptr));

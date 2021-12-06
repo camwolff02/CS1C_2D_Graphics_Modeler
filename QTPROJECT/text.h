@@ -1,26 +1,26 @@
-#ifndef _ELLIPSE_
-#define _ELLIPSE_
+#ifndef TEXT_H
+#define TEXT_H
 
 #include "shape.h"
+#include <QObject>
+#include <QFont>
 
 namespace myStd{
 
-class Ellipse : public Shape {
+class Text : public Shape {
 public:
-    Ellipse(QPainter *painter, int id = -1, int width=0, int height=0) : Shape{painter, ShapeType::Ellipse, id} , shape{0, 0, width, height} {};
+
+    Text(QPainter *painter, QString msg, QFont font, Qt::GlobalColor color, int id=-1);
 
     virtual void draw(const int x, const int y) override;
     virtual void move(const int x, const int y) override;
     virtual double getPerimeter() override;
     virtual double getArea() override;
 
-
 private:
-  QRect shape;
-
+    QString text;
 };
 
+
 }
-
-
-#endif
+#endif // TEXT_H
