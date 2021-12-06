@@ -4,7 +4,7 @@
 #include <QPainter>
 
 /*Author: Christopher Schrader
- Editors: <list your names here>
+ Editors: Ethan Safai
 */
 
 enum ShapeType {Line=1, Polyline, Polygon, Rectangle, Square,  Ellipse, Circle, Text};
@@ -14,7 +14,13 @@ class Shape {
 public:
 
   //alt constructor
-  Shape(QPainter *painterPTR, ShapeType type, int id) : qpainterPTR{painterPTR}, shapeID{type} , id{id} {};
+  Shape(QPainter *painterPTR, ShapeType type, int id) 
+    : qpainterPTR{painterPTR}
+    , shapeID{type} 
+    , id{id} 
+  {
+    ++shapeCount;
+  };
 
   /*We were told to disable these*/
   //copy constructor
@@ -41,9 +47,15 @@ public:
   void setPen(Qt::GlobalColor color, int size, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle);
   //invoke qpainterPTR.setBrush(brush) with brush being the QBrush brush we make using these parameters
   void setBrush(Qt::GlobalColor color, Qt::BrushStyle brushStyle);
+  //set id member
+  void setId(int id) { this->id = id; }
 
   //return our qpainter
   QPainter* getPainter();
+  //return id
+  int getId() const { return id; }
+  //return number of shapes created 
+  static int getShapeCount() { return shapeCount; }
 
   //destructor
   virtual ~Shape();
@@ -57,6 +69,8 @@ ShapeType shapeID;
 //Number ID, not shape type
 int id;
 
+//static member - how many shapes have been instantiated
+static int shapeCount;
 };
 
 
