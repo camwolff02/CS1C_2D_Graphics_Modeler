@@ -4,6 +4,8 @@
 #include "addLines.h"
 #include "contactus.h"
 #include "addrectangles.h"
+#include "addelllipse.h"
+#include "addtextbox.h"
 
 #include <QMessageBox>
 
@@ -95,6 +97,10 @@ void MainWindow::on_actionEllipse_triggered()
 {
     if (isAdmin)
     {
+        addElllipse addellipse;
+        addellipse.setModal(true);
+        addellipse.setWindowTitle("Add Ellipse");
+        addellipse.exec();
         // this is an admin only command, will add the code for adding ellipse here
     }
     else
@@ -107,6 +113,10 @@ void MainWindow::on_actionText_triggered()
 {
     if (isAdmin)
     {
+        addTextBox textbox;
+        textbox.setModal(true);
+        textbox.setWindowTitle("Add Text Box");
+        textbox.exec();
         // this is an admin only command, will add the code for adding text box here
     }
     else
