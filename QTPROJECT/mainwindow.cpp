@@ -6,6 +6,8 @@
 #include "addrectangles.h"
 #include "addelllipse.h"
 #include "addtextbox.h"
+#include "addpolyline.h"
+#include "addpolygon.h"
 
 #include <QMessageBox>
 
@@ -56,6 +58,10 @@ void MainWindow::on_actionPolyline_triggered()
 {
     if (isAdmin)
     {
+        addPolyline polyline;
+        polyline.setModal(true);
+        polyline.setWindowTitle("Add Polyline");
+        polyline.exec();
         // this is an admin only command, will add the code for adding polyline here
     }
     else
@@ -68,6 +74,10 @@ void MainWindow::on_actionPolygon_triggered()
 {
     if (isAdmin)
     {
+        addPolygon polygon;
+        polygon.setModal(true);
+        polygon.setWindowTitle("Add Polygon");
+        polygon.exec();
         // this is an admin only command, will add the code for adding polygon here
     }
     else

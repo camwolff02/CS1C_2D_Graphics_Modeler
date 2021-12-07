@@ -11,12 +11,15 @@ CONFIG += c++11
 SOURCES += \
     addLines.cpp \
     addelllipse.cpp \
+    addpolygon.cpp \
+    addpolyline.cpp \
     addrectangles.cpp \
     addtextbox.cpp \
     canvas.cpp \
     contactus.cpp \
     ellipse.cpp \
     globals.cpp \
+    line.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -29,12 +32,15 @@ SOURCES += \
 HEADERS += \
     addLines.h \
     addelllipse.h \
+    addpolygon.h \
+    addpolyline.h \
     addrectangles.h \
     addtextbox.h \
     canvas.h \
     contactus.h \
     ellipse.h \
     globals.h \
+    line.h \
     login.h \
     mainwindow.h \
     polyline.h \
@@ -47,6 +53,8 @@ HEADERS += \
 FORMS += \
     addLines.ui \
     addelllipse.ui \
+    addpolygon.ui \
+    addpolyline.ui \
     addrectangles.ui \
     addtextbox.ui \
     contactus.ui \
