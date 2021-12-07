@@ -44,7 +44,9 @@ HEADERS += \
     login.h \
     mainwindow.h \
     polyline.h \
+    read_data.h \
     shape.h \
+    shapes.h \
     text.h
     canvas.h
     shape.h
