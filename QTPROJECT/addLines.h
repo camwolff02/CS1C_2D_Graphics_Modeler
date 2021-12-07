@@ -15,6 +15,9 @@ public:
     explicit addLines(QWidget *parent = nullptr);
     ~addLines();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::addLines *ui;
 };
