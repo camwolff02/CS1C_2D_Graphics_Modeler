@@ -143,3 +143,23 @@ void MainWindow::on_actionTeam_Info_triggered()
     contact.exec();
 }
 
+
+void MainWindow::on_actionOpen_triggered()
+{
+    QMessageBox::information(this, "Open File", "Opening file");
+    // will add logic for opening .txt file or other file to the program to parse
+}
+
+
+void MainWindow::on_actionSave_triggered()
+{
+    QMessageBox::information(this, "Save File", "File has been saved");
+    // will add logic for saving files for other runs
+}
+
+
+void MainWindow::on_actionQuit_triggered()
+{
+    qApp->exit();
+}
+

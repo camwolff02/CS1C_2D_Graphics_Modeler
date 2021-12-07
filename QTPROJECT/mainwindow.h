@@ -33,6 +33,12 @@ private slots:
 
     void on_actionTeam_Info_triggered();
 
+    void on_actionOpen_triggered();
+
+    void on_actionSave_triggered();
+
+    void on_actionQuit_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
