@@ -19,11 +19,13 @@ Canvas::Canvas(QWidget *parent) : QWidget(parent) {
 void Canvas::paintEvent(QPaintEvent *event) {
 
     for (int i = 0; i <= shapes.size(); i++){
+        //we also need the
         //shapes[i]->draw(0, 0);
     }
 
     QPainter painter(this);
 
+    //STUFF BELOW IS HARD CODED IN AND WILL BE REMOVED!
     //demo of shapes--we need to make the shapes somewhere else, unsure of where
     myStd::Ellipse firstShape(&painter, 0, 200, 100);
 
