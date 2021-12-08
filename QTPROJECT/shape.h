@@ -62,6 +62,8 @@ public:
    int getX();
    int getY();
 
+   ShapeType getShapeType();
+
   //destructor
   virtual ~Shape();
 

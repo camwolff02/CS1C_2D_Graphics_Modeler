@@ -18,6 +18,8 @@ public:
 
     void addPoint(QPoint point);
 
+    std::vector<QPoint> getPoints();
+
 private:
     std::vector<QPoint> points;
 };

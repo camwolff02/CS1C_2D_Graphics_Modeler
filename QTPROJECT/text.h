@@ -17,6 +17,8 @@ public:
     virtual double getPerimeter() override;
     virtual double getArea() override;
 
+    QString getText();
+
 private:
     QString text;
 };

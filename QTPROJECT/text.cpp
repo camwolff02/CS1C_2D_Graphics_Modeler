@@ -29,4 +29,8 @@ void Text::move(const int x, const int y){
     //draw(x, y);
 }
 
+QString Text::getText(){
+    return this->text;
+}
+
 }

@@ -49,6 +49,10 @@ int Shape::getY(){
     return y;
 }
 
+ShapeType Shape::getShapeType(){
+    return shapeID;
+}
+
 //destructor
 Shape::~Shape(){
     --shapeCount;

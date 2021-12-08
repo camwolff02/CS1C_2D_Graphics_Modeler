@@ -38,4 +38,8 @@ void Polyline::addPoint(QPoint point){
     points.push_back(point);
 }
 
+std::vector<QPoint> Polyline::getPoints(){
+    return this->points;
+}
+
 }
