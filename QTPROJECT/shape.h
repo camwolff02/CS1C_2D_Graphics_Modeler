@@ -43,9 +43,9 @@ public:
   //public methods to change shape proerties - these will invoke our qpainterPTR
   void setShapeType(ShapeType type);
   //invoke qpainterPTR.setPen(pen) with pen being the QPen pen we make using these parameters
-  void setPen(Qt::GlobalColor color, int size, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle);
+  void setPen(QColor color, int size, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle);
   //invoke qpainterPTR.setBrush(brush) with brush being the QBrush brush we make using these parameters
-  void setBrush(Qt::GlobalColor color, Qt::BrushStyle brushStyle);
+  void setBrush(QColor color, Qt::BrushStyle brushStyle);
   //set id member
   void setId(int id) { this->id = id; }
 

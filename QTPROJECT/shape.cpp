@@ -10,7 +10,7 @@ bool Shape::operator<(const Shape& rhs)
     return id < rhs.id;
 }
 
-void Shape::setPen(Qt::GlobalColor color, int size, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle){
+void Shape::setPen(QColor color, int size, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle){
   pen.setColor(color);
   pen.setWidth(size);
   pen.setStyle(style);
@@ -19,7 +19,7 @@ void Shape::setPen(Qt::GlobalColor color, int size, Qt::PenStyle style, Qt::PenC
 
 }
 
-void Shape::setBrush(Qt::GlobalColor color, Qt::BrushStyle brushStyle){
+void Shape::setBrush(QColor color, Qt::BrushStyle brushStyle){
   brush.setColor(color);
   brush.setStyle(brushStyle);
 
