@@ -1,13 +1,12 @@
 #include "polygon.h"
 #include <cmath>
 
-// use the first coordinates of the polygon for x & y for correct rendering!
-void myStd::Polygon::draw(const int x, const int y)
+void myStd::Polygon::draw(QPainter* painter)
 {
-    // call Polygon::move function
-    move(x, y);
-    getPainter()->drawPolygon(polygon);
-    getPainter()->drawText(points[0], QString::number(getId()));
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
+    painter->drawPolygon(polygon);
+    painter->drawText(points[0], QString::number(getId()));
 }
 
 void myStd::Polygon::move(const int x, const int y)
@@ -74,4 +73,9 @@ void myStd::Polygon::addPoint(const int x, const int y)
 {
     points.push_back(QPoint(x, y));
     polygon << QPoint(x, y);
+}
+
+myStd::vector<QPoint> myStd::Polygon::getPoints() const
+{
+    return points;
 }

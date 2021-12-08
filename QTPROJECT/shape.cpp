@@ -29,6 +29,18 @@ void Shape::setShapeType(ShapeType type){
   shapeID = type;
 }
 
+void Shape::setId(int id){ 
+    this->id = id; 
+}
+
+void Shape::setX(int x){
+    this->x = x;
+}
+
+void Shape::setY(int y){
+    this->y = y;
+}
+
 QPainter* Shape::getPainter(){
     return qpainterPTR;
 }

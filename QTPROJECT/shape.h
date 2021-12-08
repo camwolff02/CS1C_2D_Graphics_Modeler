@@ -47,7 +47,11 @@ public:
   //invoke qpainterPTR.setBrush(brush) with brush being the QBrush brush we make using these parameters
   void setBrush(QColor color, Qt::BrushStyle brushStyle);
   //set id member
-  void setId(int id) { this->id = id; }
+  void setId(int id);
+  //set x coord
+  void setX(int x);
+  //set y coord
+  void setY(int y);
 
   //return our qpainter
   QPainter* getPainter();

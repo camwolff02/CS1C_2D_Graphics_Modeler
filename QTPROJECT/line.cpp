@@ -33,3 +33,13 @@ double myStd::Line::getLength() const
     // returns distance between the beginning and ending coordinate pairs
     return sqrt(pow(end.x() - begin.x(), 2) + pow(end.y() - begin.y(), 2));
 }
+
+QPoint myStd::Line::getBegin() const
+{
+    return begin;
+}
+
+QPoint myStd::Line::getEnd() const
+{
+    return end;
+}

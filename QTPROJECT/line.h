@@ -35,6 +35,8 @@ public:
     virtual double getArea() override;
 
     double getLength() const;
+    QPoint getBegin() const;
+    QPoint getEnd() const;
 
 private:
     QPoint begin; // coordinates of beginning of line

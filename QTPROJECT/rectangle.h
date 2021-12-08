@@ -13,11 +13,13 @@ class Rectangle : public Shape
 {
 public:
   // default/ alt constructor
-  Rectangle(QPainter* painter, int id = -1, int x = 0, int y = 0, int width = 0,
+  Rectangle(int id = -1, int x = 0, int y = 0, int width = 0,
             int height = 0)
-    : Shape(painter, ShapeType::Rectangle, id)
-    , rectangle(0, 0, width, height)
+    : Shape(ShapeType::Rectangle, id)
+    , rectangle(x, y, width, height)
   {
+      setX(x);
+      setY(y);
       if (id < 0)
           setId(getShapeCount());
   }
@@ -28,7 +30,7 @@ public:
 
   Rectangle& operator=(Rectangle&&) = default;
 
-  virtual void draw(const int x, const int y) override;
+  virtual void draw(QPainter* painter) override;
   virtual void move(const int x, const int y) override;
   virtual double getPerimeter() override;
   virtual double getArea() override;
