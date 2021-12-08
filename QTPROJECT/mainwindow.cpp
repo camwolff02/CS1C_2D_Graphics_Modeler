@@ -41,7 +41,9 @@ void MainWindow::on_actionLine_triggered()
 {
     if (isAdmin)
     {
-        addLines addLine;
+        //ui->widget->getPainter() returns our global QPainter object!
+
+        addLines addLine(ui->widget, ui->widget->getPainter(), ui->widget);
         addLine.setModal(true);
         addLine.setWindowTitle("Add Line");
         addLine.exec();
@@ -58,7 +60,7 @@ void MainWindow::on_actionPolyline_triggered()
 {
     if (isAdmin)
     {
-        addPolyline polyline;
+        addPolyline polyline(this);
         polyline.setModal(true);
         polyline.setWindowTitle("Add Polyline");
         polyline.exec();
@@ -74,7 +76,7 @@ void MainWindow::on_actionPolygon_triggered()
 {
     if (isAdmin)
     {
-        addPolygon polygon;
+        addPolygon polygon(this);
         polygon.setModal(true);
         polygon.setWindowTitle("Add Polygon");
         polygon.exec();
@@ -90,7 +92,7 @@ void MainWindow::on_actionRectangle_triggered()
 {
     if (isAdmin)
     {
-        addRectangles addRect;
+        addRectangles addRect(this);
         addRect.setModal(true);
         addRect.setWindowTitle("Add Rectangle");
         addRect.exec();
@@ -107,7 +109,7 @@ void MainWindow::on_actionEllipse_triggered()
 {
     if (isAdmin)
     {
-        addElllipse addellipse;
+        addElllipse addellipse(this);
         addellipse.setModal(true);
         addellipse.setWindowTitle("Add Ellipse");
         addellipse.exec();
@@ -123,7 +125,7 @@ void MainWindow::on_actionText_triggered()
 {
     if (isAdmin)
     {
-        addTextBox textbox;
+        addTextBox textbox(this);
         textbox.setModal(true);
         textbox.setWindowTitle("Add Text Box");
         textbox.exec();

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "login.h"
+#include <QPainter>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -41,5 +42,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QPainter painter;
+
 };
 #endif // MAINWINDOW_H

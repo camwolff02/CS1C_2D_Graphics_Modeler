@@ -19,14 +19,19 @@ class Canvas : public QWidget {
 public:
 
   //default constructor
+  //CALL CAMERONS FUNCTION TO READ IN TO shapes. shapes = hisFunction();
   Canvas(QWidget *parent = 0);
 
   //virtual function override
   void paintEvent(QPaintEvent *event) override;
 
-  //ask prof: should we use destructor to save stuff to shapes.txt?
+  //CALL RILEYS FUNCTION TO WRITE
+  //also need to deallocate new shapes
   //~Canvas();
 
+  QPainter* getPainter();
+
+  void addShape(Shape* shape);
 
 private:
 myStd::vector<Shape*> shapes;
