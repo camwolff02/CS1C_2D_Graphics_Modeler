@@ -14,9 +14,8 @@ class Shape {
 public:
 
   //alt constructor
-  Shape(QPainter *painterPTR, ShapeType type, int id) 
-    : qpainterPTR{painterPTR}
-    , shapeID{type} 
+  Shape(ShapeType type, int id)
+    : shapeID{type}
     , id{id} 
   {
     ++shapeCount;
@@ -36,7 +35,7 @@ public:
   bool operator<(const Shape& rhs);
 
   //pure virtual functions, override in derived classes
-  virtual void draw(const int x, const int y) = 0;
+  virtual void draw(QPainter* painter) = 0;
   virtual void move(const int x, const int y) = 0;
   virtual double getPerimeter() = 0;
   virtual double getArea() = 0;
@@ -57,6 +56,12 @@ public:
   //return number of shapes created 
   static int getShapeCount() { return shapeCount; }
 
+   QPen getPen();
+   QBrush getBrush();
+
+   int getX();
+   int getY();
+
   //destructor
   virtual ~Shape();
 
@@ -65,6 +70,11 @@ private:
 QPainter* qpainterPTR;
 //shape type id:
 ShapeType shapeID;
+QPen pen;
+QBrush brush;
+
+int x;
+int y;
 
 //Number ID, not shape type
 int id;

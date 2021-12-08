@@ -1,11 +1,14 @@
 #include "line.h"
 #include <cmath>
 
-void myStd::Line::draw(const int x, const int y)
+void myStd::Line::draw(QPainter* painter)
 {
-    move(x, y);
-    getPainter()->drawLine(begin, end);
-    getPainter()->drawText(begin, QString::number(getId()));
+    //move(x, y);
+
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
+    painter->drawLine(begin, end);
+    painter->drawText(begin, QString::number(getId()));
 }
 
 void myStd::Line::move(const int x, const int y)

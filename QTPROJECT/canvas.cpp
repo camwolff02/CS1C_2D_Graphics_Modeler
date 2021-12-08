@@ -18,13 +18,10 @@ Canvas::Canvas(QWidget *parent) : QWidget(parent) {
 }
 
 void Canvas::paintEvent(QPaintEvent *event) {
-    qInfo() << "Size: " << shapes.size();
-    qInfo() << "Test!";
-    for (int i = 0; i <= shapes.size(); i++){
+    QPainter painter(this);
+    for (int i = 0; i < shapes.size(); i++){
         if (shapes.size() != 0){
-            shapes[i]->draw(0, 0);
-            qInfo() << shapes[i];
-            qInfo() << "Test 2";
+            shapes[i]->draw(&painter);
         }
     }
 
@@ -32,14 +29,14 @@ void Canvas::paintEvent(QPaintEvent *event) {
 
     //STUFF BELOW IS HARD CODED IN AND WILL BE REMOVED!
     //demo of shapes--we need to make the shapes somewhere else, unsure of where
-    //myStd::Ellipse firstShape(&painter, 0, 200, 100);
+   // myStd::Ellipse firstShape(0, 200, 100);
 
-    //firstShape.draw(500, 250);
+    //firstShape.draw(&painter);
 
-    QFont font("times", 24);
-    //myStd::Text text(&painter, "hello world", font, Qt::red);
+    //QFont font("times", 24);
+    //myStd::Text text("hello world", font, Qt::red);
 
-    //text.draw(50, 50);
+    //text.draw(&painter);
 
     //myStd::Polyline poly(&painter, 0);
     //poly.addPoint(QPoint(50,50));

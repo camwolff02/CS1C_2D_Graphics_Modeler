@@ -9,9 +9,9 @@ namespace myStd{
 class Polyline : public Shape {
 
 public:
-    Polyline(QPainter *painter, int id=-1);
+    Polyline(int id=-1);
 
-    virtual void draw(const int x, const int y) override;
+    virtual void draw(QPainter* painter) override;
     virtual void move(const int x, const int y) override;
     virtual double getPerimeter() override;
     virtual double getArea() override;

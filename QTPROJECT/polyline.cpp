@@ -2,19 +2,22 @@
 
 namespace myStd{
 
-Polyline::Polyline(QPainter *painter, int id) : Shape{painter, ShapeType::Polyline, id} {
+Polyline::Polyline(int id) : Shape{ShapeType::Polyline, id} {
 
 
 }
 
-void Polyline::draw(const int x, const int y) {
+void Polyline::draw(QPainter* painter) {
+
 
     QPointF pointsTwo[points.size()];
     for(int i = 0; i <= points.size(); i++){
         pointsTwo[i] = points[i];
     }
 
-    getPainter()->drawPolyline(pointsTwo, points.size());
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
+    painter->drawPolyline(pointsTwo, points.size());
 
 }
 
@@ -27,7 +30,7 @@ double Polyline::getArea(){
 }
 
 void Polyline::move(const int x, const int y){
-    draw(x, y);
+    //draw(x, y);
 }
 
 
