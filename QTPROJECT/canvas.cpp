@@ -32,20 +32,20 @@ void Canvas::paintEvent(QPaintEvent *event) {
 
     //STUFF BELOW IS HARD CODED IN AND WILL BE REMOVED!
     //demo of shapes--we need to make the shapes somewhere else, unsure of where
-    myStd::Ellipse firstShape(&painter, 0, 200, 100);
+    //myStd::Ellipse firstShape(&painter, 0, 200, 100);
 
     //firstShape.draw(500, 250);
 
     QFont font("times", 24);
-    myStd::Text text(&painter, "hello world", font, Qt::red);
+    //myStd::Text text(&painter, "hello world", font, Qt::red);
 
     //text.draw(50, 50);
 
-    myStd::Polyline poly(&painter, 0);
-    poly.addPoint(QPoint(50,50));
-    poly.addPoint(QPoint(100,200));
-    poly.addPoint(QPoint(200,954));
-    poly.addPoint(QPoint(50,20));
+    //myStd::Polyline poly(&painter, 0);
+    //poly.addPoint(QPoint(50,50));
+    //poly.addPoint(QPoint(100,200));
+    //poly.addPoint(QPoint(200,954));
+    //poly.addPoint(QPoint(50,20));
     //poly.draw(0,0);
 }
 
