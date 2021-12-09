@@ -2,7 +2,7 @@
 
 namespace myStd {
 
-Text::Text(QPainter *painter, QString msg, QFont font, Qt::GlobalColor color, int id) : Shape{painter, ShapeType::Ellipse, id} , text{msg} {
+Text::Text(QString msg, QFont font, Qt::GlobalColor color, int id) : Shape{ShapeType::Text, id} , text{msg} {
     getPainter()->setFont(font);
     QPen pen = getPainter()->pen();
     pen.setColor(color);
@@ -10,9 +10,10 @@ Text::Text(QPainter *painter, QString msg, QFont font, Qt::GlobalColor color, in
 
 }
 
-void Text::draw(const int x, const int y) {
-
-    getPainter()->drawText(x, y, text);
+void Text::draw(QPainter* painter) {
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
+    painter->drawText(0, 0, text);
 
 }
 
@@ -25,7 +26,11 @@ double Text::getArea(){
 }
 
 void Text::move(const int x, const int y){
-    draw(x, y);
+    //draw(x, y);
+}
+
+QString Text::getText(){
+    return this->text;
 }
 
 }

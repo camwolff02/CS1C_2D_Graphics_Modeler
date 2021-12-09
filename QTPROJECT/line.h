@@ -13,9 +13,9 @@ class Line : public Shape
 {
 public:
     // default/ alt constructor
-    Line(QPainter* painter, int id = -1, int x1 = 0, int y1 = 0, int x2 = 0,
+    Line(int id = -1, int x1 = 0, int y1 = 0, int x2 = 0,
          int y2 = 0)
-        : Shape(painter, ShapeType::Line, id)
+        : Shape(ShapeType::Line, id)
         , begin(QPoint(x1, y1))
         , end(QPoint(x2, y2))
     {
@@ -29,12 +29,14 @@ public:
 
     Line& operator=(Line&&) = default;
 
-    virtual void draw(const int x, const int y) override;
+    virtual void draw(QPainter* painter) override;
     virtual void move(const int x, const int y) override;
     virtual double getPerimeter() override;
     virtual double getArea() override;
 
     double getLength() const;
+    QPoint getBegin() const;
+    QPoint getEnd() const;
 
 private:
     QPoint begin; // coordinates of beginning of line

@@ -1,11 +1,14 @@
 #include "line.h"
 #include <cmath>
 
-void myStd::Line::draw(const int x, const int y)
+void myStd::Line::draw(QPainter* painter)
 {
-    move(x, y);
-    getPainter()->drawLine(begin, end);
-    getPainter()->drawText(begin, QString::number(getId()));
+    //move(x, y);
+
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
+    painter->drawLine(begin, end);
+    painter->drawText(begin, QString::number(getId()));
 }
 
 void myStd::Line::move(const int x, const int y)
@@ -29,4 +32,14 @@ double myStd::Line::getLength() const
 {
     // returns distance between the beginning and ending coordinate pairs
     return sqrt(pow(end.x() - begin.x(), 2) + pow(end.y() - begin.y(), 2));
+}
+
+QPoint myStd::Line::getBegin() const
+{
+    return begin;
+}
+
+QPoint myStd::Line::getEnd() const
+{
+    return end;
 }

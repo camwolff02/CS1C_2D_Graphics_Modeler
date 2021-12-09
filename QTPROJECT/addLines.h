@@ -14,7 +14,7 @@ class addLines : public QDialog
     Q_OBJECT
 
 public:
-    explicit addLines(QWidget *parent = nullptr, QPainter* painter=nullptr, Canvas *renderarea=nullptr);
+    explicit addLines(QWidget *parent = nullptr, Canvas *renderarea=nullptr);
     ~addLines();
 
 private slots:
@@ -22,7 +22,6 @@ private slots:
 
 private:
     Ui::addLines *ui;
-    QPainter* painter;
     Canvas* renderarea;
 };
 

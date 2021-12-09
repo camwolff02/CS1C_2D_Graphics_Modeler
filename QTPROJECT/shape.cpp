@@ -10,24 +10,18 @@ bool Shape::operator<(const Shape& rhs)
     return id < rhs.id;
 }
 
-void Shape::setPen(Qt::GlobalColor color, int size, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle){
-  QPen pen;
+void Shape::setPen(QColor color, int size, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle){
   pen.setColor(color);
   pen.setWidth(size);
   pen.setStyle(style);
   pen.setCapStyle(capStyle);
   pen.setJoinStyle(joinStyle);
 
-  qpainterPTR->setPen(pen);
-
 }
 
-void Shape::setBrush(Qt::GlobalColor color, Qt::BrushStyle brushStyle){
-  QBrush brush;
+void Shape::setBrush(QColor color, Qt::BrushStyle brushStyle){
   brush.setColor(color);
   brush.setStyle(brushStyle);
-
-  qpainterPTR->setBrush(brush);
 
 }
 
@@ -35,8 +29,40 @@ void Shape::setShapeType(ShapeType type){
   shapeID = type;
 }
 
+void Shape::setId(int id){ 
+    this->id = id; 
+}
+
+void Shape::setX(int x){
+    this->x = x;
+}
+
+void Shape::setY(int y){
+    this->y = y;
+}
+
 QPainter* Shape::getPainter(){
     return qpainterPTR;
+}
+
+QPen Shape::getPen(){
+    return this->pen;
+}
+
+QBrush Shape::getBrush(){
+    return this->brush;
+}
+
+int Shape::getX(){
+    return x;
+}
+
+int Shape::getY(){
+    return y;
+}
+
+ShapeType Shape::getShapeType(){
+    return shapeID;
 }
 
 //destructor

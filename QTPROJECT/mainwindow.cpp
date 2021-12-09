@@ -43,7 +43,7 @@ void MainWindow::on_actionLine_triggered()
     {
         //ui->widget->getPainter() returns our global QPainter object!
 
-        addLines addLine(ui->widget, ui->widget->getPainter(), ui->widget);
+        addLines addLine(ui->widget, ui->widget);
         addLine.setModal(true);
         addLine.setWindowTitle("Add Line");
         addLine.exec();

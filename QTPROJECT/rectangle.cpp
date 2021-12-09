@@ -1,11 +1,11 @@
 #include "rectangle.h"
 
-void myStd::Rectangle::draw(const int x, const int y)
+void myStd::Rectangle::draw(QPainter* painter)
 {
-    // call Rectangle::move function
-    move(x, y);
-    getPainter()->drawRect(rectangle);
-    getPainter()->drawText(QPoint(x, y), QString::number(getId()));
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
+    painter->drawRect(rectangle);
+    painter->drawText(QPoint(rectangle.x(), rectangle.y()), QString::number(getId()));
 }
 
 void myStd::Rectangle::move(const int x, const int y)

@@ -5,9 +5,12 @@
 
 namespace myStd{
 
-void Ellipse::draw(const int x, const int y) {
-    shape.moveTo(x, y);
-    getPainter()->drawEllipse(shape);
+void Ellipse::draw(QPainter* painter) {
+    //shape.moveTo(x, y);
+
+    painter->setPen(this->getPen());
+    painter->setBrush(this->getBrush());
+    painter->drawEllipse(shape);
 
 }
 
@@ -26,7 +29,7 @@ double Ellipse::getArea(){
 }
 
 void Ellipse::move(const int x, const int y){
-    this->draw(x, y);
+    //this->draw(x, y);
 }
 
 }
