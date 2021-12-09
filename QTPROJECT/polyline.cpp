@@ -3,8 +3,9 @@
 namespace myStd{
 
 Polyline::Polyline(int id) : Shape{ShapeType::Polyline, id} {
-
-
+    if (id < 0){
+        setId(getShapeCount());
+    }
 }
 
 void Polyline::draw(QPainter* painter) {
@@ -18,6 +19,7 @@ void Polyline::draw(QPainter* painter) {
     painter->setPen(this->getPen());
     painter->setBrush(this->getBrush());
     painter->drawPolyline(pointsTwo, points.size());
+    painter->drawText(QPoint(points[0].x(), points[0].y()), QString::number(getId()));
 
 }
 

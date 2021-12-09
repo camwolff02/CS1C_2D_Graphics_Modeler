@@ -2,18 +2,23 @@
 
 namespace myStd {
 
-Text::Text(QString msg, QFont font, Qt::GlobalColor color, int id) : Shape{ShapeType::Text, id} , text{msg} {
+Text::Text(QString msg, QFont font, QColor color, int id) : Shape{ShapeType::Text, id} , text{msg} {
     getPainter()->setFont(font);
     QPen pen = getPainter()->pen();
     pen.setColor(color);
     getPainter()->setPen(pen);
+
+    if (id < 0){
+        setId(getShapeCount());
+    }
 
 }
 
 void Text::draw(QPainter* painter) {
     painter->setPen(this->getPen());
     painter->setBrush(this->getBrush());
-    painter->drawText(0, 0, text);
+
+    painter->drawText(this->getX(), this->getY(), text);
 
 }
 

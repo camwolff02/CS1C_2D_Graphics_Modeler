@@ -16,6 +16,9 @@ public:
     explicit addTextBox(QWidget *parent = nullptr, Canvas *renderarea=nullptr);
     ~addTextBox();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::addTextBox *ui;
     Canvas* renderarea;
