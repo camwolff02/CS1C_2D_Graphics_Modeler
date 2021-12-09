@@ -30,20 +30,18 @@ void addLines::on_buttonBox_accepted()
 
     myStd::Line *newLine = new myStd::Line(-1, point1.x(), point1.y(), point2.x(), point2.y());
 
-    //attempt 1
-    //Qt::GlobalColor color = Qt::GlobalColor(ui->penColorBox->itemData(
-                //ui->penColorBox->currentIndex(), Qt::GlobalColor()).toInt());
-    //attempt 2
     QColor color(ui->penColorBox->currentText());
-    Qt::PenStyle style = static_cast<Qt::PenStyle>(ui->penStyleBox->currentData().toInt());
 
-    newLine->setPen(color, ui->penWidthBox->value(), Qt::SolidLine, Qt::SquareCap, Qt::BevelJoin);
-    //newLine->setPen(ui->penColorBox->currentData().value<QColor>(), ui->penWidthBox->value(),
-                    //ui->penStyleBox->currentData().value<Qt::PenStyle>(), ui->penCapStyleBox->currentData().value<Qt::PenCapStyle>(), ui->comboBox->currentData().value<Qt::PenJoinStyle>());
-    //newLine->setPen(Qt::red, 2, Qt::SolidLine, Qt::SquareCap, Qt::BevelJoin);
+    int styleIndex = ui->penCapStyleBox->currentIndex();
+    Qt::PenStyle style = renderarea->getPenStyle(styleIndex);
 
-    //set pen stuff here
-    //add our shape to our vector in parent using a new method i will create tonight
+    int capIndex = ui->penCapStyleBox->currentIndex();
+    Qt::PenCapStyle capStyle = renderarea->getPenCapStyle(capIndex);
+
+    int joinIndex = ui->penJoinStyleBox->currentIndex();
+    Qt::PenJoinStyle joinStyle = renderarea->getPenJoinStyle(joinIndex);
+
+    newLine->setPen(color, ui->penWidthBox->value(), style, capStyle, joinStyle);
 
     renderarea->addShape(newLine);
 

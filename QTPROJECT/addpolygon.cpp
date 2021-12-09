@@ -1,9 +1,10 @@
 #include "addpolygon.h"
 #include "ui_addpolygon.h"
 
-addPolygon::addPolygon(QWidget *parent) :
+addPolygon::addPolygon(QWidget *parent, Canvas *renderarea) :
     QDialog(parent),
-    ui(new Ui::addPolygon)
+    ui(new Ui::addPolygon),
+    renderarea{renderarea}
 {
     ui->setupUi(this);
 }

@@ -1,9 +1,10 @@
 #include "addrectangles.h"
 #include "ui_addrectangles.h"
 
-addRectangles::addRectangles(QWidget *parent) :
+addRectangles::addRectangles(QWidget *parent, Canvas *renderarea) :
     QDialog(parent),
-    ui(new Ui::addRectangles)
+    ui(new Ui::addRectangles),
+    renderarea{renderarea}
 {
     ui->setupUi(this);
 }

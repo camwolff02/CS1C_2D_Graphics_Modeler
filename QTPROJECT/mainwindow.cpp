@@ -60,7 +60,7 @@ void MainWindow::on_actionPolyline_triggered()
 {
     if (isAdmin)
     {
-        addPolyline polyline(this);
+        addPolyline polyline(ui->widget, ui->widget);
         polyline.setModal(true);
         polyline.setWindowTitle("Add Polyline");
         polyline.exec();
@@ -76,7 +76,7 @@ void MainWindow::on_actionPolygon_triggered()
 {
     if (isAdmin)
     {
-        addPolygon polygon(this);
+        addPolygon polygon(ui->widget, ui->widget);
         polygon.setModal(true);
         polygon.setWindowTitle("Add Polygon");
         polygon.exec();
@@ -92,7 +92,7 @@ void MainWindow::on_actionRectangle_triggered()
 {
     if (isAdmin)
     {
-        addRectangles addRect(this);
+        addRectangles addRect(ui->widget, ui->widget);
         addRect.setModal(true);
         addRect.setWindowTitle("Add Rectangle");
         addRect.exec();
@@ -109,7 +109,7 @@ void MainWindow::on_actionEllipse_triggered()
 {
     if (isAdmin)
     {
-        addElllipse addellipse(this);
+        addElllipse addellipse(ui->widget, ui->widget);
         addellipse.setModal(true);
         addellipse.setWindowTitle("Add Ellipse");
         addellipse.exec();
@@ -125,7 +125,7 @@ void MainWindow::on_actionText_triggered()
 {
     if (isAdmin)
     {
-        addTextBox textbox(this);
+        addTextBox textbox(ui->widget, ui->widget);
         textbox.setModal(true);
         textbox.setWindowTitle("Add Text Box");
         textbox.exec();

@@ -2,6 +2,7 @@
 #define ADDPOLYLINE_H
 
 #include <QDialog>
+#include "canvas.h"
 
 namespace Ui {
 class addPolyline;
@@ -12,11 +13,12 @@ class addPolyline : public QDialog
     Q_OBJECT
 
 public:
-    explicit addPolyline(QWidget *parent = nullptr);
+    explicit addPolyline(QWidget *parent = nullptr, Canvas *renderarea=nullptr);
     ~addPolyline();
 
 private:
     Ui::addPolyline *ui;
+    Canvas* renderarea;
 };
 
 #endif // ADDPOLYLINE_H

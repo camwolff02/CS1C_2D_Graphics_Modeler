@@ -3,8 +3,7 @@
 
 #include <QDialog>
 
-#include "Canvas.h"
-
+#include "canvas.h"
 namespace Ui {
 class addLines;
 }
