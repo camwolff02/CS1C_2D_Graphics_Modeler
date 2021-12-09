@@ -16,6 +16,9 @@ public:
     explicit addElllipse(QWidget *parent = nullptr, Canvas *renderarea=nullptr);
     ~addElllipse();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::addElllipse *ui;
     Canvas* renderarea;

@@ -98,7 +98,7 @@ Qt::PenCapStyle Canvas::getPenCapStyle(int index){
     return capStyle;
 }
 Qt::PenJoinStyle Canvas::getPenJoinStyle(int index){
-    Qt::PenJoinStyle pen_join_style = Qt::MiterJoin;
+    Qt::PenJoinStyle pen_join_style;
       switch(index)
       {
           case 1:
@@ -113,3 +113,8 @@ Qt::PenJoinStyle Canvas::getPenJoinStyle(int index){
       }
       return pen_join_style;
 }
+
+Qt::BrushStyle Canvas::getBrushStyle(int index){
+
+}
+
