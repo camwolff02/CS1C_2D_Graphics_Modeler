@@ -16,6 +16,9 @@ public:
     explicit addRectangles(QWidget *parent = nullptr, Canvas *renderarea=nullptr);
     ~addRectangles();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::addRectangles *ui;
     Canvas* renderarea;

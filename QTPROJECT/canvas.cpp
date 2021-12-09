@@ -115,6 +115,22 @@ Qt::PenJoinStyle Canvas::getPenJoinStyle(int index){
 }
 
 Qt::BrushStyle Canvas::getBrushStyle(int index){
-
+    Qt::BrushStyle brush_style;
+    switch(index)
+    {
+        case 1:
+            brush_style = Qt::SolidPattern;
+            break;
+        case 2:
+            brush_style = Qt::HorPattern;
+            break;
+        case 3:
+            brush_style = Qt::VerPattern;
+            break;
+        case 4:
+            brush_style = Qt::NoBrush;
+            break;
+    }
+    return brush_style;
 }
 

@@ -31,6 +31,8 @@ public:
 
   QPainter* getPainter();
 
+  Qt::BrushStyle getBrushStyle(int index);
+
   void addShape(Shape* shape);
 
   Qt::PenStyle getPenStyle(int index);

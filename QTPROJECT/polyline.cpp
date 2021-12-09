@@ -34,7 +34,8 @@ void Polyline::move(const int x, const int y){
 }
 
 
-void Polyline::addPoint(QPoint point){
+void Polyline::addPoint(const int x, const int y){
+    QPoint point(x, y);
     points.push_back(point);
 }
 
