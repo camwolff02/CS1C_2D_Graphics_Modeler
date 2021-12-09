@@ -16,6 +16,9 @@ public:
     explicit addPolygon(QWidget *parent = nullptr, Canvas *renderarea=nullptr);
     ~addPolygon();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::addPolygon *ui;
     Canvas* renderarea;

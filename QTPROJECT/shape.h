@@ -60,13 +60,13 @@ public:
   //return number of shapes created 
   static int getShapeCount() { return shapeCount; }
 
-   QPen getPen();
-   QBrush getBrush();
+  QPen getPen() const { return pen; }
+  QBrush getBrush() const { return brush; }
 
-   int getX();
-   int getY();
+  int getX() const { return x; } ;
+  int getY() const { return y;} ;
 
-   ShapeType getShapeType();
+  ShapeType getShapeType() const { return shapeID; };
 
   //destructor
   virtual ~Shape();

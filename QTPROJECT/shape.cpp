@@ -45,25 +45,6 @@ QPainter* Shape::getPainter(){
     return qpainterPTR;
 }
 
-QPen Shape::getPen(){
-    return this->pen;
-}
-
-QBrush Shape::getBrush(){
-    return this->brush;
-}
-
-int Shape::getX(){
-    return x;
-}
-
-int Shape::getY(){
-    return y;
-}
-
-ShapeType Shape::getShapeType(){
-    return shapeID;
-}
 
 //destructor
 Shape::~Shape(){
