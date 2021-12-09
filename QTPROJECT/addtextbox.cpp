@@ -29,14 +29,14 @@ void addTextBox::on_buttonBox_accepted()
     //myStd::Text *newText = new myStd::Text(ui->lineEdit->text(), font, color, -1);
 
     QFont font("times", 24);
-    myStd::Text *newText = new myStd::Text("hello world", font, Qt::red);
+    myStd::Text *newText = new myStd::Text("hello world", font, Qt::red, -1);
 
     newText->setX(x);
     newText->setY(y);
 
-    renderarea->addShape(newText);
+   renderarea->addShape(newText);
 
-    renderarea->update();
+   renderarea->update();
 
 
 
