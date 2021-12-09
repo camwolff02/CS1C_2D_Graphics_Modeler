@@ -28,6 +28,8 @@ void MainWindow::on_actionLogout_triggered()
     // set the admin to false, because we don't yet know what the next login will be
     isAdmin = false;
 
+    Shape::resetShapeCount();
+
     close();    // will close the mainpage and reopen the login screen
 
 //    login loginReopen;
