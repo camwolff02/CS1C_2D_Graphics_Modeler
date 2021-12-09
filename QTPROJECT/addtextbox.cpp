@@ -23,10 +23,13 @@ void addTextBox::on_buttonBox_accepted()
 
     QColor color = ui->comboBox->currentText();
 
-    QFont font(ui->comboBox_3->currentText(), ui->spinBox->value(), 1, false);
+    //QFont font(ui->comboBox_3->currentText(), ui->spinBox->value(), 1, false);
 
     //not done
-    myStd::Text *newText = new myStd::Text(ui->lineEdit->text(), font, color, -1);
+    //myStd::Text *newText = new myStd::Text(ui->lineEdit->text(), font, color, -1);
+
+    QFont font("times", 24);
+    myStd::Text *newText = new myStd::Text("hello world", font, Qt::red);
 
     newText->setX(x);
     newText->setY(y);
