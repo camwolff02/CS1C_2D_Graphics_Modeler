@@ -17,7 +17,9 @@ public:
     ~addPolyline();
 
 private slots:
-    void on_buttonBox_accepted();
+    void on_pushButton_pressed();
+
+    void on_pushButton_2_pressed();
 
 private:
     Ui::addPolyline *ui;

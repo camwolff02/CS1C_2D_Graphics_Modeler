@@ -16,7 +16,7 @@ addPolyline::~addPolyline()
     delete ui;
 }
 
-void addPolyline::on_buttonBox_accepted()
+void addPolyline::on_pushButton_pressed()
 {
     myStd::Polyline *newPolyLine = new myStd::Polyline(-1);
     newPolyLine->addPoint(ui->x_1->text().toInt(), ui->y_1->text().toInt());
@@ -43,5 +43,13 @@ void addPolyline::on_buttonBox_accepted()
     renderarea->addShape(newPolyLine);
 
     renderarea->update();
+
+    close();
+
+}
+
+void addPolyline::on_pushButton_2_pressed()
+{
+    close();
 }
 

@@ -426,21 +426,31 @@
     </layout>
    </widget>
   </widget>
-  <widget class="QDialogButtonBox" name="buttonBox">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>380</y>
-     <width>341</width>
-     <height>32</height>
+     <x>330</x>
+     <y>390</y>
+     <width>158</width>
+     <height>25</height>
     </rect>
    </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_8">
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>OK</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Cancel</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
