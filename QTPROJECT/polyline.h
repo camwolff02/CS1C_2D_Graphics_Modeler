@@ -22,6 +22,7 @@ public:
 
 private:
     std::vector<QPoint> points;
+
 };
 
 }
