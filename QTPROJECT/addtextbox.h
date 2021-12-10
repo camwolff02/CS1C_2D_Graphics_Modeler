@@ -2,6 +2,7 @@
 #define ADDTEXTBOX_H
 
 #include <QDialog>
+#include "canvas.h"
 
 namespace Ui {
 class addTextBox;
@@ -12,11 +13,15 @@ class addTextBox : public QDialog
     Q_OBJECT
 
 public:
-    explicit addTextBox(QWidget *parent = nullptr);
+    explicit addTextBox(QWidget *parent = nullptr, Canvas *renderarea=nullptr);
     ~addTextBox();
+
+private slots:
+    void on_buttonBox_accepted();
 
 private:
     Ui::addTextBox *ui;
+    Canvas* renderarea;
 };
 
 #endif // ADDTEXTBOX_H

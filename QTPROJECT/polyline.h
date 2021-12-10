@@ -16,12 +16,13 @@ public:
     virtual double getPerimeter() override;
     virtual double getArea() override;
 
-    void addPoint(QPoint point);
+    void addPoint(const int x, const int y);
 
     std::vector<QPoint> getPoints();
 
 private:
     std::vector<QPoint> points;
+
 };
 
 }

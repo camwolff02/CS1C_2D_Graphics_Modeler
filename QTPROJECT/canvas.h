@@ -31,7 +31,13 @@ public:
 
   QPainter* getPainter();
 
+  Qt::BrushStyle getBrushStyle(int index);
+
   void addShape(Shape* shape);
+
+  Qt::PenStyle getPenStyle(int index);
+  Qt::PenCapStyle getPenCapStyle(int index);
+  Qt::PenJoinStyle getPenJoinStyle(int index);
 
 private:
 myStd::vector<Shape*> shapes;

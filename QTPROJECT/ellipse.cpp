@@ -6,11 +6,12 @@
 namespace myStd{
 
 void Ellipse::draw(QPainter* painter) {
-    //shape.moveTo(x, y);
+    shape.moveTo(getX(), getY());
 
     painter->setPen(this->getPen());
     painter->setBrush(this->getBrush());
     painter->drawEllipse(shape);
+    painter->drawText(QPoint(getX(), getY()), QString::number(getId()));
 
 }
 

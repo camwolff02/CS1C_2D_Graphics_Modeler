@@ -23,7 +23,9 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    polygon.cpp \
     polyline.cpp \
+    rectangle.cpp \
     shape.cpp \
     text.cpp
     canvas.cpp
@@ -44,8 +46,10 @@ HEADERS += \
     login.h \
     mainwindow.h \
     parser.h \
+    polygon.h \
     polyline.h \
     read_data.h \
+    rectangle.h \
     shape.h \
     shapes.h \
     text.h

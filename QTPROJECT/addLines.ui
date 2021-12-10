@@ -60,7 +60,7 @@
       <x>10</x>
       <y>20</y>
       <width>354</width>
-      <height>52</height>
+      <height>58</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -118,8 +118,8 @@
      <rect>
       <x>10</x>
       <y>20</y>
-      <width>123</width>
-      <height>22</height>
+      <width>170</width>
+      <height>32</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="color">
@@ -191,8 +191,8 @@
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>139</width>
-      <height>22</height>
+      <width>213</width>
+      <height>32</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="style">
@@ -249,8 +249,8 @@
      <rect>
       <x>10</x>
       <y>110</y>
-      <width>154</width>
-      <height>22</height>
+      <width>209</width>
+      <height>32</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="capstyle">
@@ -292,8 +292,8 @@
      <rect>
       <x>10</x>
       <y>140</y>
-      <width>151</width>
-      <height>22</height>
+      <width>207</width>
+      <height>32</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -305,7 +305,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="penJoinStyleBox">
        <item>
         <property name="text">
          <string>---</string>
@@ -330,12 +330,12 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>50</y>
-      <width>99</width>
+      <width>114</width>
       <height>24</height>
      </rect>
     </property>

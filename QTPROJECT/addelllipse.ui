@@ -154,7 +154,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_3">
+      <widget class="QComboBox" name="brushColorBox">
        <item>
         <property name="text">
          <string>---</string>
@@ -227,7 +227,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_4">
+      <widget class="QComboBox" name="brushStyleBox">
        <item>
         <property name="text">
          <string>---</string>
@@ -445,7 +445,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="penCapStyleBox">
        <item>
         <property name="text">
          <string>---</string>
@@ -488,7 +488,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_2">
+      <widget class="QComboBox" name="penJoinStyleBox">
        <item>
         <property name="text">
          <string>---</string>
