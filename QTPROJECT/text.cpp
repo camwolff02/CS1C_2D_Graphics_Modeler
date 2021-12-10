@@ -4,6 +4,8 @@ namespace myStd {
 
 Text::Text(QString msg, QFont font, QColor color, int id) : Shape{ShapeType::Text, id} , text{msg} {
     this->font = font;
+
+    this->getBrush().setColor(color);
     if (id < 0){
         setId(getShapeCount());
     }
@@ -14,6 +16,7 @@ void Text::draw(QPainter* painter) {
     painter->setPen(this->getPen());
     painter->setBrush(this->getBrush());
     painter->setFont(this->font);
+
 
     painter->drawText(this->getX(), this->getY(), text);
     painter->drawText(QPoint(getX() - 10, getY() - 10), QString::number(getId()));
