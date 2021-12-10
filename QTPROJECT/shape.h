@@ -9,19 +9,19 @@
 */
 
 //! Enum representing the ShapeType
-/*
+/*!
   Values: Line (1), PolyLine, Polygon, Rectangle, Square, Ellipse, Circle, Text
 */
 enum ShapeType 
 {
-  Line=1,    /*!< Enum value Line. */
-  Polyline,  /*!< Enum value Polyline. */
-  Polygon,   /*!< Enum value Polygon. */
-  Rectangle, /*!< Enum value Rectangle. */
-  Square,    /*!< Enum value Square. */
-  Ellipse,   /*!< Enum value Ellipse. */
-  Circle,    /*!< Enum value Circle. */
-  Text       /*!< Enum value Text. */
+  Line = 1,  /*!< Enum value Line (1) */
+  Polyline,  /*!< Enum value Polyline (2) */
+  Polygon,   /*!< Enum value Polygon (3) */
+  Rectangle, /*!< Enum value Rectangle (4) */
+  Square,    /*!< Enum value Square (5) */
+  Ellipse,   /*!< Enum value Ellipse (6) */
+  Circle,    /*!< Enum value Circle (7) */
+  Text       /*!< Enum value Text (8) */
 };
 
 //! Shape class
@@ -32,7 +32,7 @@ enum ShapeType
 class Shape 
 {
 public:
-  //! Alternate constructor.
+  //! Alternate constructor
   /*!
     \param type as a ShapeType enum (shape type)
     \param id as an integer argument (shape ID)
@@ -181,17 +181,17 @@ public:
   ShapeType getShapeType() const { return shapeID; }
 
   //! Static method to reset the static shape count
-  static void resetShapeCount(){shapeCount = 0;}
+  static void resetShapeCount() { shapeCount = 0; }
 
 private:
-  ShapeType shapeID;     //shape type id
-  QPen pen;              // shape's pen
-  QBrush brush;          // shape's brush
-  int x;                 // shape's top-left x-coordinate
-  int y;                 // shape's top-left y-coordinate
-  int id;                // number ID (not shape type)
-  static int shapeCount; // static member - how many shapes have been 
-                         // instantiated
+  ShapeType shapeID;     /*!< shape type id */
+  QPen pen;              /*!< shape's pen */
+  QBrush brush;          /*!< shape's brush */
+  int x;                 /*!< shape's top-left x-coordinate */
+  int y;                 /*!< shape's top-left y-coordinate */
+  int id;                /*!< number ID (not shape type) */
+  static int shapeCount; /*!< static member - how many shapes have been 
+                              instantiated */
 };
 
 
