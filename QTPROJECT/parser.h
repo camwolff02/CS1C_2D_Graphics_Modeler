@@ -114,7 +114,7 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
         foreach (QString str, in.readLine().remove(0, 17).split(", ")) dims.append(str.toInt());
 
         // now handling rest of param
-        if (type == "Text") {
+        if (type == "Text") {  //!NOT WORKING
             QString msg = in.readLine().remove(0, 12);
             QColor color = in.readLine().remove(0, 11);
             QString alignment = in.readLine().remove(0, 15);
@@ -136,7 +136,7 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
                 QColor brushColor = in.readLine().remove(0, 12);
                 QString brushStyle = in.readLine().remove(0, 12);
 
-                if (type == "Polygon") {
+                if (type == "Polygon") {  //!NOT WORKING
                     shape = new myStd::Polygon(id);
                     for (int i = 0; i < dims.length(); i+=2)
                         ((myStd::Polygon*)shape)->addPoint(dims.at(i), dims.at(i));
@@ -147,11 +147,11 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
                 else if (type == "Square") {
                     shape = new myStd::Rectangle(id, dims.at(0), dims.at(1), dims.at(2), dims.at(2));
                 }
-                else if (type == "Ellipse") {
+                else if (type == "Ellipse") {  //!NOT WORKING
                     shape = new myStd::Ellipse(id, dims.at(2), dims.at(3));
                     shape->move(dims.at(0), dims.at(1));
                 }
-                else {  // type == "Circle")
+                else {  //! type == "Circle" NOT WORKING
                     shape = new myStd::Ellipse(id, dims.at(2), dims.at(2));
                     shape->move(dims.at(0), dims.at(1));
                 }

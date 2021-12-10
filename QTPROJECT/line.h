@@ -29,10 +29,10 @@ public:
 
     Line& operator=(Line&&) = default;
 
-    virtual void draw(QPainter* painter) override;
-    virtual void move(const int x, const int y) override;
-    virtual double getPerimeter() override;
-    virtual double getArea() override;
+    void draw(QPainter* painter) override;
+    void move(const int x, const int y) override;
+    double getPerimeter() override;
+    double getArea() override;
 
     double getLength() const;
     QPoint getBegin() const;

@@ -1,0 +1,100 @@
+Project Requirements:
+
+2. "contact us" method with name and logo
+contactus.h
+contactus.cpp
+
+
+3. Display all graphics in rendering window
+canvas.h
+canvas.cpp, line 20
+
+4. Read from a shape file that keeps track of all shapes 
+parser.h, line 81
+
+canvas.h
+canvas.cpp, line 10
+
+
+5. Ability to move shapes
+shape.h
+shape.cpp, line 39 (implemented in derrived classes)
+
+ellipse.h
+line.h
+polygon.h
+polyline.h
+rectangle.h
+text.h
+
+ellipse.cpp, line 32
+line.cpp, line 14
+polygon.cpp, line 12
+polyline.cpp, line 34
+rectangle.cpp, line 11
+text.cpp, line 34
+
+
+6. Ability to add and remove shapes
+addLines.h
+addLines.cpp, line 23
+
+addEllipse.h
+addEllipse.cpp, line 19
+
+addPolygon.h
+addPolygon.cpp, line 19
+
+addPolyline.h
+addPolyline.cpp, line 19
+
+addRectangles.h
+addRectangles.cpp, line 19
+
+addTextbox.h
+addTextbox.cpp, line 20
+
+
+10. Save changes between executions
+serializer.h
+
+
+General Requirements:
+
+1. inheritance 
+(Base)
+shape.h
+shape.cpp
+
+(Derrived)
+ellipse.h
+ellipse.cpp
+line.h
+line.cpp
+polygon.h
+polyline.cpp
+polyline.h
+polyline.cpp
+rectangle.h
+rectangle.cpp
+text.h
+text.cpp
+
+2. aggregation
+TODO
+
+3. exception handlers
+TODO 
+
+4. virtual function
+shape.h, line 38
+
+5. at least two overloaded operators
+shape.h
+shape.cpp lines 3, 8
+
+6. At least one templated class
+Vector.h
+
+7. At least one pointer with copy constructor
+Vector.h, line 52
