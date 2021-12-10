@@ -41,11 +41,6 @@ void Shape::setY(int y){
     this->y = y;
 }
 
-QPainter* Shape::getPainter(){
-    return qpainterPTR;
-}
-
-
 //destructor
 Shape::~Shape(){
     --shapeCount;
