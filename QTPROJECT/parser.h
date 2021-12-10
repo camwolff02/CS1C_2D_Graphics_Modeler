@@ -15,6 +15,29 @@
 */
 
 // helper functions
+Qt::BrushStyle getBrushStyle(QString style)
+{
+    if (style == "SolidPattern") return Qt::SolidPattern;
+    else if (style == "Dense1Pattern") return Qt::Dense1Pattern;
+    else if (style == "Dense2Pattern") return Qt::Dense2Pattern;
+    else if (style == "Dense3Pattern") return Qt::Dense3Pattern;
+    else if (style == "Dense4Pattern") return Qt::Dense4Pattern;
+    else if (style == "Dense5Pattern") return Qt::Dense5Pattern;
+    else if (style == "Dense6Pattern") return Qt::Dense6Pattern;
+    else if (style == "Dense7Pattern") return Qt::Dense7Pattern;
+    else if (style == "HorPattern") return Qt::HorPattern;
+    else if (style == "VerPattern") return Qt::VerPattern;
+    else if (style == "CrossPattern") return Qt::CrossPattern;
+    else if (style == "BDiagPattern") return Qt::BDiagPattern;
+    else if (style == "FDiagPattern") return Qt::FDiagPattern;
+    else if (style == "DiagCrossPattern") return Qt::DiagCrossPattern;
+    else if (style == "LinearGradientPattern") return Qt::LinearGradientPattern;
+    else if (style == "ConicalGradientPattern") return Qt::ConicalGradientPattern;
+    else if (style == "RadialGradientPattern") return Qt::RadialGradientPattern;
+    else if (style == "TexturePattern") return Qt::TexturePattern;
+    else return Qt::NoBrush;
+}
+
 Qt::PenCapStyle getPenCapStyle(QString style)
 {
     if (style == "SquareCap") return Qt::SquareCap;
@@ -36,6 +59,22 @@ Qt::PenJoinStyle getPenJoinStyle(QString style)
     if (style == "MiterJoin") return Qt::MiterJoin;
     else if (style == "BevelJoin") return Qt::BevelJoin;
     else return Qt::RoundJoin;
+}
+
+QFont makeFont(QString fontFamily, int pointSize, QString fontWeight, QString fontStyle)
+{
+    QFont font {fontFamily, pointSize};
+
+    if (fontWeight == "Thin") font.setWeight(QFont::Thin);
+    else if (fontWeight == "Light") font.setWeight(QFont::Light);
+    else if (fontWeight == "Bold") font.setWeight(QFont::Bold);
+    else font.setWeight(QFont::Normal);
+
+    if (fontStyle == "StyleItalic") font.setStyle(QFont::StyleItalic);
+    else if (fontStyle == "StyleOblique") font.setStyle(QFont::StyleOblique);
+    else font.setStyle(QFont::StyleNormal);
+
+    return font;
 }
 
 // parser function
@@ -65,7 +104,7 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
     QTextStream in {&file};
     while (!in.atEnd()) {  // while we are not at file end
         // create new shape to add to vector
-        Shape* shape;
+        Shape* shape = nullptr;
         in.readLine();
 
         // first 3 param are same for all shapes
@@ -83,9 +122,8 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
             QString fontFamily = in.readLine().remove(0, 16);
             QString fontStyle = in.readLine().remove(0, 15);
             QString fontWeight = in.readLine().remove(0, 16);
-            QFont font {fontFamily, pointSize};
 
-            //shape = new myStd::Text(msg, font, color, id);
+            shape = new myStd::Text(msg, makeFont(fontFamily, pointSize, fontWeight, fontStyle), color, id);
         }
         else {
             QColor color = in.readLine().remove(0, 10);
@@ -95,21 +133,45 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
             Qt::PenJoinStyle joinStyle = getPenJoinStyle(in.readLine().remove(0, 14));
 
             if (type != "Line" && type != "Polyline") {
-                QString brushColor = in.readLine().remove(0, 12);
+                QColor brushColor = in.readLine().remove(0, 12);
                 QString brushStyle = in.readLine().remove(0, 12);
+
+                if (type == "Polygon") {
+                    shape = new myStd::Polygon(id);
+                    for (int i = 0; i < dims.length(); i+=2)
+                        ((myStd::Polygon*)shape)->addPoint(dims.at(i), dims.at(i));
+                }
+                else if (type == "Rectangle") {
+                    shape = new myStd::Rectangle(id, dims.at(0), dims.at(1), dims.at(2), dims.at(3));
+                }
+                else if (type == "Square") {
+                    shape = new myStd::Rectangle(id, dims.at(0), dims.at(1), dims.at(2), dims.at(2));
+                }
+                else if (type == "Ellipse") {
+                    shape = new myStd::Ellipse(id, dims.at(2), dims.at(3));
+                    shape->move(dims.at(0), dims.at(1));
+                }
+                else {  // type == "Circle")
+                    shape = new myStd::Ellipse(id, dims.at(2), dims.at(2));
+                    shape->move(dims.at(0), dims.at(1));
+                }
+
+                shape->setBrush(brushColor, getBrushStyle(brushStyle));
             }
             else {
                 if (type == "Line") {
                     shape = new myStd::Line(id, dims.at(0), dims.at(1), dims.at(2), dims.at(3));
-                    shape->setPen(color, width, style, capStyle, joinStyle);
                 }
                 else {  // type == "Polyline"
-
+                    shape = new myStd::Polyline(id);
+                    for (int i = 0; i < dims.length(); i+=2)
+                        ((myStd::Polyline*)shape)->addPoint(dims.at(i), dims.at(i));
                 }
             }
+            shape->setPen(color, width, style, capStyle, joinStyle);
         }
 
-        vect.push_back(shape);
+        if (shape != nullptr) vect.push_back(shape);
     }
     qInfo("\nvector write complete\n");
     file.close();
