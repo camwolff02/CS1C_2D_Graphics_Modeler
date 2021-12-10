@@ -68,6 +68,8 @@ public:
 
   ShapeType getShapeType() const { return shapeID; };
 
+  static void resetShapeCount(){shapeCount = 0;}
+
   //destructor
   virtual ~Shape();
 

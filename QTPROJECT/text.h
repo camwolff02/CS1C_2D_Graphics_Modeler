@@ -21,6 +21,9 @@ public:
 
 private:
     QString text;
+    int height;
+    int width;
+    QFont font;
 };
 
 
