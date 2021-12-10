@@ -43,7 +43,7 @@ public:
   /*!
     Empty
   */
-  ~Canvas();
+  //~Canvas();
 
   //! Returns painter
   /*!
