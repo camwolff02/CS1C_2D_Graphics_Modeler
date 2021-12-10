@@ -45,6 +45,7 @@ HEADERS += \
     line.h \
     login.h \
     mainwindow.h \
+    parser.h \
     polygon.h \
     polyline.h \
     read_data.h \
@@ -74,3 +75,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     icons.qrc
+
+DISTFILES += \
+    shapes.txt

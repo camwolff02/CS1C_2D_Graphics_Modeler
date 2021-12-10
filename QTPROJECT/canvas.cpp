@@ -2,23 +2,19 @@
 #include "ellipse.h"
 #include "text.h"
 #include "polyline.h"
-#include "read_data.h"
+#include "parser.h"
 #include <QDebug>
 
 Canvas::Canvas(QWidget *parent)
        : QWidget(parent)
-       , shapes{ read_data("shapes.txt")}
+       , shapes{ parse()}
 {
     setFixedSize(1000, 500);
-
-
     //creating some test shapes to demonstrate:
     //myStd::Ellipse firstShape(&painter, 0, 200, 100);
     //shapes.push_back(&firstShape);
 
     // this->paintEvent();
-
-
 }
 
 void Canvas::paintEvent(QPaintEvent *event) {
