@@ -2,8 +2,13 @@
 
 namespace myStd {
 
-Text::Text(QString msg, QFont font, QColor color, int id) : Shape{ShapeType::Text, id} , text{msg} {
+Text::Text(QString msg, QFont font, QColor color, int height, int width, int x, int y, int flag, int id) : Shape{ShapeType::Text, id} , text{msg} {
     this->font = font;
+    this->height = height;
+    this->width = width;
+    this->setX(x);
+    this->setY(y);
+    this->flag = flag;
 
     this->getBrush().setColor(color);
     if (id < 0){
@@ -17,9 +22,14 @@ void Text::draw(QPainter* painter) {
     painter->setBrush(this->getBrush());
     painter->setFont(this->font);
 
+    this->getBrush().setColor(Qt::red);
+    this->getPen().setColor(Qt::red);
 
-    painter->drawText(this->getX(), this->getY(), text);
-    painter->drawText(QPoint(getX() - 10, getY() - 10), QString::number(getId()));
+
+    //painter->drawText(this->getX(), this->getY(), text);
+    //painter->drawText(QPoint(getX() - 10, getY() - 10), QString::number(getId()));
+    painter->drawText(getX(), getY(), this->width, this->height, flag, text);
+
 
 }
 
