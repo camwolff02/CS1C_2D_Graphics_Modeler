@@ -114,7 +114,7 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
         foreach (QString str, in.readLine().remove(0, 17).split(", ")) dims.append(str.toInt());
 
         // now handling rest of param
-        if (type == "Text") {  //!NOT WORKING
+        if (type == "Text") {
             QString msg = in.readLine().remove(0, 12);
             QColor color = in.readLine().remove(0, 11);
             QString alignment = in.readLine().remove(0, 15);
@@ -123,7 +123,8 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
             QString fontStyle = in.readLine().remove(0, 15);
             QString fontWeight = in.readLine().remove(0, 16);
 
-            shape = new myStd::Text(msg, makeFont(fontFamily, pointSize, fontWeight, fontStyle), color, id);
+            shape = new myStd::Text(msg, makeFont(fontFamily, pointSize, fontWeight, fontStyle),
+                                    color, dims.at(0), dims.at(1), dims.at(2), dims.at(3), id);
         }
         else {
             QColor color = in.readLine().remove(0, 10);
