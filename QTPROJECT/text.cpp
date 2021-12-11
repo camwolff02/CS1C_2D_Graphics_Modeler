@@ -22,15 +22,8 @@ void Text::draw(QPainter* painter) {
     painter->setBrush(this->getBrush());
     painter->setFont(this->font);
 
-    this->getBrush().setColor(Qt::red);
-    this->getPen().setColor(Qt::red);
-
-
-    //painter->drawText(this->getX(), this->getY(), text);
-    //painter->drawText(QPoint(getX() - 10, getY() - 10), QString::number(getId()));
+    painter->drawText(QPoint(getX() - 10, getY() - 10), QString::number(getId()));
     painter->drawText(getX(), getY(), this->width, this->height, flag, text);
-
-
 }
 
 double Text::getPerimeter(){

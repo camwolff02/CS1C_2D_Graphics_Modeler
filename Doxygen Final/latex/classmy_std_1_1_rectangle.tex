@@ -1,0 +1,181 @@
+\hypertarget{classmy_std_1_1_rectangle}{}\doxysection{my\+Std\+::Rectangle Class Reference}
+\label{classmy_std_1_1_rectangle}\index{myStd::Rectangle@{myStd::Rectangle}}
+
+
+\mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}} class.  
+
+
+
+
+{\ttfamily \#include $<$rectangle.\+h$>$}
+
+Inheritance diagram for my\+Std\+::Rectangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmy_std_1_1_rectangle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_std_1_1_rectangle_a461c65c61a67d76de00bf5df9b0cdf97}{Rectangle}} (int id=-\/1, int x=0, int y=0, int width=0, int height=0)
+\begin{DoxyCompactList}\small\item\em Default/ alternate constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_std_1_1_rectangle_ab3ef1dbc3b4b17f4f7c2f15714790fcc}{Rectangle}} (\mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_std_1_1_rectangle_af6d5aa48071e03597bb6980a78d1b655}{$\sim$\+Rectangle}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}} \& \mbox{\hyperlink{classmy_std_1_1_rectangle_a5c679188748fbfcc5efb73f13a150962}{operator=}} (\mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_rectangle_ac0a4b33ec230a123f51ffecfbfbe92f8}{draw}} (QPainter $\ast$painter) override
+\begin{DoxyCompactList}\small\item\em Virtual method to draw the rectangle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_rectangle_a5fcc8b41f22245c34c8f79d81e1bb8a8}{move}} (const int x, const int y) override
+\begin{DoxyCompactList}\small\item\em Virtual method to move the rectangle. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_rectangle_ae5d51ea2917ee94f65a26d1cab7922bd}{get\+Perimeter}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to return the rectangle\textquotesingle{}s perimeter. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_rectangle_a150b545544ebb2fb6e9b3b25ffcf4751}{get\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to return the rectangle\textquotesingle{}s area. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}} class. 
+
+This class represents a rectangle that inherits from the \mbox{\hyperlink{class_shape}{Shape}} abstract base class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_rectangle_a461c65c61a67d76de00bf5df9b0cdf97}\label{classmy_std_1_1_rectangle_a461c65c61a67d76de00bf5df9b0cdf97}} 
+\index{myStd::Rectangle@{myStd::Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!myStd::Rectangle@{myStd::Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily my\+Std\+::\+Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{int}]{id = {\ttfamily -\/1},  }\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0},  }\item[{int}]{width = {\ttfamily 0},  }\item[{int}]{height = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default/ alternate constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & as an integer argument (shape ID) \\
+\hline
+{\em x} & as an integer argument (top-\/left x coord) \\
+\hline
+{\em y} & as an integer argument (top-\/left y coord) \\
+\hline
+{\em width} & as an integer argument (rectangle width) \\
+\hline
+{\em height} & as an integer argument (rectangle height) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmy_std_1_1_rectangle_ab3ef1dbc3b4b17f4f7c2f15714790fcc}\label{classmy_std_1_1_rectangle_ab3ef1dbc3b4b17f4f7c2f15714790fcc}} 
+\index{myStd::Rectangle@{myStd::Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!myStd::Rectangle@{myStd::Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily my\+Std\+::\+Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move constructor. 
+
+Default \mbox{\Hypertarget{classmy_std_1_1_rectangle_af6d5aa48071e03597bb6980a78d1b655}\label{classmy_std_1_1_rectangle_af6d5aa48071e03597bb6980a78d1b655}} 
+\index{myStd::Rectangle@{myStd::Rectangle}!````~Rectangle@{$\sim$Rectangle}}
+\index{````~Rectangle@{$\sim$Rectangle}!myStd::Rectangle@{myStd::Rectangle}}
+\doxysubsubsection{\texorpdfstring{$\sim$Rectangle()}{~Rectangle()}}
+{\footnotesize\ttfamily my\+Std\+::\+Rectangle\+::$\sim$\+Rectangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+Empty 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_rectangle_ac0a4b33ec230a123f51ffecfbfbe92f8}\label{classmy_std_1_1_rectangle_ac0a4b33ec230a123f51ffecfbfbe92f8}} 
+\index{myStd::Rectangle@{myStd::Rectangle}!draw@{draw}}
+\index{draw@{draw}!myStd::Rectangle@{myStd::Rectangle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Rectangle\+::draw (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to draw the rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & as a pointer to a QPainter object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_a6b4fa6a322560ac657dc66774ae8e531}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_rectangle_a150b545544ebb2fb6e9b3b25ffcf4751}\label{classmy_std_1_1_rectangle_a150b545544ebb2fb6e9b3b25ffcf4751}} 
+\index{myStd::Rectangle@{myStd::Rectangle}!getArea@{getArea}}
+\index{getArea@{getArea}!myStd::Rectangle@{myStd::Rectangle}}
+\doxysubsubsection{\texorpdfstring{getArea()}{getArea()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Rectangle\+::get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to return the rectangle\textquotesingle{}s area. 
+
+\begin{DoxyReturn}{Returns}
+the rectangle\textquotesingle{}s area 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_acec2178598665e96b85f1ac6a13a47b9}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_rectangle_ae5d51ea2917ee94f65a26d1cab7922bd}\label{classmy_std_1_1_rectangle_ae5d51ea2917ee94f65a26d1cab7922bd}} 
+\index{myStd::Rectangle@{myStd::Rectangle}!getPerimeter@{getPerimeter}}
+\index{getPerimeter@{getPerimeter}!myStd::Rectangle@{myStd::Rectangle}}
+\doxysubsubsection{\texorpdfstring{getPerimeter()}{getPerimeter()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Rectangle\+::get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to return the rectangle\textquotesingle{}s perimeter. 
+
+\begin{DoxyReturn}{Returns}
+the rectangle\textquotesingle{}s perimeter 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a3918812ff3a143dabbeba2f650fb5e7c}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_rectangle_a5fcc8b41f22245c34c8f79d81e1bb8a8}\label{classmy_std_1_1_rectangle_a5fcc8b41f22245c34c8f79d81e1bb8a8}} 
+\index{myStd::Rectangle@{myStd::Rectangle}!move@{move}}
+\index{move@{move}!myStd::Rectangle@{myStd::Rectangle}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Rectangle\+::move (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to move the rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & as a constant integer (x coord for move) \\
+\hline
+{\em y} & as a constant integer (y coord for move) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_ad73469e5a2cb91a76b874af72dd59379}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_rectangle_a5c679188748fbfcc5efb73f13a150962}\label{classmy_std_1_1_rectangle_a5c679188748fbfcc5efb73f13a150962}} 
+\index{myStd::Rectangle@{myStd::Rectangle}!operator=@{operator=}}
+\index{operator=@{operator=}!myStd::Rectangle@{myStd::Rectangle}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}} \& my\+Std\+::\+Rectangle\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move assignment. 
+
+Default 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+QTPROJECT/rectangle.\+h\item 
+QTPROJECT/rectangle.\+cpp\end{DoxyCompactItemize}

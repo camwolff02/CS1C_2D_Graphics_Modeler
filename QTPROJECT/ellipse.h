@@ -51,7 +51,7 @@ public:
 
 
 private:
-  QRect shape;
+  QRect shape; /*!< QRect to represent ellipse */
 
 };
 

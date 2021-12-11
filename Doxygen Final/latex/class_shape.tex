@@ -1,0 +1,427 @@
+\hypertarget{class_shape}{}\doxysection{Shape Class Reference}
+\label{class_shape}\index{Shape@{Shape}}
+
+
+\mbox{\hyperlink{class_shape}{Shape}} class.  
+
+
+
+
+{\ttfamily \#include $<$shape.\+h$>$}
+
+Inheritance diagram for Shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.609195cm]{class_shape}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_a2be57e345217494a0cdd999ea9e77da4}{Shape}} (Shape\+Type type, int id)
+\begin{DoxyCompactList}\small\item\em Alternate constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shape_a5a7ba966cf5efb6745a9b15dc63afd7f}{Shape}} (const \mbox{\hyperlink{class_shape}{Shape}} \&rhs)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shape}{Shape}} \& \mbox{\hyperlink{class_shape_aa710f04738d5faaa91f6cd985800605a}{operator=}} (const \mbox{\hyperlink{class_shape}{Shape}} \&rhs)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_shape_a935afc9e576015f967d90de56977167d}{$\sim$\+Shape}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_a152eec1a35b057d49a5f7334c0dc24ea}{operator==}} (const \mbox{\hyperlink{class_shape}{Shape}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Equality operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_a9b3f8a6a2a4d64e1db3bbc6ae2b373ec}{operator$<$}} (const \mbox{\hyperlink{class_shape}{Shape}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Less than operator. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shape_a6b4fa6a322560ac657dc66774ae8e531}{draw}} (QPainter $\ast$painter)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to draw the shape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shape_ad73469e5a2cb91a76b874af72dd59379}{move}} (const int x, const int y)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to move the shape. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_shape_a3918812ff3a143dabbeba2f650fb5e7c}{get\+Perimeter}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to return the shape\textquotesingle{}s perimeter. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_shape_acec2178598665e96b85f1ac6a13a47b9}{get\+Area}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method to return the shape\textquotesingle{}s area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a05fc5c8506a62f2eb43fbf29818b4258}{set\+Shape\+Type}} (Shape\+Type type)
+\begin{DoxyCompactList}\small\item\em Method to set the shape\textquotesingle{}s type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a028e8f42ef5aaa8c3cbf004ab9076f2f}{set\+Pen}} (QColor color, int size, Qt\+::\+Pen\+Style style, Qt\+::\+Pen\+Cap\+Style cap\+Style, Qt\+::\+Pen\+Join\+Style join\+Style)
+\begin{DoxyCompactList}\small\item\em Method to set the shape\textquotesingle{}s pen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_ac5aa170455b074fec2079b17840ddba7}{set\+Brush}} (QColor color, Qt\+::\+Brush\+Style brush\+Style)
+\begin{DoxyCompactList}\small\item\em Method to set the shape\textquotesingle{}s brush. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a96fcff5389f4e35805e72d075464eeaa}{set\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Method to set the shape\textquotesingle{}s id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a2d8fd6861bf7906e0152a699ce6054c8}{setX}} (int x)
+\begin{DoxyCompactList}\small\item\em Method to set the shape\textquotesingle{}s top-\/left x-\/coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_aa2b8845b186bf95781ca5d5e22316343}{setY}} (int y)
+\begin{DoxyCompactList}\small\item\em Method to set the shape\textquotesingle{}s top-\/left y-\/coordinate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_shape_a9943196f6a4fb3c9da2a8904c1af9a18}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Method to return the shape\textquotesingle{}s id. \end{DoxyCompactList}\item 
+QPen \mbox{\hyperlink{class_shape_a16aad057da1ce3475f666cbdd27da042}{get\+Pen}} () const
+\begin{DoxyCompactList}\small\item\em Method to return the shape\textquotesingle{}s pen. \end{DoxyCompactList}\item 
+QBrush \mbox{\hyperlink{class_shape_acbb9f9354579fdaad31853d714653e0d}{get\+Brush}} () const
+\begin{DoxyCompactList}\small\item\em Method to return the shape\textquotesingle{}s brush. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_shape_af604de36aa616c585bb30dedf5e5c68b}{getX}} () const
+\begin{DoxyCompactList}\small\item\em Method to return the shape\textquotesingle{}s top-\/left x-\/coordinate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_shape_a2e87ea4122381ffb83474f4b69247ded}{getY}} () const
+\begin{DoxyCompactList}\small\item\em Method to return the shape\textquotesingle{}s top-\/left y-\/coordinate. \end{DoxyCompactList}\item 
+Shape\+Type \mbox{\hyperlink{class_shape_abe95f6fae956f8d700d4d9c5fe62ced7}{get\+Shape\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Method to return the shape\textquotesingle{}s shape type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_shape_af1a9b6477c90ed40ad32cf2c061ec43f}{get\+Shape\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Static method to return the number of shapes created. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shape_a7ce5090298133856826690aab427c8a2}\label{class_shape_a7ce5090298133856826690aab427c8a2}} 
+static void {\bfseries reset\+Shape\+Count} ()
+\begin{DoxyCompactList}\small\item\em Static method to reset the static shape count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_shape}{Shape}} class. 
+
+An abstract base class representing a basic shape that derived classes inherit from. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shape_a2be57e345217494a0cdd999ea9e77da4}\label{class_shape_a2be57e345217494a0cdd999ea9e77da4}} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{Shape\+Type}]{type,  }\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Alternate constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & as a Shape\+Type enum (shape type) \\
+\hline
+{\em id} & as an integer argument (shape ID) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_a5a7ba966cf5efb6745a9b15dc63afd7f}\label{class_shape_a5a7ba966cf5efb6745a9b15dc63afd7f}} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_shape}{Shape}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy constructor. 
+
+Deleted \mbox{\Hypertarget{class_shape_a935afc9e576015f967d90de56977167d}\label{class_shape_a935afc9e576015f967d90de56977167d}} 
+\index{Shape@{Shape}!````~Shape@{$\sim$Shape}}
+\index{````~Shape@{$\sim$Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{$\sim$Shape()}{~Shape()}}
+{\footnotesize\ttfamily Shape\+::$\sim$\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+Decrements the static shape\+Count variable 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shape_a6b4fa6a322560ac657dc66774ae8e531}\label{class_shape_a6b4fa6a322560ac657dc66774ae8e531}} 
+\index{Shape@{Shape}!draw@{draw}}
+\index{draw@{draw}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Shape\+::draw (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to draw the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & as a pointer to a QPainter object \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmy_std_1_1_ellipse_a4fa3e317cd833a31d29e90372bdf8d6c}{my\+Std\+::\+Ellipse}}, \mbox{\hyperlink{classmy_std_1_1_line_a9fcb28d2eda5a69e796777fb434bea05}{my\+Std\+::\+Line}}, \mbox{\hyperlink{classmy_std_1_1_polygon_ab41b6012819c13f263c3cfcb9f92e82a}{my\+Std\+::\+Polygon}}, \mbox{\hyperlink{classmy_std_1_1_polyline_a419a06185c533bafb312421b35da4cb4}{my\+Std\+::\+Polyline}}, \mbox{\hyperlink{classmy_std_1_1_rectangle_ac0a4b33ec230a123f51ffecfbfbe92f8}{my\+Std\+::\+Rectangle}}, and \mbox{\hyperlink{classmy_std_1_1_text_aeee4fd15cfe8f1ecf4de47401d16b663}{my\+Std\+::\+Text}}.
+
+\mbox{\Hypertarget{class_shape_acec2178598665e96b85f1ac6a13a47b9}\label{class_shape_acec2178598665e96b85f1ac6a13a47b9}} 
+\index{Shape@{Shape}!getArea@{getArea}}
+\index{getArea@{getArea}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getArea()}{getArea()}}
+{\footnotesize\ttfamily virtual double Shape\+::get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to return the shape\textquotesingle{}s area. 
+
+\begin{DoxyReturn}{Returns}
+the shape\textquotesingle{}s area 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmy_std_1_1_ellipse_afae063887b390eb3b043bbf59e120e5f}{my\+Std\+::\+Ellipse}}, \mbox{\hyperlink{classmy_std_1_1_line_a19073f1ea8d81eb4fb09ac08aec2a1f8}{my\+Std\+::\+Line}}, \mbox{\hyperlink{classmy_std_1_1_polygon_a9d1421f7838c26b881bcf42cc431d966}{my\+Std\+::\+Polygon}}, \mbox{\hyperlink{classmy_std_1_1_polyline_a758089ef10174c6a63417aea9bfafd40}{my\+Std\+::\+Polyline}}, \mbox{\hyperlink{classmy_std_1_1_rectangle_a150b545544ebb2fb6e9b3b25ffcf4751}{my\+Std\+::\+Rectangle}}, and \mbox{\hyperlink{classmy_std_1_1_text_ac151cf3588c44c6ded2d5956dc7674c6}{my\+Std\+::\+Text}}.
+
+\mbox{\Hypertarget{class_shape_acbb9f9354579fdaad31853d714653e0d}\label{class_shape_acbb9f9354579fdaad31853d714653e0d}} 
+\index{Shape@{Shape}!getBrush@{getBrush}}
+\index{getBrush@{getBrush}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getBrush()}{getBrush()}}
+{\footnotesize\ttfamily QBrush Shape\+::get\+Brush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to return the shape\textquotesingle{}s brush. 
+
+\begin{DoxyReturn}{Returns}
+the shape\textquotesingle{}s brush 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a9943196f6a4fb3c9da2a8904c1af9a18}\label{class_shape_a9943196f6a4fb3c9da2a8904c1af9a18}} 
+\index{Shape@{Shape}!getId@{getId}}
+\index{getId@{getId}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Shape\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to return the shape\textquotesingle{}s id. 
+
+\begin{DoxyReturn}{Returns}
+the shape\textquotesingle{}s id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a16aad057da1ce3475f666cbdd27da042}\label{class_shape_a16aad057da1ce3475f666cbdd27da042}} 
+\index{Shape@{Shape}!getPen@{getPen}}
+\index{getPen@{getPen}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getPen()}{getPen()}}
+{\footnotesize\ttfamily QPen Shape\+::get\+Pen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to return the shape\textquotesingle{}s pen. 
+
+\begin{DoxyReturn}{Returns}
+the shape\textquotesingle{}s pen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a3918812ff3a143dabbeba2f650fb5e7c}\label{class_shape_a3918812ff3a143dabbeba2f650fb5e7c}} 
+\index{Shape@{Shape}!getPerimeter@{getPerimeter}}
+\index{getPerimeter@{getPerimeter}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getPerimeter()}{getPerimeter()}}
+{\footnotesize\ttfamily virtual double Shape\+::get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to return the shape\textquotesingle{}s perimeter. 
+
+\begin{DoxyReturn}{Returns}
+the shape\textquotesingle{}s perimeter 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmy_std_1_1_ellipse_ac8c9fa657794126b4c2e3978bcad07c0}{my\+Std\+::\+Ellipse}}, \mbox{\hyperlink{classmy_std_1_1_line_af91eac3b81f3716fdbde10180471e453}{my\+Std\+::\+Line}}, \mbox{\hyperlink{classmy_std_1_1_polygon_a21ba735cd255848ea7bc314b3e52cac9}{my\+Std\+::\+Polygon}}, \mbox{\hyperlink{classmy_std_1_1_polyline_a02f903f72551647a19002bcad39096d5}{my\+Std\+::\+Polyline}}, \mbox{\hyperlink{classmy_std_1_1_rectangle_ae5d51ea2917ee94f65a26d1cab7922bd}{my\+Std\+::\+Rectangle}}, and \mbox{\hyperlink{classmy_std_1_1_text_a82aaa5bc95eeec189409f2e2a1bc07bc}{my\+Std\+::\+Text}}.
+
+\mbox{\Hypertarget{class_shape_af1a9b6477c90ed40ad32cf2c061ec43f}\label{class_shape_af1a9b6477c90ed40ad32cf2c061ec43f}} 
+\index{Shape@{Shape}!getShapeCount@{getShapeCount}}
+\index{getShapeCount@{getShapeCount}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getShapeCount()}{getShapeCount()}}
+{\footnotesize\ttfamily static int Shape\+::get\+Shape\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Static method to return the number of shapes created. 
+
+\begin{DoxyReturn}{Returns}
+the number of shapes created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_abe95f6fae956f8d700d4d9c5fe62ced7}\label{class_shape_abe95f6fae956f8d700d4d9c5fe62ced7}} 
+\index{Shape@{Shape}!getShapeType@{getShapeType}}
+\index{getShapeType@{getShapeType}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getShapeType()}{getShapeType()}}
+{\footnotesize\ttfamily Shape\+Type Shape\+::get\+Shape\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to return the shape\textquotesingle{}s shape type. 
+
+\begin{DoxyReturn}{Returns}
+the shape\textquotesingle{}s shape type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_af604de36aa616c585bb30dedf5e5c68b}\label{class_shape_af604de36aa616c585bb30dedf5e5c68b}} 
+\index{Shape@{Shape}!getX@{getX}}
+\index{getX@{getX}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int Shape\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to return the shape\textquotesingle{}s top-\/left x-\/coordinate. 
+
+\begin{DoxyReturn}{Returns}
+the shape\textquotesingle{}s top-\/left x-\/coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a2e87ea4122381ffb83474f4b69247ded}\label{class_shape_a2e87ea4122381ffb83474f4b69247ded}} 
+\index{Shape@{Shape}!getY@{getY}}
+\index{getY@{getY}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int Shape\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to return the shape\textquotesingle{}s top-\/left y-\/coordinate. 
+
+\begin{DoxyReturn}{Returns}
+the shape\textquotesingle{}s top-\/left y-\/coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_ad73469e5a2cb91a76b874af72dd59379}\label{class_shape_ad73469e5a2cb91a76b874af72dd59379}} 
+\index{Shape@{Shape}!move@{move}}
+\index{move@{move}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily virtual void Shape\+::move (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method to move the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & as a constant integer (x coord for move) \\
+\hline
+{\em y} & as a constant integer (y coord for move) \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmy_std_1_1_ellipse_aad3d9657e7759b6411481b771982c72e}{my\+Std\+::\+Ellipse}}, \mbox{\hyperlink{classmy_std_1_1_line_a25942ca5fe7ee2571165f99b57f68382}{my\+Std\+::\+Line}}, \mbox{\hyperlink{classmy_std_1_1_polygon_a9d4dd724c2e7f91aba923202d76c1528}{my\+Std\+::\+Polygon}}, \mbox{\hyperlink{classmy_std_1_1_polyline_a298849a59d0b00508378ffff5790b1ac}{my\+Std\+::\+Polyline}}, \mbox{\hyperlink{classmy_std_1_1_rectangle_a5fcc8b41f22245c34c8f79d81e1bb8a8}{my\+Std\+::\+Rectangle}}, and \mbox{\hyperlink{classmy_std_1_1_text_a2a5fbb7fed10a794a0bae2b9f144d397}{my\+Std\+::\+Text}}.
+
+\mbox{\Hypertarget{class_shape_a9b3f8a6a2a4d64e1db3bbc6ae2b373ec}\label{class_shape_a9b3f8a6a2a4d64e1db3bbc6ae2b373ec}} 
+\index{Shape@{Shape}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Shape\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_shape}{Shape}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Less than operator. 
+
+\begin{DoxyReturn}{Returns}
+true if this shape\textquotesingle{}s id is less than the other\textquotesingle{}s id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_aa710f04738d5faaa91f6cd985800605a}\label{class_shape_aa710f04738d5faaa91f6cd985800605a}} 
+\index{Shape@{Shape}!operator=@{operator=}}
+\index{operator=@{operator=}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shape}{Shape}} \& Shape\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_shape}{Shape}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy assignment. 
+
+Deleted \mbox{\Hypertarget{class_shape_a152eec1a35b057d49a5f7334c0dc24ea}\label{class_shape_a152eec1a35b057d49a5f7334c0dc24ea}} 
+\index{Shape@{Shape}!operator==@{operator==}}
+\index{operator==@{operator==}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Shape\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_shape}{Shape}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Equality operator. 
+
+\begin{DoxyReturn}{Returns}
+true this and the other shapes\textquotesingle{} id\textquotesingle{}s are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_ac5aa170455b074fec2079b17840ddba7}\label{class_shape_ac5aa170455b074fec2079b17840ddba7}} 
+\index{Shape@{Shape}!setBrush@{setBrush}}
+\index{setBrush@{setBrush}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setBrush()}{setBrush()}}
+{\footnotesize\ttfamily void Shape\+::set\+Brush (\begin{DoxyParamCaption}\item[{QColor}]{color,  }\item[{Qt\+::\+Brush\+Style}]{brush\+Style }\end{DoxyParamCaption})}
+
+
+
+Method to set the shape\textquotesingle{}s brush. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & as a QColor \\
+\hline
+{\em brush\+Style} & as a Qt\+::\+Brush\+Style \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_a96fcff5389f4e35805e72d075464eeaa}\label{class_shape_a96fcff5389f4e35805e72d075464eeaa}} 
+\index{Shape@{Shape}!setId@{setId}}
+\index{setId@{setId}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Shape\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Method to set the shape\textquotesingle{}s id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & as an integer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_a028e8f42ef5aaa8c3cbf004ab9076f2f}\label{class_shape_a028e8f42ef5aaa8c3cbf004ab9076f2f}} 
+\index{Shape@{Shape}!setPen@{setPen}}
+\index{setPen@{setPen}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setPen()}{setPen()}}
+{\footnotesize\ttfamily void Shape\+::set\+Pen (\begin{DoxyParamCaption}\item[{QColor}]{color,  }\item[{int}]{size,  }\item[{Qt\+::\+Pen\+Style}]{style,  }\item[{Qt\+::\+Pen\+Cap\+Style}]{cap\+Style,  }\item[{Qt\+::\+Pen\+Join\+Style}]{join\+Style }\end{DoxyParamCaption})}
+
+
+
+Method to set the shape\textquotesingle{}s pen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & as a QColor \\
+\hline
+{\em size} & as an integer \\
+\hline
+{\em style} & as a Qt\+::\+Pen\+Style \\
+\hline
+{\em cap\+Style} & as a Qt\+::\+Pen\+Cap\+Style \\
+\hline
+{\em join\+Style} & as a Qt\+::\+Pen\+Join\+Style \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_a05fc5c8506a62f2eb43fbf29818b4258}\label{class_shape_a05fc5c8506a62f2eb43fbf29818b4258}} 
+\index{Shape@{Shape}!setShapeType@{setShapeType}}
+\index{setShapeType@{setShapeType}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setShapeType()}{setShapeType()}}
+{\footnotesize\ttfamily void Shape\+::set\+Shape\+Type (\begin{DoxyParamCaption}\item[{Shape\+Type}]{type }\end{DoxyParamCaption})}
+
+
+
+Method to set the shape\textquotesingle{}s type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & as a Shape\+Type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_a2d8fd6861bf7906e0152a699ce6054c8}\label{class_shape_a2d8fd6861bf7906e0152a699ce6054c8}} 
+\index{Shape@{Shape}!setX@{setX}}
+\index{setX@{setX}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily void Shape\+::setX (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Method to set the shape\textquotesingle{}s top-\/left x-\/coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & as a constant integer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_aa2b8845b186bf95781ca5d5e22316343}\label{class_shape_aa2b8845b186bf95781ca5d5e22316343}} 
+\index{Shape@{Shape}!setY@{setY}}
+\index{setY@{setY}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily void Shape\+::setY (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Method to set the shape\textquotesingle{}s top-\/left y-\/coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & as a constant integer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+QTPROJECT/shape.\+h\item 
+QTPROJECT/shape.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,155 @@
+\hypertarget{classmy_std_1_1_polyline}{}\doxysection{my\+Std\+::Polyline Class Reference}
+\label{classmy_std_1_1_polyline}\index{myStd::Polyline@{myStd::Polyline}}
+
+
+\mbox{\hyperlink{classmy_std_1_1_polyline}{Polyline}} class.  
+
+
+
+
+{\ttfamily \#include $<$polyline.\+h$>$}
+
+Inheritance diagram for my\+Std\+::Polyline\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmy_std_1_1_polyline}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_std_1_1_polyline_a12af463fffe56f3b92aa00dcf6ac103b}{Polyline}} (int id=-\/1)
+\begin{DoxyCompactList}\small\item\em Default/alternate constructor -\/ calls base \mbox{\hyperlink{class_shape}{Shape}} constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_polyline_a419a06185c533bafb312421b35da4cb4}{draw}} (QPainter $\ast$painter) override
+\begin{DoxyCompactList}\small\item\em Virtual method to draw polyline. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_polyline_a298849a59d0b00508378ffff5790b1ac}{move}} (const int x, const int y) override
+\begin{DoxyCompactList}\small\item\em Virtual method to move polyline. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_polyline_a02f903f72551647a19002bcad39096d5}{get\+Perimeter}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to get perimeter. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_polyline_a758089ef10174c6a63417aea9bfafd40}{get\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to get area. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmy_std_1_1_polyline_a4f2d60126f1f6b1043c496f8a6d71b41}\label{classmy_std_1_1_polyline_a4f2d60126f1f6b1043c496f8a6d71b41}} 
+void {\bfseries add\+Point} (const int x, const int y)
+\item 
+std\+::vector$<$ QPoint $>$ \mbox{\hyperlink{classmy_std_1_1_polyline_a0f54ec01b1db518d6d9c23607b4a9c8d}{get\+Points}} ()
+\begin{DoxyCompactList}\small\item\em Virtual method to get vector of all points on polyline. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classmy_std_1_1_polyline}{Polyline}} class. 
+
+This class represents a polyline which derives from the \mbox{\hyperlink{class_shape}{Shape}} abstract base class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_polyline_a12af463fffe56f3b92aa00dcf6ac103b}\label{classmy_std_1_1_polyline_a12af463fffe56f3b92aa00dcf6ac103b}} 
+\index{myStd::Polyline@{myStd::Polyline}!Polyline@{Polyline}}
+\index{Polyline@{Polyline}!myStd::Polyline@{myStd::Polyline}}
+\doxysubsubsection{\texorpdfstring{Polyline()}{Polyline()}}
+{\footnotesize\ttfamily my\+Std\+::\+Polyline\+::\+Polyline (\begin{DoxyParamCaption}\item[{int}]{id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Default/alternate constructor -\/ calls base \mbox{\hyperlink{class_shape}{Shape}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & as an integer argument (shape ID) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_polyline_a419a06185c533bafb312421b35da4cb4}\label{classmy_std_1_1_polyline_a419a06185c533bafb312421b35da4cb4}} 
+\index{myStd::Polyline@{myStd::Polyline}!draw@{draw}}
+\index{draw@{draw}!myStd::Polyline@{myStd::Polyline}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Polyline\+::draw (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to draw polyline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & as a pointer to a QPainter object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_a6b4fa6a322560ac657dc66774ae8e531}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_polyline_a758089ef10174c6a63417aea9bfafd40}\label{classmy_std_1_1_polyline_a758089ef10174c6a63417aea9bfafd40}} 
+\index{myStd::Polyline@{myStd::Polyline}!getArea@{getArea}}
+\index{getArea@{getArea}!myStd::Polyline@{myStd::Polyline}}
+\doxysubsubsection{\texorpdfstring{getArea()}{getArea()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Polyline\+::get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to get area. 
+
+\begin{DoxyReturn}{Returns}
+0; 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_acec2178598665e96b85f1ac6a13a47b9}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_polyline_a02f903f72551647a19002bcad39096d5}\label{classmy_std_1_1_polyline_a02f903f72551647a19002bcad39096d5}} 
+\index{myStd::Polyline@{myStd::Polyline}!getPerimeter@{getPerimeter}}
+\index{getPerimeter@{getPerimeter}!myStd::Polyline@{myStd::Polyline}}
+\doxysubsubsection{\texorpdfstring{getPerimeter()}{getPerimeter()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Polyline\+::get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to get perimeter. 
+
+\begin{DoxyReturn}{Returns}
+0; 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a3918812ff3a143dabbeba2f650fb5e7c}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_polyline_a0f54ec01b1db518d6d9c23607b4a9c8d}\label{classmy_std_1_1_polyline_a0f54ec01b1db518d6d9c23607b4a9c8d}} 
+\index{myStd::Polyline@{myStd::Polyline}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!myStd::Polyline@{myStd::Polyline}}
+\doxysubsubsection{\texorpdfstring{getPoints()}{getPoints()}}
+{\footnotesize\ttfamily std\+::vector$<$ QPoint $>$ my\+Std\+::\+Polyline\+::get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Virtual method to get vector of all points on polyline. 
+
+\begin{DoxyReturn}{Returns}
+0; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1_polyline_a298849a59d0b00508378ffff5790b1ac}\label{classmy_std_1_1_polyline_a298849a59d0b00508378ffff5790b1ac}} 
+\index{myStd::Polyline@{myStd::Polyline}!move@{move}}
+\index{move@{move}!myStd::Polyline@{myStd::Polyline}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Polyline\+::move (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to move polyline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & as a constant integer (shift x units) \\
+\hline
+{\em y} & as a constant integer (shift y units) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_ad73469e5a2cb91a76b874af72dd59379}{Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+QTPROJECT/polyline.\+h\item 
+QTPROJECT/polyline.\+cpp\end{DoxyCompactItemize}

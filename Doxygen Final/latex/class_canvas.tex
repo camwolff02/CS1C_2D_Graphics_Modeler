@@ -1,0 +1,198 @@
+\hypertarget{class_canvas}{}\doxysection{Canvas Class Reference}
+\label{class_canvas}\index{Canvas@{Canvas}}
+
+
+\mbox{\hyperlink{class_canvas}{Canvas}}.  
+
+
+
+
+{\ttfamily \#include $<$canvas.\+h$>$}
+
+Inheritance diagram for Canvas\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_canvas}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_canvas_a5525075d65b32480dd518d382946e0ea}{Canvas}} (QWidget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_a67dbba80855f3b4fb95c26d5012f7ccc}{paint\+Event}} (QPaint\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em Passes pointer to QPaint\+Event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_canvas_a237c4549ad2e27c729cd1f71e89f0fd9}{$\sim$\+Canvas}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+QPainter $\ast$ \mbox{\hyperlink{class_canvas_a6c8413c625b3597b4b58ec49ed6cfe07}{get\+Painter}} ()
+\begin{DoxyCompactList}\small\item\em Returns painter. \end{DoxyCompactList}\item 
+Qt\+::\+Brush\+Style \mbox{\hyperlink{class_canvas_aa4e9f7feda07a623829169b2bb42ce05}{get\+Brush\+Style}} (int index)
+\begin{DoxyCompactList}\small\item\em Returns brush style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_a67dd4de2d248435c5b458bca17d1f574}{add\+Shape}} (\mbox{\hyperlink{class_shape}{Shape}} $\ast$shape)
+\begin{DoxyCompactList}\small\item\em Adds a shape. \end{DoxyCompactList}\item 
+Qt\+::\+Pen\+Style \mbox{\hyperlink{class_canvas_a6afd4497cb315934709c83009b394692}{get\+Pen\+Style}} (int index)
+\begin{DoxyCompactList}\small\item\em Returns pen style. \end{DoxyCompactList}\item 
+Qt\+::\+Pen\+Cap\+Style \mbox{\hyperlink{class_canvas_a7e13947d68bb1721b74fae9469fcb241}{get\+Pen\+Cap\+Style}} (int index)
+\begin{DoxyCompactList}\small\item\em Returns pen cap style. \end{DoxyCompactList}\item 
+Qt\+::\+Pen\+Join\+Style \mbox{\hyperlink{class_canvas_a4ac2767549b39a79638bef41aa466905}{get\+Pen\+Join\+Style}} (int index)
+\begin{DoxyCompactList}\small\item\em Returns pen join style. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_canvas}{Canvas}}. 
+
+This class represents the canvas on which shapes will render and inherits from QDWidget. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_canvas_a5525075d65b32480dd518d382946e0ea}\label{class_canvas_a5525075d65b32480dd518d382946e0ea}} 
+\index{Canvas@{Canvas}!Canvas@{Canvas}}
+\index{Canvas@{Canvas}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{Canvas()}{Canvas()}}
+{\footnotesize\ttfamily Canvas\+::\+Canvas (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & points to the QWidget \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_canvas_a237c4549ad2e27c729cd1f71e89f0fd9}\label{class_canvas_a237c4549ad2e27c729cd1f71e89f0fd9}} 
+\index{Canvas@{Canvas}!````~Canvas@{$\sim$Canvas}}
+\index{````~Canvas@{$\sim$Canvas}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{$\sim$Canvas()}{~Canvas()}}
+{\footnotesize\ttfamily Canvas\+::$\sim$\+Canvas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Empty 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_canvas_a67dd4de2d248435c5b458bca17d1f574}\label{class_canvas_a67dd4de2d248435c5b458bca17d1f574}} 
+\index{Canvas@{Canvas}!addShape@{addShape}}
+\index{addShape@{addShape}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{addShape()}{addShape()}}
+{\footnotesize\ttfamily void Canvas\+::add\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shape}{Shape}} $\ast$}]{shape }\end{DoxyParamCaption})}
+
+
+
+Adds a shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & shape to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+brush\+\_\+style 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_canvas_aa4e9f7feda07a623829169b2bb42ce05}\label{class_canvas_aa4e9f7feda07a623829169b2bb42ce05}} 
+\index{Canvas@{Canvas}!getBrushStyle@{getBrushStyle}}
+\index{getBrushStyle@{getBrushStyle}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{getBrushStyle()}{getBrushStyle()}}
+{\footnotesize\ttfamily Qt\+::\+Brush\+Style Canvas\+::get\+Brush\+Style (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns brush style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index location of shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+brush\+\_\+style 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_canvas_a6c8413c625b3597b4b58ec49ed6cfe07}\label{class_canvas_a6c8413c625b3597b4b58ec49ed6cfe07}} 
+\index{Canvas@{Canvas}!getPainter@{getPainter}}
+\index{getPainter@{getPainter}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{getPainter()}{getPainter()}}
+{\footnotesize\ttfamily QPainter $\ast$ Canvas\+::get\+Painter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns painter. 
+
+\begin{DoxyReturn}{Returns}
+painter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_canvas_a7e13947d68bb1721b74fae9469fcb241}\label{class_canvas_a7e13947d68bb1721b74fae9469fcb241}} 
+\index{Canvas@{Canvas}!getPenCapStyle@{getPenCapStyle}}
+\index{getPenCapStyle@{getPenCapStyle}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{getPenCapStyle()}{getPenCapStyle()}}
+{\footnotesize\ttfamily Qt\+::\+Pen\+Cap\+Style Canvas\+::get\+Pen\+Cap\+Style (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns pen cap style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index location of shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cap\+Style 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_canvas_a4ac2767549b39a79638bef41aa466905}\label{class_canvas_a4ac2767549b39a79638bef41aa466905}} 
+\index{Canvas@{Canvas}!getPenJoinStyle@{getPenJoinStyle}}
+\index{getPenJoinStyle@{getPenJoinStyle}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{getPenJoinStyle()}{getPenJoinStyle()}}
+{\footnotesize\ttfamily Qt\+::\+Pen\+Join\+Style Canvas\+::get\+Pen\+Join\+Style (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns pen join style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index location of shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pen\+\_\+join\+\_\+style 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_canvas_a6afd4497cb315934709c83009b394692}\label{class_canvas_a6afd4497cb315934709c83009b394692}} 
+\index{Canvas@{Canvas}!getPenStyle@{getPenStyle}}
+\index{getPenStyle@{getPenStyle}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{getPenStyle()}{getPenStyle()}}
+{\footnotesize\ttfamily Qt\+::\+Pen\+Style Canvas\+::get\+Pen\+Style (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns pen style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index location of shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+style 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_canvas_a67dbba80855f3b4fb95c26d5012f7ccc}\label{class_canvas_a67dbba80855f3b4fb95c26d5012f7ccc}} 
+\index{Canvas@{Canvas}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!Canvas@{Canvas}}
+\doxysubsubsection{\texorpdfstring{paintEvent()}{paintEvent()}}
+{\footnotesize\ttfamily void Canvas\+::paint\+Event (\begin{DoxyParamCaption}\item[{QPaint\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Passes pointer to QPaint\+Event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & points to QPaint\+Event \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+QTPROJECT/canvas.\+h\item 
+QTPROJECT/canvas.\+cpp\end{DoxyCompactItemize}

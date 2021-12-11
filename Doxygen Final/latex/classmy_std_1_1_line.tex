@@ -1,0 +1,226 @@
+\hypertarget{classmy_std_1_1_line}{}\doxysection{my\+Std\+::Line Class Reference}
+\label{classmy_std_1_1_line}\index{myStd::Line@{myStd::Line}}
+
+
+\mbox{\hyperlink{classmy_std_1_1_line}{Line}} class.  
+
+
+
+
+{\ttfamily \#include $<$line.\+h$>$}
+
+Inheritance diagram for my\+Std\+::Line\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmy_std_1_1_line}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_std_1_1_line_a4d5a3257ee87d35825d709a638c8493d}{Line}} (int id=-\/1, int x1=0, int y1=0, int x2=0, int y2=0)
+\begin{DoxyCompactList}\small\item\em Default/ alternate constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_std_1_1_line_a58d33d0a60925da91ee5a718bcc5749c}{Line}} (\mbox{\hyperlink{classmy_std_1_1_line}{Line}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_std_1_1_line_a8a99ec24004396f5d68f82141b3b9c09}{$\sim$\+Line}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_std_1_1_line}{Line}} \& \mbox{\hyperlink{classmy_std_1_1_line_a5b949a92cbc6fb35ce7b0bbda8932224}{operator=}} (\mbox{\hyperlink{classmy_std_1_1_line}{Line}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_line_a9fcb28d2eda5a69e796777fb434bea05}{draw}} (QPainter $\ast$painter) override
+\begin{DoxyCompactList}\small\item\em Virtual method to draw the line. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_line_a25942ca5fe7ee2571165f99b57f68382}{move}} (const int x, const int y) override
+\begin{DoxyCompactList}\small\item\em Virtual method to move the line. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_line_af91eac3b81f3716fdbde10180471e453}{get\+Perimeter}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to return the line\textquotesingle{}s perimeter. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_line_a19073f1ea8d81eb4fb09ac08aec2a1f8}{get\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to return the line\textquotesingle{}s area. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classmy_std_1_1_line_a4ea6aa771158dd5e978a1a19c03b48dd}{get\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Method to return the line\textquotesingle{}s length. \end{DoxyCompactList}\item 
+QPoint \mbox{\hyperlink{classmy_std_1_1_line_a20a31aa0f79d9a1c359c6fbd73a12173}{get\+Begin}} () const
+\begin{DoxyCompactList}\small\item\em Method to return the line\textquotesingle{}s beginning point. \end{DoxyCompactList}\item 
+QPoint \mbox{\hyperlink{classmy_std_1_1_line_a1e631160314f4473de1d4a45ca56387f}{get\+End}} () const
+\begin{DoxyCompactList}\small\item\em Method to return the line\textquotesingle{}s ending point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classmy_std_1_1_line}{Line}} class. 
+
+This class represents a line that inherits from the \mbox{\hyperlink{class_shape}{Shape}} abstract base class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_line_a4d5a3257ee87d35825d709a638c8493d}\label{classmy_std_1_1_line_a4d5a3257ee87d35825d709a638c8493d}} 
+\index{myStd::Line@{myStd::Line}!Line@{Line}}
+\index{Line@{Line}!myStd::Line@{myStd::Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily my\+Std\+::\+Line\+::\+Line (\begin{DoxyParamCaption}\item[{int}]{id = {\ttfamily -\/1},  }\item[{int}]{x1 = {\ttfamily 0},  }\item[{int}]{y1 = {\ttfamily 0},  }\item[{int}]{x2 = {\ttfamily 0},  }\item[{int}]{y2 = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default/ alternate constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & as an integer argument (shape ID) \\
+\hline
+{\em x1} & as an integer argument (begin x coord) \\
+\hline
+{\em y1} & as an integer argument (begin y coord) \\
+\hline
+{\em x2} & as an integer argument (end x coord) \\
+\hline
+{\em y2} & as an integer argument (end y coord) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmy_std_1_1_line_a58d33d0a60925da91ee5a718bcc5749c}\label{classmy_std_1_1_line_a58d33d0a60925da91ee5a718bcc5749c}} 
+\index{myStd::Line@{myStd::Line}!Line@{Line}}
+\index{Line@{Line}!myStd::Line@{myStd::Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily my\+Std\+::\+Line\+::\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_std_1_1_line}{Line}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move constructor. 
+
+Default \mbox{\Hypertarget{classmy_std_1_1_line_a8a99ec24004396f5d68f82141b3b9c09}\label{classmy_std_1_1_line_a8a99ec24004396f5d68f82141b3b9c09}} 
+\index{myStd::Line@{myStd::Line}!````~Line@{$\sim$Line}}
+\index{````~Line@{$\sim$Line}!myStd::Line@{myStd::Line}}
+\doxysubsubsection{\texorpdfstring{$\sim$Line()}{~Line()}}
+{\footnotesize\ttfamily my\+Std\+::\+Line\+::$\sim$\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+Empty 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_line_a9fcb28d2eda5a69e796777fb434bea05}\label{classmy_std_1_1_line_a9fcb28d2eda5a69e796777fb434bea05}} 
+\index{myStd::Line@{myStd::Line}!draw@{draw}}
+\index{draw@{draw}!myStd::Line@{myStd::Line}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Line\+::draw (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to draw the line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & as a pointer to a QPainter object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_a6b4fa6a322560ac657dc66774ae8e531}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_line_a19073f1ea8d81eb4fb09ac08aec2a1f8}\label{classmy_std_1_1_line_a19073f1ea8d81eb4fb09ac08aec2a1f8}} 
+\index{myStd::Line@{myStd::Line}!getArea@{getArea}}
+\index{getArea@{getArea}!myStd::Line@{myStd::Line}}
+\doxysubsubsection{\texorpdfstring{getArea()}{getArea()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Line\+::get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to return the line\textquotesingle{}s area. 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_acec2178598665e96b85f1ac6a13a47b9}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_line_a20a31aa0f79d9a1c359c6fbd73a12173}\label{classmy_std_1_1_line_a20a31aa0f79d9a1c359c6fbd73a12173}} 
+\index{myStd::Line@{myStd::Line}!getBegin@{getBegin}}
+\index{getBegin@{getBegin}!myStd::Line@{myStd::Line}}
+\doxysubsubsection{\texorpdfstring{getBegin()}{getBegin()}}
+{\footnotesize\ttfamily QPoint my\+Std\+::\+Line\+::get\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to return the line\textquotesingle{}s beginning point. 
+
+\begin{DoxyReturn}{Returns}
+QPoint of beginning coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1_line_a1e631160314f4473de1d4a45ca56387f}\label{classmy_std_1_1_line_a1e631160314f4473de1d4a45ca56387f}} 
+\index{myStd::Line@{myStd::Line}!getEnd@{getEnd}}
+\index{getEnd@{getEnd}!myStd::Line@{myStd::Line}}
+\doxysubsubsection{\texorpdfstring{getEnd()}{getEnd()}}
+{\footnotesize\ttfamily QPoint my\+Std\+::\+Line\+::get\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to return the line\textquotesingle{}s ending point. 
+
+\begin{DoxyReturn}{Returns}
+QPoint of end coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1_line_a4ea6aa771158dd5e978a1a19c03b48dd}\label{classmy_std_1_1_line_a4ea6aa771158dd5e978a1a19c03b48dd}} 
+\index{myStd::Line@{myStd::Line}!getLength@{getLength}}
+\index{getLength@{getLength}!myStd::Line@{myStd::Line}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Line\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to return the line\textquotesingle{}s length. 
+
+\begin{DoxyReturn}{Returns}
+the length of the line 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1_line_af91eac3b81f3716fdbde10180471e453}\label{classmy_std_1_1_line_af91eac3b81f3716fdbde10180471e453}} 
+\index{myStd::Line@{myStd::Line}!getPerimeter@{getPerimeter}}
+\index{getPerimeter@{getPerimeter}!myStd::Line@{myStd::Line}}
+\doxysubsubsection{\texorpdfstring{getPerimeter()}{getPerimeter()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Line\+::get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to return the line\textquotesingle{}s perimeter. 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a3918812ff3a143dabbeba2f650fb5e7c}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_line_a25942ca5fe7ee2571165f99b57f68382}\label{classmy_std_1_1_line_a25942ca5fe7ee2571165f99b57f68382}} 
+\index{myStd::Line@{myStd::Line}!move@{move}}
+\index{move@{move}!myStd::Line@{myStd::Line}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Line\+::move (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to move the line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & as a constant integer (x coord for move) \\
+\hline
+{\em y} & as a constant integer (y coord for move) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_ad73469e5a2cb91a76b874af72dd59379}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_line_a5b949a92cbc6fb35ce7b0bbda8932224}\label{classmy_std_1_1_line_a5b949a92cbc6fb35ce7b0bbda8932224}} 
+\index{myStd::Line@{myStd::Line}!operator=@{operator=}}
+\index{operator=@{operator=}!myStd::Line@{myStd::Line}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_std_1_1_line}{Line}} \& my\+Std\+::\+Line\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_std_1_1_line}{Line}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move assignment. 
+
+Default 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+QTPROJECT/line.\+h\item 
+QTPROJECT/line.\+cpp\end{DoxyCompactItemize}

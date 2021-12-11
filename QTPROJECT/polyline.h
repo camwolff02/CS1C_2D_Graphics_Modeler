@@ -54,7 +54,7 @@ public:
     std::vector<QPoint> getPoints();
 
 private:
-    std::vector<QPoint> points;
+    std::vector<QPoint> points; /*!< Vector of points that connect pollyline */
 
 };
 

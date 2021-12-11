@@ -1,0 +1,154 @@
+\hypertarget{classmy_std_1_1_text}{}\doxysection{my\+Std\+::Text Class Reference}
+\label{classmy_std_1_1_text}\index{myStd::Text@{myStd::Text}}
+Inheritance diagram for my\+Std\+::Text\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmy_std_1_1_text}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_std_1_1_text_a95ea223cb13ddc43a56ccc4530a23275}{Text}} (QString msg, QFont font, QColor color, int height, int width, int x, int y, int flag, int id=-\/1)
+\begin{DoxyCompactList}\small\item\em Default/alternate constructor -\/ calls base \mbox{\hyperlink{class_shape}{Shape}} constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_text_aeee4fd15cfe8f1ecf4de47401d16b663}{draw}} (QPainter $\ast$painter) override
+\begin{DoxyCompactList}\small\item\em Virtual method to draw text. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_text_a2a5fbb7fed10a794a0bae2b9f144d397}{move}} (const int x, const int y) override
+\begin{DoxyCompactList}\small\item\em Virtual method to move text. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_text_a82aaa5bc95eeec189409f2e2a1bc07bc}{get\+Perimeter}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to get perimeter. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_text_ac151cf3588c44c6ded2d5956dc7674c6}{get\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to get area. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classmy_std_1_1_text_a8e7804ceb5cfc6778252e8ff8f8ca79d}{get\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Returns message stored in text box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_text_a95ea223cb13ddc43a56ccc4530a23275}\label{classmy_std_1_1_text_a95ea223cb13ddc43a56ccc4530a23275}} 
+\index{myStd::Text@{myStd::Text}!Text@{Text}}
+\index{Text@{Text}!myStd::Text@{myStd::Text}}
+\doxysubsubsection{\texorpdfstring{Text()}{Text()}}
+{\footnotesize\ttfamily my\+Std\+::\+Text\+::\+Text (\begin{DoxyParamCaption}\item[{QString}]{msg,  }\item[{QFont}]{font,  }\item[{QColor}]{color,  }\item[{int}]{height,  }\item[{int}]{width,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{flag,  }\item[{int}]{id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Default/alternate constructor -\/ calls base \mbox{\hyperlink{class_shape}{Shape}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & as an QString argument (text representation) \\
+\hline
+{\em font} & as an QFont argument (font representation) \\
+\hline
+{\em color} & as an QColor argument (color) \\
+\hline
+{\em height} & as an int argument (height) \\
+\hline
+{\em width} & as an int argument (width) \\
+\hline
+{\em x} & as an int argument (top left x coordinate) \\
+\hline
+{\em y} & as an int argument (top left x coordinate) \\
+\hline
+{\em flag} & as an int argument (allignment) \\
+\hline
+{\em id} & as an int argument (\mbox{\hyperlink{class_shape}{Shape}} ID) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_text_aeee4fd15cfe8f1ecf4de47401d16b663}\label{classmy_std_1_1_text_aeee4fd15cfe8f1ecf4de47401d16b663}} 
+\index{myStd::Text@{myStd::Text}!draw@{draw}}
+\index{draw@{draw}!myStd::Text@{myStd::Text}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Text\+::draw (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to draw text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & as a pointer to q QPainter object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_a6b4fa6a322560ac657dc66774ae8e531}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_text_ac151cf3588c44c6ded2d5956dc7674c6}\label{classmy_std_1_1_text_ac151cf3588c44c6ded2d5956dc7674c6}} 
+\index{myStd::Text@{myStd::Text}!getArea@{getArea}}
+\index{getArea@{getArea}!myStd::Text@{myStd::Text}}
+\doxysubsubsection{\texorpdfstring{getArea()}{getArea()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Text\+::get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to get area. 
+
+\begin{DoxyReturn}{Returns}
+0; 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_acec2178598665e96b85f1ac6a13a47b9}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_text_a82aaa5bc95eeec189409f2e2a1bc07bc}\label{classmy_std_1_1_text_a82aaa5bc95eeec189409f2e2a1bc07bc}} 
+\index{myStd::Text@{myStd::Text}!getPerimeter@{getPerimeter}}
+\index{getPerimeter@{getPerimeter}!myStd::Text@{myStd::Text}}
+\doxysubsubsection{\texorpdfstring{getPerimeter()}{getPerimeter()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Text\+::get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to get perimeter. 
+
+\begin{DoxyReturn}{Returns}
+0; 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a3918812ff3a143dabbeba2f650fb5e7c}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_text_a8e7804ceb5cfc6778252e8ff8f8ca79d}\label{classmy_std_1_1_text_a8e7804ceb5cfc6778252e8ff8f8ca79d}} 
+\index{myStd::Text@{myStd::Text}!getText@{getText}}
+\index{getText@{getText}!myStd::Text@{myStd::Text}}
+\doxysubsubsection{\texorpdfstring{getText()}{getText()}}
+{\footnotesize\ttfamily QString my\+Std\+::\+Text\+::get\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns message stored in text box. 
+
+\begin{DoxyReturn}{Returns}
+0; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1_text_a2a5fbb7fed10a794a0bae2b9f144d397}\label{classmy_std_1_1_text_a2a5fbb7fed10a794a0bae2b9f144d397}} 
+\index{myStd::Text@{myStd::Text}!move@{move}}
+\index{move@{move}!myStd::Text@{myStd::Text}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Text\+::move (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to move text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & as a constant integer (shift x units) \\
+\hline
+{\em y} & as a constant integer (shift y units) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_ad73469e5a2cb91a76b874af72dd59379}{Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+QTPROJECT/text.\+h\item 
+QTPROJECT/text.\+cpp\end{DoxyCompactItemize}

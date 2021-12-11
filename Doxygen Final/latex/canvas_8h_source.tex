@@ -1,0 +1,66 @@
+\hypertarget{canvas_8h_source}{}\doxysection{canvas.\+h}
+\label{canvas_8h_source}\index{QTPROJECT/canvas.h@{QTPROJECT/canvas.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CANVAS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CANVAS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QPixmap>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}shape.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Vector.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}shape.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}ellipse.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{comment}{//This is the class for our actual canvas where shapes are rendered}}
+\DoxyCodeLine{14 \textcolor{comment}{//it contains our vector of Shapes}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{//later: initialize vector of Shapes (private data member) in consructor using parser reading in from shapes.txt}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_canvas}{Canvas}} : \textcolor{keyword}{public} QWidget \{}
+\DoxyCodeLine{23   Q\_OBJECT}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26   \textcolor{comment}{//CALL CAMERONS FUNCTION TO READ IN TO shapes. shapes = hisFunction();}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{32   \mbox{\hyperlink{class_canvas_a5525075d65b32480dd518d382946e0ea}{Canvas}}(QWidget *parent = 0);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{38   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_canvas_a67dbba80855f3b4fb95c26d5012f7ccc}{paintEvent}}(QPaintEvent *event) \textcolor{keyword}{override};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40   \textcolor{comment}{//CALL RILEYS FUNCTION TO WRITE}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{46   \mbox{\hyperlink{class_canvas_a237c4549ad2e27c729cd1f71e89f0fd9}{\string~Canvas}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{52   QPainter* \mbox{\hyperlink{class_canvas_a6c8413c625b3597b4b58ec49ed6cfe07}{getPainter}}();}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{55 }
+\DoxyCodeLine{59   Qt::BrushStyle \mbox{\hyperlink{class_canvas_aa4e9f7feda07a623829169b2bb42ce05}{getBrushStyle}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_canvas_a67dd4de2d248435c5b458bca17d1f574}{addShape}}(\mbox{\hyperlink{class_shape}{Shape}}* shape);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{69 }
+\DoxyCodeLine{73   Qt::PenStyle \mbox{\hyperlink{class_canvas_a6afd4497cb315934709c83009b394692}{getPenStyle}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{76 }
+\DoxyCodeLine{80   Qt::PenCapStyle \mbox{\hyperlink{class_canvas_a7e13947d68bb1721b74fae9469fcb241}{getPenCapStyle}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{83 }
+\DoxyCodeLine{87   Qt::PenJoinStyle \mbox{\hyperlink{class_canvas_a4ac2767549b39a79638bef41aa466905}{getPenJoinStyle}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{keyword}{private}:}
+\DoxyCodeLine{91 \mbox{\hyperlink{classmy_std_1_1vector}{myStd::vector<Shape*>}} shapes;}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{94 QPainter painter;}
+\DoxyCodeLine{95 \};}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CANVAS\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,127 @@
+\hypertarget{classmy_std_1_1_ellipse}{}\doxysection{my\+Std\+::Ellipse Class Reference}
+\label{classmy_std_1_1_ellipse}\index{myStd::Ellipse@{myStd::Ellipse}}
+Inheritance diagram for my\+Std\+::Ellipse\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmy_std_1_1_ellipse}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_std_1_1_ellipse_a9f517478872fe9dea471f12debbe0949}{Ellipse}} (int id=-\/1, int width=0, int height=0)
+\begin{DoxyCompactList}\small\item\em Default/alternate constructor -\/ calls base \mbox{\hyperlink{class_shape}{Shape}} constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_ellipse_a4fa3e317cd833a31d29e90372bdf8d6c}{draw}} (QPainter $\ast$painter) override
+\begin{DoxyCompactList}\small\item\em Virtual method to draw ellipse. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_ellipse_aad3d9657e7759b6411481b771982c72e}{move}} (const int x, const int y) override
+\begin{DoxyCompactList}\small\item\em Virtual method to move ellipse. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_ellipse_ac8c9fa657794126b4c2e3978bcad07c0}{get\+Perimeter}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to get perimeter. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_ellipse_afae063887b390eb3b043bbf59e120e5f}{get\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to get area. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_ellipse_a9f517478872fe9dea471f12debbe0949}\label{classmy_std_1_1_ellipse_a9f517478872fe9dea471f12debbe0949}} 
+\index{myStd::Ellipse@{myStd::Ellipse}!Ellipse@{Ellipse}}
+\index{Ellipse@{Ellipse}!myStd::Ellipse@{myStd::Ellipse}}
+\doxysubsubsection{\texorpdfstring{Ellipse()}{Ellipse()}}
+{\footnotesize\ttfamily my\+Std\+::\+Ellipse\+::\+Ellipse (\begin{DoxyParamCaption}\item[{int}]{id = {\ttfamily -\/1},  }\item[{int}]{width = {\ttfamily 0},  }\item[{int}]{height = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default/alternate constructor -\/ calls base \mbox{\hyperlink{class_shape}{Shape}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & as an integer argument (shape ID) \\
+\hline
+{\em width} & as an integer argument (ellipse width) \\
+\hline
+{\em height} & as an integer argument (ellipse height) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_ellipse_a4fa3e317cd833a31d29e90372bdf8d6c}\label{classmy_std_1_1_ellipse_a4fa3e317cd833a31d29e90372bdf8d6c}} 
+\index{myStd::Ellipse@{myStd::Ellipse}!draw@{draw}}
+\index{draw@{draw}!myStd::Ellipse@{myStd::Ellipse}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Ellipse\+::draw (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to draw ellipse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & as a pointer to q QPainter object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_a6b4fa6a322560ac657dc66774ae8e531}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_ellipse_afae063887b390eb3b043bbf59e120e5f}\label{classmy_std_1_1_ellipse_afae063887b390eb3b043bbf59e120e5f}} 
+\index{myStd::Ellipse@{myStd::Ellipse}!getArea@{getArea}}
+\index{getArea@{getArea}!myStd::Ellipse@{myStd::Ellipse}}
+\doxysubsubsection{\texorpdfstring{getArea()}{getArea()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Ellipse\+::get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to get area. 
+
+\begin{DoxyReturn}{Returns}
+0; 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_acec2178598665e96b85f1ac6a13a47b9}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_ellipse_ac8c9fa657794126b4c2e3978bcad07c0}\label{classmy_std_1_1_ellipse_ac8c9fa657794126b4c2e3978bcad07c0}} 
+\index{myStd::Ellipse@{myStd::Ellipse}!getPerimeter@{getPerimeter}}
+\index{getPerimeter@{getPerimeter}!myStd::Ellipse@{myStd::Ellipse}}
+\doxysubsubsection{\texorpdfstring{getPerimeter()}{getPerimeter()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Ellipse\+::get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to get perimeter. 
+
+\begin{DoxyReturn}{Returns}
+0; 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a3918812ff3a143dabbeba2f650fb5e7c}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_ellipse_aad3d9657e7759b6411481b771982c72e}\label{classmy_std_1_1_ellipse_aad3d9657e7759b6411481b771982c72e}} 
+\index{myStd::Ellipse@{myStd::Ellipse}!move@{move}}
+\index{move@{move}!myStd::Ellipse@{myStd::Ellipse}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Ellipse\+::move (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to move ellipse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & as a constant integer (shift x units) \\
+\hline
+{\em y} & as a constant integer (shift y units) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_ad73469e5a2cb91a76b874af72dd59379}{Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+QTPROJECT/ellipse.\+h\item 
+QTPROJECT/ellipse.\+cpp\end{DoxyCompactItemize}

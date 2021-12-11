@@ -58,7 +58,26 @@ void addTextBox::on_buttonBox_accepted()
 
     //not done
     int flag = ui->comboBox_2->currentIndex();
-    myStd::Text *newText = new myStd::Text(ui->lineEdit->text(), font, color, height, width, x, y, flag, -1);
+    int alignment;
+    switch(flag){
+    case 1:
+        alignment = Qt::AlignLeft;
+        break;
+    case 2:
+        alignment = Qt::AlignRight;
+        break;
+    case 3:
+        alignment = Qt::AlignTop;
+        break;
+    case 4:
+        alignment = Qt::AlignBottom;
+        break;
+    case 5:
+        alignment = Qt::AlignCenter;
+        break;
+    }
+
+    myStd::Text *newText = new myStd::Text(ui->lineEdit->text(), font, color, height, width, x, y, alignment, -1);
 
     newText->getBrush().setColor(color);
 

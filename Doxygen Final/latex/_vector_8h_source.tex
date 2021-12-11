@@ -1,0 +1,215 @@
+\hypertarget{_vector_8h_source}{}\doxysection{Vector.\+h}
+\label{_vector_8h_source}\index{QTPROJECT/Vector.h@{QTPROJECT/Vector.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * vector.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Created on: Dec 1, 2016}}
+\DoxyCodeLine{5 \textcolor{comment}{ *      Author: jkath (modified by Ethan Safai)}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef VECTOR\_H\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define VECTOR\_H\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <algorithm>} }
+\DoxyCodeLine{12 \textcolor{keyword}{using} std::copy;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemy_std}{myStd}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{classmy_std_1_1vector}{vector}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19     \textcolor{comment}{/*}}
+\DoxyCodeLine{20 \textcolor{comment}{    Templated vector class much like stl vector container}}
+\DoxyCodeLine{21 \textcolor{comment}{}}
+\DoxyCodeLine{22 \textcolor{comment}{    NOTE: elem[n] is vector component n for all n >= 0 AND n < size\_v}}
+\DoxyCodeLine{23 \textcolor{comment}{          size\_v = the number of items stored in the vector}}
+\DoxyCodeLine{24 \textcolor{comment}{          space = available storage capacity of the vector where size\_v <= space}}
+\DoxyCodeLine{25 \textcolor{comment}{          if size\_v < space there is space for (space -\/ size\_v) elements after}}
+\DoxyCodeLine{26 \textcolor{comment}{          elem[size\_v-\/1]}}
+\DoxyCodeLine{27 \textcolor{comment}{    */}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{private}:}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} size\_v; }
+\DoxyCodeLine{31     T *elem;    }
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} space;  }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{public}:}
+\DoxyCodeLine{36     \mbox{\hyperlink{classmy_std_1_1vector_a40e5c01ceb5d0c2bc64b23005c21ba04}{vector}}()}
+\DoxyCodeLine{37         : size\_v\{0\}}
+\DoxyCodeLine{38         , elem\{nullptr\}}
+\DoxyCodeLine{39         , space\{0\}}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{44     \textcolor{keyword}{explicit} \mbox{\hyperlink{classmy_std_1_1vector_a3f942029ffea510e3c6e67310c18abb7}{vector}}(\textcolor{keywordtype}{int} s)}
+\DoxyCodeLine{45         : size\_v\{0\}}
+\DoxyCodeLine{46         , elem\{new T[s]\}}
+\DoxyCodeLine{47         , space\{s\}}
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{52     \mbox{\hyperlink{classmy_std_1_1vector_ae425fb0a79cfa7870cf3603c8abe3369}{vector}}(\textcolor{keyword}{const} \mbox{\hyperlink{classmy_std_1_1vector}{vector}} \&src)}
+\DoxyCodeLine{53         : size\_v\{src.size\_v\}}
+\DoxyCodeLine{54         , elem\{new T[src.space]\}}
+\DoxyCodeLine{55         , space\{src.space\}}
+\DoxyCodeLine{56     \{}
+\DoxyCodeLine{58         copy(src.elem, src.elem + size\_v, elem);}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{62     \mbox{\hyperlink{classmy_std_1_1vector_a2159a38177f8bc6729fe082d9c70d07c}{vector}}(\mbox{\hyperlink{classmy_std_1_1vector}{vector}}\&\& src) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{64         : size\_v\{src.size\_v\}}
+\DoxyCodeLine{65         , elem\{src.elem\}}
+\DoxyCodeLine{66         , space\{src.space\}}
+\DoxyCodeLine{67     \{}
+\DoxyCodeLine{69         src.size\_v = 0;}
+\DoxyCodeLine{70         src.elem = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{71         src.space = 0;}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{75     \mbox{\hyperlink{classmy_std_1_1vector_a1e1f606078c299bca20e54a0296b7af0}{\string~vector}}() noexcept}
+\DoxyCodeLine{76     \{}
+\DoxyCodeLine{77         \textcolor{keyword}{delete}[] elem;}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{81     \mbox{\hyperlink{classmy_std_1_1vector}{vector}} \&\mbox{\hyperlink{classmy_std_1_1vector_afdc47c36b3de5aa4e0e2d32da3539c2c}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classmy_std_1_1vector}{vector}} \&src)}
+\DoxyCodeLine{82     \{}
+\DoxyCodeLine{84         \textcolor{keywordflow}{if} (\textcolor{keyword}{this} != \&src)}
+\DoxyCodeLine{85         \{}
+\DoxyCodeLine{87             T *p = \textcolor{keyword}{new} T[src.space];}
+\DoxyCodeLine{89             copy(src.elem, src.elem + src.size\_v, p);}
+\DoxyCodeLine{91             \textcolor{keyword}{delete}[] elem;}
+\DoxyCodeLine{93             elem = p;}
+\DoxyCodeLine{94             size\_v = src.size\_v;}
+\DoxyCodeLine{95             space = src.space;}
+\DoxyCodeLine{96         \}}
+\DoxyCodeLine{98         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{99     \}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{102     \mbox{\hyperlink{classmy_std_1_1vector}{vector}}\& \mbox{\hyperlink{classmy_std_1_1vector_a19d376a15390448a1c3ccf79b9fc709a}{operator=}}(\mbox{\hyperlink{classmy_std_1_1vector}{vector}}\&\& src) \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{103     \{}
+\DoxyCodeLine{105         \textcolor{keywordflow}{if} (\textcolor{keyword}{this} != \&src)}
+\DoxyCodeLine{106         \{}
+\DoxyCodeLine{108             \textcolor{keyword}{delete}[] elem;}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{111             size\_v = src.size\_v;}
+\DoxyCodeLine{112             elem = src.elem;}
+\DoxyCodeLine{113             space = src.space;}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{116             src.size\_v = 0;}
+\DoxyCodeLine{117             src.elem = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{118             src.space = 0;}
+\DoxyCodeLine{119         \}}
+\DoxyCodeLine{121         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{122     \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     T\& \mbox{\hyperlink{classmy_std_1_1vector_a047cbc9e4084fbb83600f5aa71da34b9}{operator[]}}(\textcolor{keywordtype}{int} n)}
+\DoxyCodeLine{125     \{}
+\DoxyCodeLine{126         \textcolor{keywordflow}{return} elem[n]; }
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129     \textcolor{keyword}{const} T\& \mbox{\hyperlink{classmy_std_1_1vector_a047cbc9e4084fbb83600f5aa71da34b9}{operator[]}}(\textcolor{keywordtype}{int} n)\textcolor{keyword}{ const}}
+\DoxyCodeLine{130 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{131         \textcolor{keywordflow}{return} elem[n];}
+\DoxyCodeLine{132     \}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134     \textcolor{keywordtype}{int} size()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} size\_v; \}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136     \textcolor{keywordtype}{int} capacity()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} space; \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1vector_aa54bd9c3d8d3b6191d7eb7f85490eadb}{resize}}(\textcolor{keywordtype}{int} newsize)}
+\DoxyCodeLine{139     \{}
+\DoxyCodeLine{141         \mbox{\hyperlink{classmy_std_1_1vector_a50e786a02a59e689999365037ae26b3a}{reserve}}(newsize);}
+\DoxyCodeLine{143         \textcolor{keywordflow}{if} (newsize < size\_v)}
+\DoxyCodeLine{144             size\_v = newsize;}
+\DoxyCodeLine{145     \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1vector_a6b67323a806bc77abe59429eab4c2da0}{push\_back}}(T newObj)}
+\DoxyCodeLine{149     \{}
+\DoxyCodeLine{150         \textcolor{keywordflow}{if} (space == 0)}
+\DoxyCodeLine{151             \mbox{\hyperlink{classmy_std_1_1vector_a50e786a02a59e689999365037ae26b3a}{reserve}}(8); }
+\DoxyCodeLine{152         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (size\_v == space)}
+\DoxyCodeLine{153             \mbox{\hyperlink{classmy_std_1_1vector_a50e786a02a59e689999365037ae26b3a}{reserve}}(2 * space); }
+\DoxyCodeLine{155         elem[size\_v] = newObj;}
+\DoxyCodeLine{157         ++size\_v;}
+\DoxyCodeLine{158     \}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1vector_a50e786a02a59e689999365037ae26b3a}{reserve}}(\textcolor{keywordtype}{int} newalloc)}
+\DoxyCodeLine{161     \{}
+\DoxyCodeLine{163         \textcolor{keywordflow}{if} (newalloc > space)}
+\DoxyCodeLine{164         \{}
+\DoxyCodeLine{166             T *p = \textcolor{keyword}{new} T[newalloc];}
+\DoxyCodeLine{168             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size\_v; ++i)}
+\DoxyCodeLine{169             p[i] = std::move(elem[i]);}
+\DoxyCodeLine{171             \textcolor{keyword}{delete}[] elem;}
+\DoxyCodeLine{173             elem = p;}
+\DoxyCodeLine{175             space = newalloc;}
+\DoxyCodeLine{176         \}}
+\DoxyCodeLine{177     \}}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179     \textcolor{keyword}{using} iterator = T *;}
+\DoxyCodeLine{180     \textcolor{keyword}{using} const\_iterator = \textcolor{keyword}{const} T *;}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182     iterator \mbox{\hyperlink{classmy_std_1_1vector_adaa284b6b387f70d3244b4d6e64869c3}{begin}}() }
+\DoxyCodeLine{183     \{}
+\DoxyCodeLine{184         \textcolor{keywordflow}{if} (size\_v == 0)}
+\DoxyCodeLine{185             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{186         \textcolor{keywordflow}{return} \&elem[0];}
+\DoxyCodeLine{187     \}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189     const\_iterator \mbox{\hyperlink{classmy_std_1_1vector_adaa284b6b387f70d3244b4d6e64869c3}{begin}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{190 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{191         \textcolor{keywordflow}{if} (size\_v == 0)}
+\DoxyCodeLine{192             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{193         \textcolor{keywordflow}{return} \&elem[0];}
+\DoxyCodeLine{194     \}}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196     iterator \mbox{\hyperlink{classmy_std_1_1vector_a8fc7ec068c194f5ecb5a08e17a9c9ac4}{end}}() }
+\DoxyCodeLine{197     \{}
+\DoxyCodeLine{198         \textcolor{keywordflow}{if} (size\_v == 0)}
+\DoxyCodeLine{199             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{200         \textcolor{keywordflow}{return} \&elem[size\_v];}
+\DoxyCodeLine{201     \}}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203     const\_iterator \mbox{\hyperlink{classmy_std_1_1vector_a8fc7ec068c194f5ecb5a08e17a9c9ac4}{end}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{204 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{205         \textcolor{keywordflow}{if} (size\_v == 0)}
+\DoxyCodeLine{206             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{207         \textcolor{keywordflow}{return} \&elem[size\_v];}
+\DoxyCodeLine{208     \}}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{211     iterator \mbox{\hyperlink{classmy_std_1_1vector_a8d15cd0016a01d4f4aabbc926c986082}{insert}}(iterator p, \textcolor{keyword}{const} T\& newObj)}
+\DoxyCodeLine{212     \{}
+\DoxyCodeLine{214         \textcolor{keywordflow}{if} (p >= \mbox{\hyperlink{classmy_std_1_1vector_adaa284b6b387f70d3244b4d6e64869c3}{begin}}() \&\& p < \mbox{\hyperlink{classmy_std_1_1vector_a8fc7ec068c194f5ecb5a08e17a9c9ac4}{end}}())}
+\DoxyCodeLine{215         \{}
+\DoxyCodeLine{220             \textcolor{keywordtype}{int} index = p -\/ \mbox{\hyperlink{classmy_std_1_1vector_adaa284b6b387f70d3244b4d6e64869c3}{begin}}();}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{223             \textcolor{keywordflow}{if} (size\_v + 1 > space)}
+\DoxyCodeLine{224                 \mbox{\hyperlink{classmy_std_1_1vector_a50e786a02a59e689999365037ae26b3a}{reserve}}(2 * space);}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{228             \textcolor{keywordflow}{for} (iterator it = \mbox{\hyperlink{classmy_std_1_1vector_a8fc7ec068c194f5ecb5a08e17a9c9ac4}{end}}(); it > (\mbox{\hyperlink{classmy_std_1_1vector_adaa284b6b387f70d3244b4d6e64869c3}{begin}}() + index); -\/-\/it)}
+\DoxyCodeLine{229                 *it = *(it -\/ 1);}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{232             *(elem + index) = newObj;}
+\DoxyCodeLine{234             ++size\_v;}
+\DoxyCodeLine{236             \textcolor{keywordflow}{return} elem + index;}
+\DoxyCodeLine{237         \}}
+\DoxyCodeLine{239         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{240     \}}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242     iterator \mbox{\hyperlink{classmy_std_1_1vector_aa4ecb71647140e3c5226299f84828984}{erase}}(iterator p) }
+\DoxyCodeLine{243     \{}
+\DoxyCodeLine{245         \textcolor{keywordflow}{if} (p < \mbox{\hyperlink{classmy_std_1_1vector_adaa284b6b387f70d3244b4d6e64869c3}{begin}}() || p >= \mbox{\hyperlink{classmy_std_1_1vector_a8fc7ec068c194f5ecb5a08e17a9c9ac4}{end}}())}
+\DoxyCodeLine{246             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{247         \textcolor{keywordflow}{for} (iterator pos = p + 1; pos != \mbox{\hyperlink{classmy_std_1_1vector_a8fc7ec068c194f5ecb5a08e17a9c9ac4}{end}}(); ++pos)}
+\DoxyCodeLine{248             *(pos -\/ 1) = *pos; }
+\DoxyCodeLine{250         -\/-\/size\_v;}
+\DoxyCodeLine{251         \textcolor{keywordflow}{return} p;}
+\DoxyCodeLine{252     \}}
+\DoxyCodeLine{253 \};}
+\DoxyCodeLine{254 \}}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* VECTOR\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

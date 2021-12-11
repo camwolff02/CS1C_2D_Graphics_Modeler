@@ -1,0 +1,69 @@
+\hypertarget{line_8h_source}{}\doxysection{line.\+h}
+\label{line_8h_source}\index{QTPROJECT/line.h@{QTPROJECT/line.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef LINE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define LINE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}shape.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{/*}}
+\DoxyCodeLine{7 \textcolor{comment}{ * Author: Ethan Safai}}
+\DoxyCodeLine{8 \textcolor{comment}{ */}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemy_std}{myStd}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{classmy_std_1_1_line}{Line}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{27     \mbox{\hyperlink{classmy_std_1_1_line_a4d5a3257ee87d35825d709a638c8493d}{Line}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = -\/1, \textcolor{keywordtype}{int} x1 = 0, \textcolor{keywordtype}{int} y1 = 0, \textcolor{keywordtype}{int} x2 = 0,}
+\DoxyCodeLine{28          \textcolor{keywordtype}{int} y2 = 0)}
+\DoxyCodeLine{29         : \mbox{\hyperlink{class_shape}{Shape}}(ShapeType::\mbox{\hyperlink{classmy_std_1_1_line}{Line}}, id)}
+\DoxyCodeLine{30         , begin(QPoint(x1, y1))}
+\DoxyCodeLine{31         , end(QPoint(x2, y2))}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} < 0)}
+\DoxyCodeLine{34             \mbox{\hyperlink{class_shape_a96fcff5389f4e35805e72d075464eeaa}{setId}}(\mbox{\hyperlink{class_shape_af1a9b6477c90ed40ad32cf2c061ec43f}{getShapeCount}}());}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{40     \mbox{\hyperlink{classmy_std_1_1_line_a58d33d0a60925da91ee5a718bcc5749c}{Line}}(\mbox{\hyperlink{classmy_std_1_1_line}{Line}}\&\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{45     \mbox{\hyperlink{classmy_std_1_1_line_a8a99ec24004396f5d68f82141b3b9c09}{\string~Line}}()}
+\DoxyCodeLine{46     \{}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{53     \mbox{\hyperlink{classmy_std_1_1_line}{Line}}\& \mbox{\hyperlink{classmy_std_1_1_line_a5b949a92cbc6fb35ce7b0bbda8932224}{operator=}}(\mbox{\hyperlink{classmy_std_1_1_line}{Line}}\&\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{56 }
+\DoxyCodeLine{59     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_line_a9fcb28d2eda5a69e796777fb434bea05}{draw}}(QPainter* painter) \textcolor{keyword}{override};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_line_a25942ca5fe7ee2571165f99b57f68382}{move}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{int} y) \textcolor{keyword}{override};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{69 }
+\DoxyCodeLine{72     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_line_af91eac3b81f3716fdbde10180471e453}{getPerimeter}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{75 }
+\DoxyCodeLine{78     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_line_a19073f1ea8d81eb4fb09ac08aec2a1f8}{getArea}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{81 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_line_a4ea6aa771158dd5e978a1a19c03b48dd}{getLength}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{90     QPoint \mbox{\hyperlink{classmy_std_1_1_line_a20a31aa0f79d9a1c359c6fbd73a12173}{getBegin}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{93 }
+\DoxyCodeLine{96     QPoint \mbox{\hyperlink{classmy_std_1_1_line_a1e631160314f4473de1d4a45ca56387f}{getEnd}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{keyword}{private}:}
+\DoxyCodeLine{99     QPoint begin; \textcolor{comment}{// coordinates of beginning of line}}
+\DoxyCodeLine{100     QPoint end; \textcolor{comment}{// coordinates of end of line}}
+\DoxyCodeLine{101 \};}
+\DoxyCodeLine{102 \}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LINE\_H}}
+
+\end{DoxyCode}

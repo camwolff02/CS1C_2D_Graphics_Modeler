@@ -1,0 +1,207 @@
+\hypertarget{classmy_std_1_1_polygon}{}\doxysection{my\+Std\+::Polygon Class Reference}
+\label{classmy_std_1_1_polygon}\index{myStd::Polygon@{myStd::Polygon}}
+
+
+\mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}} class.  
+
+
+
+
+{\ttfamily \#include $<$polygon.\+h$>$}
+
+Inheritance diagram for my\+Std\+::Polygon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmy_std_1_1_polygon}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_std_1_1_polygon_a2195a8776c8e2c5cd19371a03907f7c6}{Polygon}} (int id=-\/1)
+\begin{DoxyCompactList}\small\item\em Default/ alternate constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_std_1_1_polygon_a0ea21ba449a212fb0ada8abdf069865c}{Polygon}} (\mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_std_1_1_polygon_adb25b6f85abfa46c5fad1f1613b5b169}{$\sim$\+Polygon}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}} \& \mbox{\hyperlink{classmy_std_1_1_polygon_a6713e4e4d91ab02b7fd5123033e18703}{operator=}} (\mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_polygon_ab41b6012819c13f263c3cfcb9f92e82a}{draw}} (QPainter $\ast$painter) override
+\begin{DoxyCompactList}\small\item\em Virtual method to draw the polygon. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmy_std_1_1_polygon_a9d4dd724c2e7f91aba923202d76c1528}{move}} (const int x, const int y) override
+\begin{DoxyCompactList}\small\item\em Virtual method to move the polygon. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_polygon_a21ba735cd255848ea7bc314b3e52cac9}{get\+Perimeter}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to return the polygon\textquotesingle{}s perimeter. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classmy_std_1_1_polygon_a9d1421f7838c26b881bcf42cc431d966}{get\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Virtual method to return the polygon\textquotesingle{}s area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_std_1_1_polygon_a754eebc9520821f9d7f0923410260f85}{add\+Point}} (const int x, const int y)
+\begin{DoxyCompactList}\small\item\em Method to add a point to the polygon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ QPoint $>$ \mbox{\hyperlink{classmy_std_1_1_polygon_ae50c2c218641a0ea73f09d68c25c01bb}{get\+Points}} () const
+\begin{DoxyCompactList}\small\item\em Method to return a vector of the polygon\textquotesingle{}s points in order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}} class. 
+
+This class represents a polygon that inherits from the \mbox{\hyperlink{class_shape}{Shape}} abstract base class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_polygon_a2195a8776c8e2c5cd19371a03907f7c6}\label{classmy_std_1_1_polygon_a2195a8776c8e2c5cd19371a03907f7c6}} 
+\index{myStd::Polygon@{myStd::Polygon}!Polygon@{Polygon}}
+\index{Polygon@{Polygon}!myStd::Polygon@{myStd::Polygon}}
+\doxysubsubsection{\texorpdfstring{Polygon()}{Polygon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily my\+Std\+::\+Polygon\+::\+Polygon (\begin{DoxyParamCaption}\item[{int}]{id = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default/ alternate constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & as an integer argument (shape ID) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmy_std_1_1_polygon_a0ea21ba449a212fb0ada8abdf069865c}\label{classmy_std_1_1_polygon_a0ea21ba449a212fb0ada8abdf069865c}} 
+\index{myStd::Polygon@{myStd::Polygon}!Polygon@{Polygon}}
+\index{Polygon@{Polygon}!myStd::Polygon@{myStd::Polygon}}
+\doxysubsubsection{\texorpdfstring{Polygon()}{Polygon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily my\+Std\+::\+Polygon\+::\+Polygon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move constructor. 
+
+Default \mbox{\Hypertarget{classmy_std_1_1_polygon_adb25b6f85abfa46c5fad1f1613b5b169}\label{classmy_std_1_1_polygon_adb25b6f85abfa46c5fad1f1613b5b169}} 
+\index{myStd::Polygon@{myStd::Polygon}!````~Polygon@{$\sim$Polygon}}
+\index{````~Polygon@{$\sim$Polygon}!myStd::Polygon@{myStd::Polygon}}
+\doxysubsubsection{\texorpdfstring{$\sim$Polygon()}{~Polygon()}}
+{\footnotesize\ttfamily my\+Std\+::\+Polygon\+::$\sim$\+Polygon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+Empty 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmy_std_1_1_polygon_a754eebc9520821f9d7f0923410260f85}\label{classmy_std_1_1_polygon_a754eebc9520821f9d7f0923410260f85}} 
+\index{myStd::Polygon@{myStd::Polygon}!addPoint@{addPoint}}
+\index{addPoint@{addPoint}!myStd::Polygon@{myStd::Polygon}}
+\doxysubsubsection{\texorpdfstring{addPoint()}{addPoint()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Polygon\+::add\+Point (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y }\end{DoxyParamCaption})}
+
+
+
+Method to add a point to the polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & as a constant integer (x coord) \\
+\hline
+{\em y} & as a constant integer (y coord) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmy_std_1_1_polygon_ab41b6012819c13f263c3cfcb9f92e82a}\label{classmy_std_1_1_polygon_ab41b6012819c13f263c3cfcb9f92e82a}} 
+\index{myStd::Polygon@{myStd::Polygon}!draw@{draw}}
+\index{draw@{draw}!myStd::Polygon@{myStd::Polygon}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Polygon\+::draw (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to draw the polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & as a pointer to a QPainter object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_a6b4fa6a322560ac657dc66774ae8e531}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_polygon_a9d1421f7838c26b881bcf42cc431d966}\label{classmy_std_1_1_polygon_a9d1421f7838c26b881bcf42cc431d966}} 
+\index{myStd::Polygon@{myStd::Polygon}!getArea@{getArea}}
+\index{getArea@{getArea}!myStd::Polygon@{myStd::Polygon}}
+\doxysubsubsection{\texorpdfstring{getArea()}{getArea()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Polygon\+::get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to return the polygon\textquotesingle{}s area. 
+
+\begin{DoxyReturn}{Returns}
+the polygon\textquotesingle{}s area 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_acec2178598665e96b85f1ac6a13a47b9}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_polygon_a21ba735cd255848ea7bc314b3e52cac9}\label{classmy_std_1_1_polygon_a21ba735cd255848ea7bc314b3e52cac9}} 
+\index{myStd::Polygon@{myStd::Polygon}!getPerimeter@{getPerimeter}}
+\index{getPerimeter@{getPerimeter}!myStd::Polygon@{myStd::Polygon}}
+\doxysubsubsection{\texorpdfstring{getPerimeter()}{getPerimeter()}}
+{\footnotesize\ttfamily double my\+Std\+::\+Polygon\+::get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to return the polygon\textquotesingle{}s perimeter. 
+
+\begin{DoxyReturn}{Returns}
+the polygon\textquotesingle{}s perimeter 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a3918812ff3a143dabbeba2f650fb5e7c}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_polygon_ae50c2c218641a0ea73f09d68c25c01bb}\label{classmy_std_1_1_polygon_ae50c2c218641a0ea73f09d68c25c01bb}} 
+\index{myStd::Polygon@{myStd::Polygon}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!myStd::Polygon@{myStd::Polygon}}
+\doxysubsubsection{\texorpdfstring{getPoints()}{getPoints()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ QPoint $>$ my\+Std\+::\+Polygon\+::get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to return a vector of the polygon\textquotesingle{}s points in order. 
+
+\begin{DoxyReturn}{Returns}
+a vector of the polygon\textquotesingle{}s points in order of creation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1_polygon_a9d4dd724c2e7f91aba923202d76c1528}\label{classmy_std_1_1_polygon_a9d4dd724c2e7f91aba923202d76c1528}} 
+\index{myStd::Polygon@{myStd::Polygon}!move@{move}}
+\index{move@{move}!myStd::Polygon@{myStd::Polygon}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void my\+Std\+::\+Polygon\+::move (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method to move the polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & as a constant integer (x coord for move) \\
+\hline
+{\em y} & as a constant integer (y coord for move) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_ad73469e5a2cb91a76b874af72dd59379}{Shape}}.
+
+\mbox{\Hypertarget{classmy_std_1_1_polygon_a6713e4e4d91ab02b7fd5123033e18703}\label{classmy_std_1_1_polygon_a6713e4e4d91ab02b7fd5123033e18703}} 
+\index{myStd::Polygon@{myStd::Polygon}!operator=@{operator=}}
+\index{operator=@{operator=}!myStd::Polygon@{myStd::Polygon}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}} \& my\+Std\+::\+Polygon\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move assignment. 
+
+Default 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+QTPROJECT/polygon.\+h\item 
+QTPROJECT/polygon.\+cpp\end{DoxyCompactItemize}

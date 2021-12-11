@@ -1,0 +1,60 @@
+\hypertarget{rectangle_8h_source}{}\doxysection{rectangle.\+h}
+\label{rectangle_8h_source}\index{QTPROJECT/rectangle.h@{QTPROJECT/rectangle.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef RECTANGLE\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define RECTANGLE\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}shape.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{/*}}
+\DoxyCodeLine{7 \textcolor{comment}{ * Author: Ethan Safai}}
+\DoxyCodeLine{8 \textcolor{comment}{ */}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemy_std}{myStd}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{28   \mbox{\hyperlink{classmy_std_1_1_rectangle_a461c65c61a67d76de00bf5df9b0cdf97}{Rectangle}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = -\/1, \textcolor{keywordtype}{int} x = 0, \textcolor{keywordtype}{int} y = 0, \textcolor{keywordtype}{int} width = 0,}
+\DoxyCodeLine{29             \textcolor{keywordtype}{int} height = 0)}
+\DoxyCodeLine{30     : \mbox{\hyperlink{class_shape}{Shape}}(ShapeType::\mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}}, id)}
+\DoxyCodeLine{31     , rectangle(x, y, width, height)}
+\DoxyCodeLine{32   \{}
+\DoxyCodeLine{33       \mbox{\hyperlink{class_shape_a2d8fd6861bf7906e0152a699ce6054c8}{setX}}(x);}
+\DoxyCodeLine{34       \mbox{\hyperlink{class_shape_aa2b8845b186bf95781ca5d5e22316343}{setY}}(y);}
+\DoxyCodeLine{35       \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} < 0)}
+\DoxyCodeLine{36           \mbox{\hyperlink{class_shape_a96fcff5389f4e35805e72d075464eeaa}{setId}}(\mbox{\hyperlink{class_shape_af1a9b6477c90ed40ad32cf2c061ec43f}{getShapeCount}}());}
+\DoxyCodeLine{37   \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{42   \mbox{\hyperlink{classmy_std_1_1_rectangle_ab3ef1dbc3b4b17f4f7c2f15714790fcc}{Rectangle}}(\mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}}\&\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{47   \mbox{\hyperlink{classmy_std_1_1_rectangle_af6d5aa48071e03597bb6980a78d1b655}{\string~Rectangle}}()}
+\DoxyCodeLine{48   \{}
+\DoxyCodeLine{49   \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{55   \mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}}\& \mbox{\hyperlink{classmy_std_1_1_rectangle_a5c679188748fbfcc5efb73f13a150962}{operator=}}(\mbox{\hyperlink{classmy_std_1_1_rectangle}{Rectangle}}\&\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{58 }
+\DoxyCodeLine{61   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_rectangle_ac0a4b33ec230a123f51ffecfbfbe92f8}{draw}}(QPainter* painter) \textcolor{keyword}{override};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{64 }
+\DoxyCodeLine{68   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_rectangle_a5fcc8b41f22245c34c8f79d81e1bb8a8}{move}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{int} y) \textcolor{keyword}{override};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{71 }
+\DoxyCodeLine{74   \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_rectangle_ae5d51ea2917ee94f65a26d1cab7922bd}{getPerimeter}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{77 }
+\DoxyCodeLine{80   \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_rectangle_a150b545544ebb2fb6e9b3b25ffcf4751}{getArea}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{keyword}{private}:}
+\DoxyCodeLine{83   QRect rectangle; \textcolor{comment}{// defines top-\/left point, width, and height}}
+\DoxyCodeLine{84 \};}
+\DoxyCodeLine{85 \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* RECTANGLE\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

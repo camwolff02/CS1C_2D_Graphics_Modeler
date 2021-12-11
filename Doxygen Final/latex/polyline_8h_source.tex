@@ -1,0 +1,46 @@
+\hypertarget{polyline_8h_source}{}\doxysection{polyline.\+h}
+\label{polyline_8h_source}\index{QTPROJECT/polyline.h@{QTPROJECT/polyline.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef POLYLINE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define POLYLINE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}shape.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemy_std}{myStd}}\{}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classmy_std_1_1_polyline}{Polyline}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_shape}{Shape}} \{}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{21     \mbox{\hyperlink{classmy_std_1_1_polyline_a12af463fffe56f3b92aa00dcf6ac103b}{Polyline}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}=-\/1);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{24 }
+\DoxyCodeLine{27     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_polyline_a419a06185c533bafb312421b35da4cb4}{draw}}(QPainter* painter) \textcolor{keyword}{override};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_polyline_a298849a59d0b00508378ffff5790b1ac}{move}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{int} y) \textcolor{keyword}{override};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_polyline_a02f903f72551647a19002bcad39096d5}{getPerimeter}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{46     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_polyline_a758089ef10174c6a63417aea9bfafd40}{getArea}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} addPoint(\textcolor{keyword}{const} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{54     std::vector<QPoint> \mbox{\hyperlink{classmy_std_1_1_polyline_a0f54ec01b1db518d6d9c23607b4a9c8d}{getPoints}}();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{private}:}
+\DoxyCodeLine{57     std::vector<QPoint> points;}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// POLYLINE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,66 @@
+\hypertarget{polygon_8h_source}{}\doxysection{polygon.\+h}
+\label{polygon_8h_source}\index{QTPROJECT/polygon.h@{QTPROJECT/polygon.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef POLYGON\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define POLYGON\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}shape.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Vector.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{/*}}
+\DoxyCodeLine{8 \textcolor{comment}{ * Author: Ethan Safai}}
+\DoxyCodeLine{9 \textcolor{comment}{ */}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemy_std}{myStd}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{25     \mbox{\hyperlink{classmy_std_1_1_polygon_a2195a8776c8e2c5cd19371a03907f7c6}{Polygon}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = -\/1)}
+\DoxyCodeLine{26         : \mbox{\hyperlink{class_shape}{Shape}}(ShapeType::\mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}}, id)}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_shape_a2d8fd6861bf7906e0152a699ce6054c8}{setX}}(0);}
+\DoxyCodeLine{29         \mbox{\hyperlink{class_shape_aa2b8845b186bf95781ca5d5e22316343}{setY}}(0);}
+\DoxyCodeLine{30         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} < 0)}
+\DoxyCodeLine{31             \mbox{\hyperlink{class_shape_a96fcff5389f4e35805e72d075464eeaa}{setId}}(\mbox{\hyperlink{class_shape_af1a9b6477c90ed40ad32cf2c061ec43f}{getShapeCount}}());}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{37     \mbox{\hyperlink{classmy_std_1_1_polygon_a0ea21ba449a212fb0ada8abdf069865c}{Polygon}}(\mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}}\&\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{42     \mbox{\hyperlink{classmy_std_1_1_polygon_adb25b6f85abfa46c5fad1f1613b5b169}{\string~Polygon}}()}
+\DoxyCodeLine{43     \{}
+\DoxyCodeLine{44     \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{50     \mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}}\& \mbox{\hyperlink{classmy_std_1_1_polygon_a6713e4e4d91ab02b7fd5123033e18703}{operator=}}(\mbox{\hyperlink{classmy_std_1_1_polygon}{Polygon}}\&\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{53 }
+\DoxyCodeLine{56     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_polygon_ab41b6012819c13f263c3cfcb9f92e82a}{draw}}(QPainter* painter) \textcolor{keyword}{override};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_polygon_a9d4dd724c2e7f91aba923202d76c1528}{move}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{int} y) \textcolor{keyword}{override};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{69     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_polygon_a21ba735cd255848ea7bc314b3e52cac9}{getPerimeter}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{72 }
+\DoxyCodeLine{75     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_polygon_a9d1421f7838c26b881bcf42cc431d966}{getArea}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{78 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_polygon_a754eebc9520821f9d7f0923410260f85}{addPoint}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{85 }
+\DoxyCodeLine{88     \mbox{\hyperlink{classmy_std_1_1vector}{myStd::vector<QPoint>}} \mbox{\hyperlink{classmy_std_1_1_polygon_ae50c2c218641a0ea73f09d68c25c01bb}{getPoints}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{keyword}{private}:}
+\DoxyCodeLine{91     \mbox{\hyperlink{classmy_std_1_1vector}{myStd::vector<QPoint>}} points; \textcolor{comment}{// contains the polygon's vertices}}
+\DoxyCodeLine{92     QPolygon polygon; \textcolor{comment}{// contains vertices -\/ used for drawing with QPainter}}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{94 \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// POLYGON\_H}}
+
+\end{DoxyCode}

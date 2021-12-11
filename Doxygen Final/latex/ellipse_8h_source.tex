@@ -1,0 +1,44 @@
+\hypertarget{ellipse_8h_source}{}\doxysection{ellipse.\+h}
+\label{ellipse_8h_source}\index{QTPROJECT/ellipse.h@{QTPROJECT/ellipse.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_ELLIPSE\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_ELLIPSE\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}shape.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemy_std}{myStd}}\{}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classmy_std_1_1_ellipse}{Ellipse}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_shape}{Shape}} \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{21     \mbox{\hyperlink{classmy_std_1_1_ellipse_a9f517478872fe9dea471f12debbe0949}{Ellipse}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = -\/1, \textcolor{keywordtype}{int} width=0, \textcolor{keywordtype}{int} height=0) : \mbox{\hyperlink{class_shape}{Shape}}\{ShapeType::\mbox{\hyperlink{classmy_std_1_1_ellipse}{Ellipse}}, id\} , shape\{0, 0, width, height\} \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} < 0)\{}
+\DoxyCodeLine{23             \mbox{\hyperlink{class_shape_a96fcff5389f4e35805e72d075464eeaa}{setId}}(\mbox{\hyperlink{class_shape_af1a9b6477c90ed40ad32cf2c061ec43f}{getShapeCount}}());}
+\DoxyCodeLine{24     \}\};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{30     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_ellipse_a4fa3e317cd833a31d29e90372bdf8d6c}{draw}}(QPainter* painter) \textcolor{keyword}{override};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{38     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_ellipse_aad3d9657e7759b6411481b771982c72e}{move}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{int} y) \textcolor{keyword}{override};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_ellipse_ac8c9fa657794126b4c2e3978bcad07c0}{getPerimeter}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{50     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_ellipse_afae063887b390eb3b043bbf59e120e5f}{getArea}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{keyword}{private}:}
+\DoxyCodeLine{54   QRect shape;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

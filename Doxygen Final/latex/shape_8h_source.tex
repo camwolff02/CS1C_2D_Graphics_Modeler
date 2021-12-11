@@ -1,0 +1,123 @@
+\hypertarget{shape_8h_source}{}\doxysection{shape.\+h}
+\label{shape_8h_source}\index{QTPROJECT/shape.h@{QTPROJECT/shape.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_SHAPE\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_SHAPE\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QPainter>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{/*}}
+\DoxyCodeLine{7 \textcolor{comment}{  Author:  Christopher Schrader}}
+\DoxyCodeLine{8 \textcolor{comment}{  Editors: Ethan Safai}}
+\DoxyCodeLine{9 \textcolor{comment}{*/}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{12 \textcolor{comment}{/*}}
+\DoxyCodeLine{13 \textcolor{comment}{  Values: Line (1), PolyLine, Polygon, Rectangle, Square, Ellipse, Circle, Text}}
+\DoxyCodeLine{14 \textcolor{comment}{*/}}
+\DoxyCodeLine{15 \textcolor{keyword}{enum} ShapeType }
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17   Line=1,    }
+\DoxyCodeLine{18   Polyline,  }
+\DoxyCodeLine{19   Polygon,   }
+\DoxyCodeLine{20   Rectangle, }
+\DoxyCodeLine{21   Square,    }
+\DoxyCodeLine{22   Ellipse,   }
+\DoxyCodeLine{23   Circle,    }
+\DoxyCodeLine{24   Text       }
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{32 \textcolor{keyword}{class }\mbox{\hyperlink{class_shape}{Shape}} }
+\DoxyCodeLine{33 \{}
+\DoxyCodeLine{34 \textcolor{keyword}{public}:}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{40   \mbox{\hyperlink{class_shape_a2be57e345217494a0cdd999ea9e77da4}{Shape}}(ShapeType type, \textcolor{keywordtype}{int} \textcolor{keywordtype}{id})}
+\DoxyCodeLine{41     : shapeID\{type\}}
+\DoxyCodeLine{42     , id\{id\} }
+\DoxyCodeLine{43   \{}
+\DoxyCodeLine{44     ++shapeCount;}
+\DoxyCodeLine{45   \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{50   \mbox{\hyperlink{class_shape_a5a7ba966cf5efb6745a9b15dc63afd7f}{Shape}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_shape}{Shape}}\& rhs) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{55   \mbox{\hyperlink{class_shape}{Shape}}\& \mbox{\hyperlink{class_shape_aa710f04738d5faaa91f6cd985800605a}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_shape}{Shape}}\& rhs) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{60   \textcolor{keyword}{virtual} \mbox{\hyperlink{class_shape_a935afc9e576015f967d90de56977167d}{\string~Shape}}();}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{66   \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_shape_a152eec1a35b057d49a5f7334c0dc24ea}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_shape}{Shape}}\& rhs);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{69 }
+\DoxyCodeLine{72   \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_shape_a9b3f8a6a2a4d64e1db3bbc6ae2b373ec}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_shape}{Shape}}\& rhs);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{75 }
+\DoxyCodeLine{78   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_a6b4fa6a322560ac657dc66774ae8e531}{draw}}(QPainter* painter) = 0;}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{81 }
+\DoxyCodeLine{85   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_ad73469e5a2cb91a76b874af72dd59379}{move}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{int} y) = 0;}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{91   \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_shape_a3918812ff3a143dabbeba2f650fb5e7c}{getPerimeter}}() = 0;}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{94 }
+\DoxyCodeLine{97   \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_shape_acec2178598665e96b85f1ac6a13a47b9}{getArea}}() = 0;}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{100 }
+\DoxyCodeLine{103   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_a05fc5c8506a62f2eb43fbf29818b4258}{setShapeType}}(ShapeType type);}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 }
+\DoxyCodeLine{107 }
+\DoxyCodeLine{114   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_a028e8f42ef5aaa8c3cbf004ab9076f2f}{setPen}}(QColor color, \textcolor{keywordtype}{int} size, Qt::PenStyle style, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle);}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{117 }
+\DoxyCodeLine{121   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_ac5aa170455b074fec2079b17840ddba7}{setBrush}}(QColor color, Qt::BrushStyle brushStyle);}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{124 }
+\DoxyCodeLine{127   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_a96fcff5389f4e35805e72d075464eeaa}{setId}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{128   }
+\DoxyCodeLine{130 }
+\DoxyCodeLine{133   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_a2d8fd6861bf7906e0152a699ce6054c8}{setX}}(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{136 }
+\DoxyCodeLine{139   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_aa2b8845b186bf95781ca5d5e22316343}{setY}}(\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{142 }
+\DoxyCodeLine{145   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_shape_a9943196f6a4fb3c9da2a8904c1af9a18}{getId}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} id; \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{148 }
+\DoxyCodeLine{151   \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_shape_af1a9b6477c90ed40ad32cf2c061ec43f}{getShapeCount}}() \{ \textcolor{keywordflow}{return} shapeCount; \}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{154 }
+\DoxyCodeLine{157   QPen \mbox{\hyperlink{class_shape_a16aad057da1ce3475f666cbdd27da042}{getPen}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} pen; \}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{160 }
+\DoxyCodeLine{163   QBrush \mbox{\hyperlink{class_shape_acbb9f9354579fdaad31853d714653e0d}{getBrush}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} brush; \}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{166 }
+\DoxyCodeLine{169   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_shape_af604de36aa616c585bb30dedf5e5c68b}{getX}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} x; \}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{172 }
+\DoxyCodeLine{175   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_shape_a2e87ea4122381ffb83474f4b69247ded}{getY}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} y; \}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{178 }
+\DoxyCodeLine{181   ShapeType \mbox{\hyperlink{class_shape_abe95f6fae956f8d700d4d9c5fe62ced7}{getShapeType}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} shapeID; \}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{184   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_a7ce5090298133856826690aab427c8a2}{resetShapeCount}}()\{shapeCount = 0;\}}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 \textcolor{keyword}{private}:}
+\DoxyCodeLine{187   ShapeType shapeID;     \textcolor{comment}{//shape type id}}
+\DoxyCodeLine{188   QPen pen;              \textcolor{comment}{// shape's pen}}
+\DoxyCodeLine{189   QBrush brush;          \textcolor{comment}{// shape's brush}}
+\DoxyCodeLine{190   \textcolor{keywordtype}{int} x;                 \textcolor{comment}{// shape's top-\/left x-\/coordinate}}
+\DoxyCodeLine{191   \textcolor{keywordtype}{int} y;                 \textcolor{comment}{// shape's top-\/left y-\/coordinate}}
+\DoxyCodeLine{192   \textcolor{keywordtype}{int} id;                \textcolor{comment}{// number ID (not shape type)}}
+\DoxyCodeLine{193   \textcolor{keyword}{static} \textcolor{keywordtype}{int} shapeCount; \textcolor{comment}{// static member -\/ how many shapes have been }}
+\DoxyCodeLine{194                          \textcolor{comment}{// instantiated}}
+\DoxyCodeLine{195 \};}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{199 }
+
+\end{DoxyCode}

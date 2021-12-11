@@ -1,0 +1,49 @@
+\hypertarget{text_8h_source}{}\doxysection{text.\+h}
+\label{text_8h_source}\index{QTPROJECT/text.h@{QTPROJECT/text.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TEXT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TEXT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}shape.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QFont>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemy_std}{myStd}}\{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classmy_std_1_1_text}{Text}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_shape}{Shape}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{30     \mbox{\hyperlink{classmy_std_1_1_text_a95ea223cb13ddc43a56ccc4530a23275}{Text}}(QString msg, QFont font, QColor color, \textcolor{keywordtype}{int} height, \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} flag, \textcolor{keywordtype}{int} \textcolor{keywordtype}{id}=-\/1);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{36     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_text_aeee4fd15cfe8f1ecf4de47401d16b663}{draw}}(QPainter* painter) \textcolor{keyword}{override};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{43     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmy_std_1_1_text_a2a5fbb7fed10a794a0bae2b9f144d397}{move}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{int} y) \textcolor{keyword}{override};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{49     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_text_a82aaa5bc95eeec189409f2e2a1bc07bc}{getPerimeter}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{55     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classmy_std_1_1_text_ac151cf3588c44c6ded2d5956dc7674c6}{getArea}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{58 }
+\DoxyCodeLine{61     QString \mbox{\hyperlink{classmy_std_1_1_text_a8e7804ceb5cfc6778252e8ff8f8ca79d}{getText}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keyword}{private}:}
+\DoxyCodeLine{64     QString text;}
+\DoxyCodeLine{65     \textcolor{keywordtype}{int} height;}
+\DoxyCodeLine{66     \textcolor{keywordtype}{int} width;}
+\DoxyCodeLine{67     QFont font;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{int} flag;}
+\DoxyCodeLine{70 \};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// TEXT\_H}}
+
+\end{DoxyCode}

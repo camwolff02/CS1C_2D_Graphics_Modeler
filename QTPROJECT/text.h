@@ -61,12 +61,11 @@ public:
     QString getText();
 
 private:
-    QString text;
-    int height;
-    int width;
-    QFont font;
-
-    int flag;
+    QString text; /*!< QString which contains text content being displayed */
+    int height; /*!< Vertical size of text box */
+    int width; /*!< Horizontal size of text box */
+    QFont font; /*!< Font of text being rendered inside text box */
+    int flag; /*!< Flag used for text alignment within text box */
 };
 
 
