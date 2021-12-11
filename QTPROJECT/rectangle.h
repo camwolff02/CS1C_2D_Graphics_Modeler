@@ -80,7 +80,7 @@ public:
   virtual double getArea() override;
 
 private:
-  QRect rectangle; // defines top-left point, width, and height
+  QRect rectangle; /*!< defines top-left point, width, and height */
 };
 }
 

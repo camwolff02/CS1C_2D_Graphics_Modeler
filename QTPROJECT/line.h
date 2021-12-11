@@ -96,8 +96,8 @@ public:
     QPoint getEnd() const;
 
 private:
-    QPoint begin; // coordinates of beginning of line
-    QPoint end; // coordinates of end of line
+    QPoint begin; /*!< coordinates of beginning of line */
+    QPoint end; /*!< coordinates of end of line */
 };
 }
 

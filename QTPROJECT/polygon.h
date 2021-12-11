@@ -88,8 +88,8 @@ public:
     myStd::vector<QPoint> getPoints() const;
 
 private:
-    myStd::vector<QPoint> points; // contains the polygon's vertices
-    QPolygon polygon; // contains vertices - used for drawing with QPainter
+    myStd::vector<QPoint> points; /*!< contains the polygon's vertices */
+    QPolygon polygon; /*!< contains vertices - used for drawing with QPainter */
 };
 }
 
