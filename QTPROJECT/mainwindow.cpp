@@ -8,6 +8,8 @@
 #include "addtextbox.h"
 #include "addpolyline.h"
 #include "addpolygon.h"
+#include "moveshape.h"
+#include "delshape.h"
 
 #include <QMessageBox>
 
@@ -165,5 +167,41 @@ void MainWindow::on_actionSave_triggered()
 void MainWindow::on_actionQuit_triggered()
 {
     qApp->exit();
+}
+
+
+void MainWindow::on_actionMove_Shape_triggered()
+{
+    if (isAdmin)
+    {
+        moveShape moveShape;
+        moveShape.setModal(true);
+        moveShape.setWindowTitle("Move Shape");
+        moveShape.exec();
+    }
+    else
+    {
+        QMessageBox::warning(this, "Error", "Insufficient permissions");
+
+    }
+
+}
+
+
+void MainWindow::on_actionDelete_Shape_triggered()
+{
+    if (isAdmin)
+    {
+        delShape delShape;
+        delShape.setModal(true);
+        delShape.setWindowTitle("Delete Shape");
+        delShape.exec();
+    }
+    else
+    {
+        QMessageBox::warning(this, "Error", "Insufficient permissions");
+
+    }
+
 }
 

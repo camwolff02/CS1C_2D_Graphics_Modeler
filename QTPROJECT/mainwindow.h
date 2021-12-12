@@ -40,6 +40,10 @@ private slots:
 
     void on_actionQuit_triggered();
 
+    void on_actionMove_Shape_triggered();
+
+    void on_actionDelete_Shape_triggered();
+
 private:
     Ui::MainWindow *ui;
     QPainter painter;
