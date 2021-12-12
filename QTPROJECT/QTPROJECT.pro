@@ -17,12 +17,14 @@ SOURCES += \
     addtextbox.cpp \
     canvas.cpp \
     contactus.cpp \
+    delshape.cpp \
     ellipse.cpp \
     globals.cpp \
     line.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    moveshape.cpp \
     polygon.cpp \
     polyline.cpp \
     rectangle.cpp \
@@ -40,11 +42,13 @@ HEADERS += \
     addtextbox.h \
     canvas.h \
     contactus.h \
+    delshape.h \
     ellipse.h \
     globals.h \
     line.h \
     login.h \
     mainwindow.h \
+    moveshape.h \
     parser.h \
     polygon.h \
     polyline.h \
@@ -65,8 +69,10 @@ FORMS += \
     addrectangles.ui \
     addtextbox.ui \
     contactus.ui \
+    delshape.ui \
     login.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    moveshape.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
