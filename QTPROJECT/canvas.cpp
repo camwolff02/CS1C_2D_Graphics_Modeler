@@ -116,7 +116,8 @@ void Canvas::deleteShape(int id){
     for (p = shapes.begin(); p < shapes.end(); p++){
         if ((*p)->getId() == id){
             this->shapes.erase(p);
-            delete *p;
+            //deallocate memory here crashed program?
+
         }
     }
 
