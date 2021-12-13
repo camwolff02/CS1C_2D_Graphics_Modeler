@@ -105,3 +105,28 @@ Qt::BrushStyle Canvas::getBrushStyle(int index){
     return brush_style;
 }
 
+void Canvas::moveShape(int id, int x, int y){
+    myStd::vector<Shape*>::iterator m;
+    for (m = shapes.begin(); m < shapes.end();m++)
+    {
+        if ((*m)->getId() == id)
+        {
+            (*m)->move(x, y);
+
+        }
+    }
+
+}
+
+void Canvas::deleteShape(int id){
+
+    myStd::vector<Shape*>::iterator p;
+    for (p = shapes.begin(); p < shapes.end(); p++){
+        if ((*p)->getId() == id){
+            this->shapes.erase(p);
+            //deallocate memory here crashed program?
+
+        }
+    }
+
+}

@@ -27,7 +27,7 @@ public:
     /*!
       \param painter as a pointer to q QPainter object
      */
-    virtual void draw(QPainter* painter) override;
+     void draw(QPainter* painter) override;
 
     //! Virtual method to move ellipse
     /*!
@@ -35,19 +35,19 @@ public:
       \param y as a constant integer (shift y units)
      */
 
-    virtual void move(const int x, const int y) override;
+    void move(const int x, const int y) override;
 
     //! Virtual method to get perimeter
     /*!
       \return 0;
      */
-    virtual double getPerimeter() override;
+    double getPerimeter() override;
 
     //! Virtual method to get area
     /*!
       \return 0;
      */
-    virtual double getArea() override;
+    double getArea() override;
 
 
 private:

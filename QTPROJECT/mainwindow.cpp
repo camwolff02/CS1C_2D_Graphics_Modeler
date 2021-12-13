@@ -174,7 +174,7 @@ void MainWindow::on_actionMove_Shape_triggered()
 {
     if (isAdmin)
     {
-        moveShape moveShape;
+        moveShape moveShape(this, ui->widget);
         moveShape.setModal(true);
         moveShape.setWindowTitle("Move Shape");
         moveShape.exec();
@@ -192,7 +192,7 @@ void MainWindow::on_actionDelete_Shape_triggered()
 {
     if (isAdmin)
     {
-        delShape delShape;
+        delShape delShape(this, ui->widget);
         delShape.setModal(true);
         delShape.setWindowTitle("Delete Shape");
         delShape.exec();

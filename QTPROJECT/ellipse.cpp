@@ -30,7 +30,8 @@ double Ellipse::getArea(){
 }
 
 void Ellipse::move(const int x, const int y){
-    //this->draw(x, y);
+    this->setX(x);
+    this->setY(y);
 }
 
 }
