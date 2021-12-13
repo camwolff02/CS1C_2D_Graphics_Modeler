@@ -1,7 +1,7 @@
 #include "delshape.h"
 #include "ui_delshape.h"
 
-delShape::delShape(QWidget *parent) :
+delShape::delShape(QWidget *parent, Canvas *renderarea) :
     QDialog(parent),
     ui(new Ui::delShape)
 {
