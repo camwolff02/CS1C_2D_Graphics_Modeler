@@ -84,11 +84,19 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
     myStd::vector<Shape*> vect;
 
     // fix file path before opening
-    QString fullPath = QDir::currentPath() + '/' + filename;
+    QString fullPath = QDir::currentPath()/* + '/' + filename*/;
+    for (int i = fullPath.length() - 1; i >= 0; --i) {
+        if (fullPath.at(i) == '/') {
+            fullPath.chop(fullPath.length() - i);
+            break;
+        }
+    }
+    fullPath += "/QTPROJECT/" + filename;
     fullPath = fullPath.replace('/', "\\\\");
+    qInfo() << fullPath << "\n";
 
     // open file using Qt's file system
-    QFile file {filename};
+    QFile file {fullPath};
 
     // give error if we can't open the file in read only
     // QIODevice::Text turns Windows style to c++ style line terminators
