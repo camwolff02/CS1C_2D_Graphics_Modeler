@@ -163,7 +163,7 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
                 if (type == "Line") {
                     shape = new myStd::Line(id, dims.at(0), dims.at(1), dims.at(2), dims.at(3));
                 }
-                else {  // type == "Polyline"
+                else {  // type == "Polyline"  not working??
                     shape = new myStd::Polyline(id);
                     for (int i = 0; i < dims.length(); i+=2)
                         ((myStd::Polyline*)shape)->addPoint(dims.at(i), dims.at(i));
