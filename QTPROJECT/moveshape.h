@@ -18,6 +18,7 @@ public:
 
 private:
     Ui::moveShape *ui;
+    Canvas* renderarea;
 };
 
 #endif // MOVESHAPE_H

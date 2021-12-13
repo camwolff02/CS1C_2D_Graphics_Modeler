@@ -16,7 +16,11 @@ public:
     explicit delShape(QWidget *parent = nullptr, Canvas *renderarea=nullptr);
     ~delShape();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
+    Canvas* renderarea;
     Ui::delShape *ui;
 };
 

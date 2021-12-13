@@ -3,7 +3,8 @@
 
 moveShape::moveShape(QWidget *parent, Canvas *renderarea) :
     QDialog(parent),
-    ui(new Ui::moveShape)
+    ui(new Ui::moveShape),
+    renderarea{renderarea}
 {
     ui->setupUi(this);
 }

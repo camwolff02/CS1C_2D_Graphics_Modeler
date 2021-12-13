@@ -86,6 +86,9 @@ public:
   */
   Qt::PenJoinStyle getPenJoinStyle(int index);
 
+  void deleteShape(int id);
+  void moveShape(int id);
+
 private:
 //! shape container
 myStd::vector<Shape*> shapes;

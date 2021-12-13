@@ -105,3 +105,19 @@ Qt::BrushStyle Canvas::getBrushStyle(int index){
     return brush_style;
 }
 
+void Canvas::moveShape(int id){
+
+
+}
+
+void Canvas::deleteShape(int id){
+
+    myStd::vector<Shape*>::iterator p;
+    for (p = shapes.begin(); p < shapes.end(); p++){
+        if ((*p)->getId() == id){
+            this->shapes.erase(p);
+            delete *p;
+        }
+    }
+
+}
