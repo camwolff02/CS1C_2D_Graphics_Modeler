@@ -35,7 +35,8 @@ double Text::getArea(){
 }
 
 void Text::move(const int x, const int y){
-    //draw(x, y);
+    this->setX(x);
+    this->setY(y);
 }
 
 QString Text::getText(){

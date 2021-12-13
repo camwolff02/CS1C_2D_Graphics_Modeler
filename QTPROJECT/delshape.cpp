@@ -19,7 +19,7 @@ void delShape::on_buttonBox_accepted()
     int id = ui->lineEdit->text().toInt();
     renderarea->deleteShape(id);
 
-    //renderarea->update();
+    renderarea->update();
 
 }
 

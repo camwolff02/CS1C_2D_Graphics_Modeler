@@ -32,7 +32,8 @@ double Polyline::getArea(){
 }
 
 void Polyline::move(const int x, const int y){
-    //draw(x, y);
+    for (int i = 0, n = points.size(); i < n; ++i)
+        points[i] = QPoint(points[i].x() + x, points[i].y() + y);
 }
 
 
