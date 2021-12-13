@@ -140,7 +140,7 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
                 if (type == "Polygon") {  //!NOT WORKING
                     shape = new myStd::Polygon(id);
                     for (int i = 0; i < dims.length(); i+=2)
-                        ((myStd::Polygon*)shape)->addPoint(dims.at(i), dims.at(i));
+                        ((myStd::Polygon*)shape)->addPoint(dims.at(i), dims.at(i+1));
                 }
                 else if (type == "Rectangle") {
                     shape = new myStd::Rectangle(id, dims.at(0), dims.at(1), dims.at(2), dims.at(3));
@@ -148,11 +148,11 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
                 else if (type == "Square") {
                     shape = new myStd::Rectangle(id, dims.at(0), dims.at(1), dims.at(2), dims.at(2));
                 }
-                else if (type == "Ellipse") {  //!NOT WORKING
+                else if (type == "Ellipse") {
                     shape = new myStd::Ellipse(id, dims.at(2), dims.at(3));
                     shape->move(dims.at(0), dims.at(1));
                 }
-                else {  //! type == "Circle" NOT WORKING
+                else {  // type == "Circle"
                     shape = new myStd::Ellipse(id, dims.at(2), dims.at(2));
                     shape->move(dims.at(0), dims.at(1));
                 }
@@ -166,7 +166,7 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
                 else {  // type == "Polyline"  not working??
                     shape = new myStd::Polyline(id);
                     for (int i = 0; i < dims.length(); i+=2)
-                        ((myStd::Polyline*)shape)->addPoint(dims.at(i), dims.at(i));
+                        ((myStd::Polyline*)shape)->addPoint(dims.at(i), dims.at(i+1));
                 }
             }
             shape->setPen(color, width, style, capStyle, joinStyle);
