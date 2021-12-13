@@ -92,7 +92,12 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
         }
     }
     fullPath += "/QTPROJECT/" + filename;
-    fullPath = fullPath.replace('/', "\\\\");
+
+    // to account for OS differences
+    #ifdef _WIN32
+        fullPath = fullPath.replace('/', "\\\\");
+    #endif
+
     qInfo() << fullPath << "\n";
 
     // open file using Qt's file system
@@ -145,7 +150,7 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
                 QColor brushColor = in.readLine().remove(0, 12);
                 QString brushStyle = in.readLine().remove(0, 12);
 
-                if (type == "Polygon") {  //!NOT WORKING
+                if (type == "Polygon") {
                     shape = new myStd::Polygon(id);
                     for (int i = 0; i < dims.length(); i+=2)
                         ((myStd::Polygon*)shape)->addPoint(dims.at(i), dims.at(i+1));
@@ -171,7 +176,7 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
                 if (type == "Line") {
                     shape = new myStd::Line(id, dims.at(0), dims.at(1), dims.at(2), dims.at(3));
                 }
-                else {  // type == "Polyline"  not working??
+                else {  // type == "Polyline"
                     shape = new myStd::Polyline(id);
                     for (int i = 0; i < dims.length(); i+=2)
                         ((myStd::Polyline*)shape)->addPoint(dims.at(i), dims.at(i+1));
