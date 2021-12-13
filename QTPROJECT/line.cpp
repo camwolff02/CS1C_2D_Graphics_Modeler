@@ -1,5 +1,6 @@
 #include "line.h"
 #include <cmath>
+#include <QDebug>
 
 void myStd::Line::draw(QPainter* painter)
 {
@@ -14,6 +15,31 @@ void myStd::Line::draw(QPainter* painter)
 void myStd::Line::move(const int x, const int y)
 {
     // use x & y as offsets to move the beginning and ending coordinate pairs
+    qInfo() << "Line move called";
+
+//    int x1 = x;
+//    int y1 = y;
+
+//    int x2 = x;
+//    int y2 = y;
+
+//    if (x1 < begin.x())
+//    {
+//        x1*=-1;
+//    }
+//    if (y1 < begin.y())
+//    {
+//        y1*=-1;
+//    }
+//    if (x2 < end.x())
+//    {
+//        x*=-1;
+//    }
+//    if (y1 < begin.y())
+//    {
+//        y1*=-1;
+//    }
+
     begin = QPoint(begin.x() + x, begin.y() + y);
     end = QPoint(end.x() + x, end.y() + y);
 }

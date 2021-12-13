@@ -105,8 +105,16 @@ Qt::BrushStyle Canvas::getBrushStyle(int index){
     return brush_style;
 }
 
-void Canvas::moveShape(int id){
+void Canvas::moveShape(int id, int x, int y){
+    myStd::vector<Shape*>::iterator m;
+    for (m = shapes.begin(); m < shapes.end();m++)
+    {
+        if ((*m)->getId() == id)
+        {
+            (*m)->move(x, y);
 
+        }
+    }
 
 }
 

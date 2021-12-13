@@ -16,6 +16,9 @@ public:
     explicit moveShape(QWidget *parent = nullptr, Canvas *renderarea=nullptr);
     ~moveShape();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::moveShape *ui;
     Canvas* renderarea;
