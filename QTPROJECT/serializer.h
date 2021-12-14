@@ -29,11 +29,12 @@ namespace myStd{
 
 /*
  * Author: Riley Berry
+ * Editor: Cam Wolff
  */
 
 //Test: Line, Polyline, Polygon, Rectangle, Square,  Ellipse, Circle, Text
 
-void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.txt")
+void serialize(const myStd::vector<Shape*>& list, QString file = "shapes.txt")
 //void serializer(const myStd::vector<Shape*>& list, std::string file = "A:\\Github Repositories\\Qt Projects\\QtTest\\shapes.txt")
 {
     /************
@@ -41,15 +42,19 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
     ************/
 
     // PROCESSING
-    int index;                                  // index of vector list
     ShapeType currentShape;
     QColor currentColor;
 
     // PROCESSING - creates text file path
-    QString fullPath = QDir::currentPath() + '/' + QString::fromStdString(file);  // attaches file name to directory path
-    fullPath         = fullPath.replace('/', "\\\\");                             // replaces / with \\ for proper formatting
+    // fix file path before opening
+    QString fullPath = QDir::currentPath().split("CS1C_2D_Graphics_Modeler").at(0) + "CS1C_2D_Graphics_Modeler/QTPROJECT/" + file;
 
-    // DISCLAIMER - text file must be in same file as project executable, for this pathing to work!
+    // to account for OS differences
+    #ifdef _WIN32
+        fullPath = fullPath.replace('/', "\\\\");
+    #endif
+
+    // DISCLAIMER - text file must be in QTPROJECT, for this pathing to work!
 
     // OUTPUT
 //    QFile shapesFile(QString::fromStdString(file));     // shapes.txt QFile
@@ -58,7 +63,7 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
     QString colorName;              // name of pen or brush color
     QString shapeName;
     QString currentStyle;
-    string dimensions;
+    QString dimensions;
 
 
     /***********************************************************************/
@@ -72,47 +77,54 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
 //        out << fullPath << "\n";
 
     // PRIMARY LOOP - iterates through the vector list
-    for(index = 0; index < list.size(); index++)
+    for(int index = 0; index < list.size(); index++)
     {
+        // current shape to write to file
         currentShape = list[index]->getShapeType();
+        auto shapeObj = list[index];
 
         // OUTPUT - universal shape information
         switch(currentShape)
         {
             case 1: shapeName = "Line";
-                    dimensions = to_string(((myStd::Line*)(list[index]))->getBegin().x()) + ", " + to_string(((myStd::Line*)(list[index]))->getBegin().y()) + ", "
-                    + to_string(((myStd::Line*)(list[index]))->getEnd().x()) +  ", " + to_string(((myStd::Line*)(list[index]))->getEnd().y());
-                    break;
+                dimensions = QString::number(((myStd::Line*)shapeObj)->getBegin().x()) + ", " + QString::number(((myStd::Line*)shapeObj)->getBegin().y())
+                           + ", " + QString::number(((myStd::Line*)shapeObj)->getEnd().x()) + ", " + QString::number(((myStd::Line*)shapeObj)->getEnd().y());
+                break;
+
             case 2: shapeName = "Polyline";
+                dimensions = "";
+                for (auto& point : ((myStd::Polyline*)list[index])->getPoints())
+                    dimensions += QString::number(point.x()) + ", " + QString::number(point.y()) + ", ";
 
-                    int i;
-                    for(i = 0; i < ((myStd::Polyline*)(list[index]))->getPoints().size(); i++)
-                    {
-                        if(i == 0)
-                        {
-                            dimensions = ((myStd::Polyline*)(list[index]))->getPoints()[i].x();
-                        }
-
-                        dimensions += ", " + ((myStd::Polyline*)(list[index]))->getPoints()[i].y();
-                        dimensions += ", " + ((myStd::Polyline*)(list[index]))->getPoints()[i].x();
-                    }
+                dimensions.chop(2);  // removes final ", " from dimensions
                     break;
+
             case 3: shapeName = "Polygon";
-                    break;
-            case 4: shapeName = "Rectangle;";
+                dimensions = "";
+                for (auto& point : ((myStd::Polygon*)list[index])->getPoints())
+                    dimensions += QString::number(point.x()) + ", " + QString::number(point.y()) + ", ";
+
+                dimensions.chop(2);  // removes final ", " from dimensions
+                break;
+
+            case 4: shapeName = "Rectangle";
+                dimensions = QString::number(((myStd::Rectangle*)shapeObj)->getX()) + ", " + QString::number(((myStd::Rectangle*)shapeObj)->getY())
+                           + ", " /*+ QString::number((myStd::Line*)shapeObj).getWidth())*/;
                     break;
             case 5: shapeName = "Square";
                     break;
             case 6: shapeName = "Ellipse";
                     break;
-            case 7: shapeName = "Cirlce";;
+            case 7: shapeName = "Cirlce";
                     break;
             case 8: shapeName = "Text";
+                dimensions = QString::number(((myStd::Text*)shapeObj)->getX()) + ", " + QString::number(((myStd::Text*)shapeObj)->getY())
+                        + ", " /*+ ...*/;
         }
 
         out << "\nShapeId: "   << list[index]->getId();
         out << "\nShapeType: " << shapeName;                   // NEED shapeID enum
-        out << "\nShapeDimensions: " << QString::fromStdString(dimensions);             // NEED Begin and End coords/ vector coords
+        out << "\nShapeDimensions: " << dimensions;             // NEED Begin and End coords/ vector coords
 
         // OUTPUT - pen data for valid shapes
         if(currentShape != 8)
