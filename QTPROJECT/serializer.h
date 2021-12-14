@@ -58,6 +58,7 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
     QString colorName;              // name of pen or brush color
     QString shapeName;
     QString currentStyle;
+    string dimensions;
 
 
     /***********************************************************************/
@@ -79,25 +80,39 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
         switch(currentShape)
         {
             case 1: shapeName = "Line";
+                    dimensions = to_string(((myStd::Line*)(list[index]))->getBegin().x()) + ", " + to_string(((myStd::Line*)(list[index]))->getBegin().y()) + ", "
+                    + to_string(((myStd::Line*)(list[index]))->getEnd().x()) +  ", " + to_string(((myStd::Line*)(list[index]))->getEnd().y());
                     break;
             case 2: shapeName = "Polyline";
-                break;
+
+                    int i;
+                    for(i = 0; i < ((myStd::Polyline*)(list[index]))->getPoints().size(); i++)
+                    {
+                        if(i == 0)
+                        {
+                            dimensions = ((myStd::Polyline*)(list[index]))->getPoints()[i].x();
+                        }
+
+                        dimensions += ", " + ((myStd::Polyline*)(list[index]))->getPoints()[i].y();
+                        dimensions += ", " + ((myStd::Polyline*)(list[index]))->getPoints()[i].x();
+                    }
+                    break;
             case 3: shapeName = "Polygon";
-                break;
+                    break;
             case 4: shapeName = "Rectangle;";
-                break;
+                    break;
             case 5: shapeName = "Square";
-                break;
+                    break;
             case 6: shapeName = "Ellipse";
-                break;
+                    break;
             case 7: shapeName = "Cirlce";;
-                break;
+                    break;
             case 8: shapeName = "Text";
         }
 
         out << "\nShapeId: "   << list[index]->getId();
         out << "\nShapeType: " << shapeName;                   // NEED shapeID enum
-        out << "\nShapeDimensions: " << list[index];             // NEED Begin and End coords/ vector coords
+        out << "\nShapeDimensions: " << QString::fromStdString(dimensions);             // NEED Begin and End coords/ vector coords
 
         // OUTPUT - pen data for valid shapes
         if(currentShape != 8)

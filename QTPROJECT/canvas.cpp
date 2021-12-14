@@ -7,7 +7,7 @@
 
 Canvas::Canvas(QWidget *parent)
        : QWidget(parent)
-       , shapes{ parse()}
+       , shapes{ Parser::parse()}
 {
     setFixedSize(1000, 500);
 }
