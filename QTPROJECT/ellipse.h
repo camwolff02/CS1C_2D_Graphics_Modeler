@@ -49,6 +49,9 @@ public:
      */
     double getArea() override;
 
+    int getWidth();
+    int getHeight();
+
 
 private:
   QRect shape; /*!< QRect to represent ellipse */

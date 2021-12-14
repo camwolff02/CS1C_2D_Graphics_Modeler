@@ -52,4 +52,12 @@ int Text::getFlag(){
     return this->flag;
 }
 
+int myStd::Text::getWidth(){
+    return this->width;
+}
+
+int myStd::Text::getHeight(){
+    return this->height;
+}
+
 } // End of namespace
