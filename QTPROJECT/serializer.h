@@ -58,6 +58,7 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
     QString colorName;              // name of pen or brush color
     QString shapeName;
     QString currentStyle;
+    QString dimensions;
 
 
     /***********************************************************************/
@@ -79,7 +80,9 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
         switch(currentShape)
         {
             case 1: shapeName = "Line";
-                    break;
+//                    dimensions = ((myStd::Line*)(list[index]))->getBegin().x() + ", " + ((myStd::Line*)(list[index]))->getBegin().y() + ", "
+//                    + ((myStd::Line*)(list[index]))->getEnd().x() << ", " + ((myStd::Line*)(list[index]))->getEnd().y() + ", ";
+//                    break;
             case 2: shapeName = "Polyline";
                 break;
             case 3: shapeName = "Polygon";
@@ -97,7 +100,19 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
 
         out << "\nShapeId: "   << list[index]->getId();
         out << "\nShapeType: " << shapeName;                   // NEED shapeID enum
-        out << "\nShapeDimensions: " << list[index];             // NEED Begin and End coords/ vector coords
+        out << "\nShapeDimensions: ";             // NEED Begin and End coords/ vector coords
+
+        if(currentShape == 1) // equal to line
+        {
+            out << dimensions;
+        }
+        else if(0)
+        {
+//            while()
+//            {
+//                ((myStd::Polyline*)(list[index]))->getPoints();
+//            }
+        }
 
         // OUTPUT - pen data for valid shapes
         if(currentShape != 8)
