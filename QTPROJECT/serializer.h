@@ -142,6 +142,27 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
                 colorName = "Gray";
             }
 
+//            switch(list[index]->getPen().color().alpha())
+//            {
+//            case 2: colorName = "black";
+//                    break;
+//            case 3: colorName = "white";
+//                    break;
+//            case 5: colorName = "gray";
+//                    break;
+//            case 7: colorName = "red";
+//                    break;
+//            case 8: colorName = "green";
+//                    break;
+//            case 9: colorName = "blue";
+//                    break;
+//            case 10: colorName = "Cyan";
+//                    break;
+//            case 11: colorName = "magenta";
+//                     break;
+//            case 12: colorName = "yellow";
+//            }
+
             out << "\nPenColor: "        << colorName; // search through qt color library to find code??
             out << "\nPenWidth: "        << list[index]->getPen().width();
             switch(list[index]->getPen().style())
@@ -170,9 +191,9 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
                 case 0: currentStyle = "FlatCap";
                         break;
                 case 16: currentStyle = "SquareCap";
-                        break;
+                         break;
                 case 32: currentStyle = "RoundCap";
-                        break;
+                         break;
                 case 48: currentStyle = "MPenCapStyle";
             }
 
@@ -195,7 +216,7 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
 
         // OUTPUT - brush data for valid shapes
 
-        else if(currentShape != 1 && currentShape != 2 && currentShape != 8)
+        if(currentShape != 1 && currentShape != 2 && currentShape != 8)
         {
             currentColor = list[index]->getBrush().color();
 
@@ -281,32 +302,73 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
             }
             out << "\nBrushStyle: "    << currentStyle << '\n';
         }
-        else    // OUTPUT - text data for text shapes
+        else if(currentShape == 8)    // OUTPUT - text data for text shapes
         {
             // - Implement text data output -
 
             out << "\nTextString: "     << ((myStd::Text*)(list[index]))->getText();
-//            out << "\nTextColor: : "      << ((myStd::Text*)(list[index]))->getFont();
+
+
+            currentColor = (list[index])->getBrush().color();
+
+            if(currentColor  == QColor(Qt::red))
+            {
+                colorName = "red";
+            }
+            else if(currentColor == QColor(Qt::green))
+            {
+                colorName = "green";
+
+            }
+            else if(currentColor == QColor(Qt::blue))
+            {
+                colorName = "blue";
+            }
+            else if(currentColor == QColor(Qt::yellow))
+            {
+                colorName = "Yellow";
+            }
+            else if(currentColor == QColor(Qt::cyan))
+            {
+                colorName = "Cyan";
+            }
+            else if(currentColor == QColor(Qt::magenta))
+            {
+                colorName = "Magenta";
+            }
+            else if(currentColor == QColor(Qt::white))
+            {
+                colorName = "White";
+            }
+            else if(currentColor == QColor(Qt::black))
+            {
+                colorName = "Black";
+            }
+            else if(currentColor == QColor(Qt::gray))
+            {
+                colorName = "Gray";
+            }
+            out << "\nTextColor: : "      << colorName;
 
             switch(((myStd::Text*)(list[index]))->getFlag())
             {
                 case 1: currentStyle = "AlignLeft";
                         break;
-            case 2: currentStyle = "AlignRight";
-                    break;
-            case 4: currentStyle = "AlignHCenter";
-                    break;
-            case 8: currentStyle = "AlignJustify";
-                    break;
-            case 16: currentStyle = "AlignAbsolute";
-                    break;
-            case 31: currentStyle = "AlignHorizontal_Mask";
-                    break;
-            case 64: currentStyle = "AlignBottom";
-                    break;
-            case 132: currentStyle = "AlignCenter";
-                    break;
-            case 256: currentStyle = "AlignBaseline";
+                case 2: currentStyle = "AlignRight";
+                        break;
+                case 4: currentStyle = "AlignHCenter";
+                        break;
+                case 8: currentStyle = "AlignJustify";
+                     break;
+                case 16: currentStyle = "AlignAbsolute";
+                         break;
+                case 31: currentStyle = "AlignHorizontal_Mask";
+                         break;
+                case 64: currentStyle = "AlignBottom";
+                         break;
+                case 132: currentStyle = "AlignCenter";
+                          break;
+             case 256: currentStyle = "AlignBaseline";
             }
             out << "\nTextAlignment: "  << currentStyle;
             out << "\nTextPointSize: "  << ((myStd::Text*)(list[index]))->getFont().pointSize();
