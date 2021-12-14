@@ -128,8 +128,8 @@ void serialize(const myStd::vector<Shape*>& list, QString file = "shapes.txt")
                 break;
 
             case 8: shapeName = "Text";
-                dimensions = QString::number(((myStd::Text*)shapeObj)->getHeight()) + ", " + QString::number(((myStd::Text*)shapeObj)->getWidth())
-                        + ", " + QString::number(((myStd::Text*)shapeObj)->getX()) + ", " + QString::number(((myStd::Text*)shapeObj)->getY());
+                dimensions = QString::number(((myStd::Text*)shapeObj)->getX()) + ", " + QString::number(((myStd::Text*)shapeObj)->getY())
+                        + ", " + QString::number(((myStd::Text*)shapeObj)->getWidth()) + ", " + QString::number(((myStd::Text*)shapeObj)->getHeight());
         }
 
         out << "\nShapeId: "   << list[index]->getId();

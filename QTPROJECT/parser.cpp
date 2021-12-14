@@ -53,7 +53,7 @@ myStd::vector<Shape*> Parser::parse(QString filename)
             QString fontWeight = in.readLine().remove(0, 16);
 
             shape = new myStd::Text(msg, makeFont(fontFamily, pointSize, fontWeight, fontStyle),
-                                    color, dims.at(0), dims.at(1), dims.at(2), dims.at(3), alignment, id);
+                                    color, dims.at(3), dims.at(2), dims.at(0), dims.at(1), alignment, id);
         }
         else {
             QColor color = in.readLine().remove(0, 10);
