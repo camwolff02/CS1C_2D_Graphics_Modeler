@@ -84,14 +84,7 @@ myStd::vector<Shape*> parse(QString filename = "shapes.txt")
     myStd::vector<Shape*> vect;
 
     // fix file path before opening
-    QString fullPath = QDir::currentPath()/* + '/' + filename*/;
-    for (int i = fullPath.length() - 1; i >= 0; --i) {
-        if (fullPath.at(i) == '/') {
-            fullPath.chop(fullPath.length() - i);
-            break;
-        }
-    }
-    fullPath += "/QTPROJECT/" + filename;
+    QString fullPath = QDir::currentPath().split("CS1C_2D_Graphics_Modeler").at(0) + "CS1C_2D_Graphics_Modeler/QTPROJECT/" + filename;
 
     // to account for OS differences
     #ifdef _WIN32
