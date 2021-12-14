@@ -25,6 +25,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     moveshape.cpp \
+    parser.cpp \
     polygon.cpp \
     polyline.cpp \
     rectangle.cpp \
