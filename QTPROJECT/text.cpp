@@ -39,24 +39,24 @@ void Text::move(const int x, const int y){
     this->setY(y);
 }
 
-QString Text::getText(){
+QString Text::getText() const {
     return this->text;
 }
 
 
-QFont Text::getFont(){
+QFont Text::getFont() const {
      return this->font;
 }
 
-int Text::getFlag(){
+int Text::getFlag() const {
     return this->flag;
 }
 
-int myStd::Text::getWidth(){
+int myStd::Text::getWidth() const {
     return this->width;
 }
 
-int myStd::Text::getHeight(){
+int myStd::Text::getHeight() const {
     return this->height;
 }
 

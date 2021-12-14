@@ -23,10 +23,10 @@ double myStd::Rectangle::getArea()
     return rectangle.height() * rectangle.width();
 }
 
-int myStd::Rectangle::getWidth(){
+int myStd::Rectangle::getWidth() const {
     return this->rectangle.width();
 }
 
-int myStd::Rectangle::getHeight(){
+int myStd::Rectangle::getHeight() const {
     return this->rectangle.height();
 }

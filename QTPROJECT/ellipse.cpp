@@ -34,11 +34,11 @@ void Ellipse::move(const int x, const int y){
     this->setY(y);
 }
 
-int myStd::Ellipse::getWidth(){
+int myStd::Ellipse::getWidth() const {
     return this->shape.width();
 }
 
-int myStd::Ellipse::getHeight(){
+int myStd::Ellipse::getHeight() const {
     return this->shape.height();
 }
 

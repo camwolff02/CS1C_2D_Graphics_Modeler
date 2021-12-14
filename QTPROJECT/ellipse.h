@@ -49,8 +49,17 @@ public:
      */
     double getArea() override;
 
-    int getWidth();
-    int getHeight();
+    //! Returns width of ellipse
+    /*!
+      \return 0;
+     */
+    int getWidth() const;
+
+    //! Returns height of ellipse
+    /*!
+      \return 0;
+     */
+    int getHeight() const;
 
 
 private:

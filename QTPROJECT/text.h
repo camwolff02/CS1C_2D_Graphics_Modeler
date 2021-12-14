@@ -58,12 +58,31 @@ public:
     /*!
       \return 0;
      */
-    QString getText();
-    QFont   getFont();
-    int     getFlag();
+    QString getText() const;
 
-    int getWidth();
-    int getHeight();
+    //! Returns font of text
+    /*!
+      \return 0;
+     */
+    QFont   getFont() const;
+
+    //! Returns integer that represents text allignment
+    /*!
+      \return 0;
+     */
+    int     getFlag() const ;
+
+    //! Returns width of text box
+    /*!
+      \return 0;
+     */
+    int getWidth() const ;
+
+    //! Returns height of text box
+    /*!
+      \return 0;
+     */
+    int getHeight() const;
 
 private:
     QString text; /*!< QString which contains text content being displayed */
