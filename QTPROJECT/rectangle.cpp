@@ -22,3 +22,11 @@ double myStd::Rectangle::getArea()
 {
     return rectangle.height() * rectangle.width();
 }
+
+int myStd::Rectangle::getWidth(){
+    return this->rectangle.width();
+}
+
+int myStd::Rectangle::getHeight(){
+    return this->rectangle.height();
+}

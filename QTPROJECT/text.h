@@ -62,6 +62,8 @@ public:
     QFont   getFont();
     int     getFlag();
 
+    int getWidth();
+    int getHeight();
 
 private:
     QString text; /*!< QString which contains text content being displayed */

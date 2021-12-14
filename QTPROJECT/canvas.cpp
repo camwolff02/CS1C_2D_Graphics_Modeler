@@ -130,3 +130,13 @@ void Canvas::deleteShape(int id){
     }
 
 }
+
+Canvas::~Canvas(){
+
+
+    myStd::vector<Shape*>::iterator p;
+    for (p = shapes.begin(); p < shapes.end(); p++){
+        delete *p;
+    }
+
+}

@@ -78,6 +78,8 @@ public:
     \return the rectangle's area
   */
   virtual double getArea() override;
+  int getWidth();
+  int getHeight();
 
 private:
   QRect rectangle; /*!< defines top-left point, width, and height */
