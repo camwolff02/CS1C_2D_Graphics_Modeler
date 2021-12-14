@@ -133,7 +133,7 @@ void Canvas::deleteShape(int id){
 }
 
 Canvas::~Canvas(){
-    // serialize(shapes);  parser writes most data with some loss on labels
+    serialize(shapes, "shapes_backup.txt");  // parser writes most data with some loss on labels
 
     for (auto p = shapes.begin(); p < shapes.end(); p++){
         delete *p;
