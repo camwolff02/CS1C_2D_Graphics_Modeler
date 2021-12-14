@@ -33,12 +33,6 @@ void MainWindow::on_actionLogout_triggered()
     Shape::resetShapeCount();
 
     close();    // will close the mainpage and reopen the login screen
-
-//    login loginReopen;
-//    loginReopen.setModal(true);
-//    loginReopen.setWindowTitle("Login");
-//    loginReopen.exec();
-
 }
 
 void MainWindow::on_actionLine_triggered()
