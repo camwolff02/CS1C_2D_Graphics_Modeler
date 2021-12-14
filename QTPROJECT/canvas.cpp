@@ -3,6 +3,7 @@
 #include "text.h"
 #include "polyline.h"
 #include "parser.h"
+#include "serializer.h"
 #include <QDebug>
 
 Canvas::Canvas(QWidget *parent)
@@ -132,10 +133,9 @@ void Canvas::deleteShape(int id){
 }
 
 Canvas::~Canvas(){
+    // serialize(shapes);  parser writes most data with some loss on labels
 
-
-    myStd::vector<Shape*>::iterator p;
-    for (p = shapes.begin(); p < shapes.end(); p++){
+    for (auto p = shapes.begin(); p < shapes.end(); p++){
         delete *p;
     }
 

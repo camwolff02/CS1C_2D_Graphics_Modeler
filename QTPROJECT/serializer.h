@@ -109,17 +109,27 @@ void serialize(const myStd::vector<Shape*>& list, QString file = "shapes.txt")
 
             case 4: shapeName = "Rectangle";
                 dimensions = QString::number(((myStd::Rectangle*)shapeObj)->getX()) + ", " + QString::number(((myStd::Rectangle*)shapeObj)->getY())
-                           + ", " /*+ QString::number((myStd::Line*)shapeObj).getWidth())*/;
-                    break;
+                           + ", " + QString::number(((myStd::Rectangle*)shapeObj)->getWidth()) + ", " + QString::number(((myStd::Rectangle*)shapeObj)->getHeight());
+                break;
+
             case 5: shapeName = "Square";
-                    break;
+                dimensions = QString::number(((myStd::Rectangle*)shapeObj)->getX()) + ", " + QString::number(((myStd::Rectangle*)shapeObj)->getY())
+                           + ", " + QString::number(((myStd::Rectangle*)shapeObj)->getWidth()) + ", " + QString::number(((myStd::Rectangle*)shapeObj)->getWidth());
+                break;
+
             case 6: shapeName = "Ellipse";
-                    break;
+                dimensions = QString::number(((myStd::Ellipse*)shapeObj)->getX()) + ", " + QString::number(((myStd::Ellipse*)shapeObj)->getY())
+                           + ", " + QString::number(((myStd::Ellipse*)shapeObj)->getWidth()) + ", " + QString::number(((myStd::Ellipse*)shapeObj)->getHeight());
+                break;
+
             case 7: shapeName = "Cirlce";
-                    break;
+                dimensions = QString::number(((myStd::Ellipse*)shapeObj)->getX()) + ", " + QString::number(((myStd::Ellipse*)shapeObj)->getY())
+                           + ", " + QString::number(((myStd::Ellipse*)shapeObj)->getWidth()) + ", " + QString::number(((myStd::Ellipse*)shapeObj)->getWidth());
+                break;
+
             case 8: shapeName = "Text";
-                dimensions = QString::number(((myStd::Text*)shapeObj)->getX()) + ", " + QString::number(((myStd::Text*)shapeObj)->getY())
-                        + ", " /*+ ...*/;
+                dimensions = QString::number(((myStd::Text*)shapeObj)->getHeight()) + ", " + QString::number(((myStd::Text*)shapeObj)->getWidth())
+                        + ", " + QString::number(((myStd::Text*)shapeObj)->getX()) + ", " + QString::number(((myStd::Text*)shapeObj)->getY());
         }
 
         out << "\nShapeId: "   << list[index]->getId();
@@ -146,27 +156,27 @@ void serialize(const myStd::vector<Shape*>& list, QString file = "shapes.txt")
             }
             else if(currentColor == QColor(Qt::yellow))
             {
-                colorName = "Yellow";
+                colorName = "yellow";
             }
             else if(currentColor == QColor(Qt::cyan))
             {
-                colorName = "Cyan";
+                colorName = "cyan";
             }
             else if(currentColor == QColor(Qt::magenta))
             {
-                colorName = "Magenta";
+                colorName = "magenta";
             }
             else if(currentColor == QColor(Qt::white))
             {
-                colorName = "White";
+                colorName = "white";
             }
             else if(currentColor == QColor(Qt::black))
             {
-                colorName = "Black";
+                colorName = "black";
             }
             else if(currentColor == QColor(Qt::gray))
             {
-                colorName = "Gray";
+                colorName = "gray";
             }
 
 //            switch(list[index]->getPen().color().alpha())
@@ -262,27 +272,27 @@ void serialize(const myStd::vector<Shape*>& list, QString file = "shapes.txt")
             }
             else if(currentColor == QColor(Qt::yellow))
             {
-                colorName = "Yellow";
+                colorName = "yellow";
             }
             else if(currentColor == QColor(Qt::cyan))
             {
-                colorName = "Cyan";
+                colorName = "cyan";
             }
             else if(currentColor == QColor(Qt::magenta))
             {
-                colorName = "Magenta";
+                colorName = "magenta";
             }
             else if(currentColor == QColor(Qt::white))
             {
-                colorName = "White";
+                colorName = "white";
             }
             else if(currentColor == QColor(Qt::black))
             {
-                colorName = "Black";
+                colorName = "black";
             }
             else if(currentColor == QColor(Qt::gray))
             {
-                colorName = "Gray";
+                colorName = "gray";
             }
             out << "BrushColor: "    << colorName;
 
@@ -327,7 +337,7 @@ void serialize(const myStd::vector<Shape*>& list, QString file = "shapes.txt")
                 case 24: currentStyle = "TexturePattern";
                          break;
             }
-            out << "\nBrushStyle: "    << currentStyle << '\n';
+            out << "\nBrushStyle: "    << currentStyle << ((index < list.size() - 1)? "\n" : "");
         }
         else if(currentShape == 8)    // OUTPUT - text data for text shapes
         {
@@ -433,7 +443,7 @@ void serialize(const myStd::vector<Shape*>& list, QString file = "shapes.txt")
                 case 900: currentStyle = "Black";
             }
 
-            out << "\nTextFontWeight: " << currentStyle << '\n';
+            out << "\nTextFontWeight: " << currentStyle << ((index < list.size() - 1)? "\n" : "");
         }
     }       // END - primary loop
 
@@ -441,6 +451,7 @@ void serialize(const myStd::vector<Shape*>& list, QString file = "shapes.txt")
         shapesFile.close();     // QFile shapes.txt is closed
 
 }   // END - functon definition
+
 }   // END - namespace myStd
 
 
