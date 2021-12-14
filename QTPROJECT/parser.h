@@ -29,6 +29,7 @@ public:  // public member functions
      * \return vector containing data from file represented as shape object
      */
     static myStd::vector<Shape*> parse(QString filename = "shapes.txt");
+
 private:  // private helper functions
     //! private static method get Brush Style
     /*!
