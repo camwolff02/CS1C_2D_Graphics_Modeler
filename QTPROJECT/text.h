@@ -59,6 +59,9 @@ public:
       \return 0;
      */
     QString getText();
+    QFont   getFont();
+    int     getFlag();
+
 
 private:
     QString text; /*!< QString which contains text content being displayed */

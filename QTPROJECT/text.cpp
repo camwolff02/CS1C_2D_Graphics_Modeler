@@ -43,4 +43,13 @@ QString Text::getText(){
     return this->text;
 }
 
+
+QFont Text::getFont(){
+     return this->font;
 }
+
+int Text::getFlag(){
+    return this->flag;
+}
+
+} // End of namespace

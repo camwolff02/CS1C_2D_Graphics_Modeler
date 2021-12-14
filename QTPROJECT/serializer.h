@@ -16,6 +16,7 @@
 #include <typeinfo>
 #include <QColor>
 #include <Qt>
+ #include <parser.h>
 
 using namespace myStd;
 using namespace std;
@@ -191,22 +192,10 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
             }
             out << "\nPenJoinStyle: "    << currentStyle << '\n'; // Use switch statement to output as string
         }
-        else    // OUTPUT - text data for text shapes
-        {
-            // - Implement text data output -
-
-//            Text* d = (Text*(list[index]);
-//            out << "\nTextString: : "     << (Text*(list[index]));
-            out << "\nTextColor: : "      << list[index];
-            out << "\nTextAlignment: : "  << list[index];
-            out << "\nTextPointSize: : "  << list[index];
-            out << "\nTextFontFamily: : " << list[index];
-            out << "\nTextFontStyle: : "  << list[index];
-            out << "\nTextFontWeight: : " << list[index] << '\n';
-        }
 
         // OUTPUT - brush data for valid shapes
-        if(currentShape != 1 && currentShape != 2)
+
+        else if(currentShape != 1 && currentShape != 2 && currentShape != 8)
         {
             currentColor = list[index]->getBrush().color();
 
@@ -291,6 +280,71 @@ void serializer(const myStd::vector<Shape*>& list, std::string file = "shapes.tx
                          break;
             }
             out << "\nBrushStyle: "    << currentStyle << '\n';
+        }
+        else    // OUTPUT - text data for text shapes
+        {
+            // - Implement text data output -
+
+            out << "\nTextString: "     << ((myStd::Text*)(list[index]))->getText();
+//            out << "\nTextColor: : "      << ((myStd::Text*)(list[index]))->getFont();
+
+            switch(((myStd::Text*)(list[index]))->getFlag())
+            {
+                case 1: currentStyle = "AlignLeft";
+                        break;
+            case 2: currentStyle = "AlignRight";
+                    break;
+            case 4: currentStyle = "AlignHCenter";
+                    break;
+            case 8: currentStyle = "AlignJustify";
+                    break;
+            case 16: currentStyle = "AlignAbsolute";
+                    break;
+            case 31: currentStyle = "AlignHorizontal_Mask";
+                    break;
+            case 64: currentStyle = "AlignBottom";
+                    break;
+            case 132: currentStyle = "AlignCenter";
+                    break;
+            case 256: currentStyle = "AlignBaseline";
+            }
+            out << "\nTextAlignment: "  << currentStyle;
+            out << "\nTextPointSize: "  << ((myStd::Text*)(list[index]))->getFont().pointSize();
+            out << "\nTextFontFamily: " << ((myStd::Text*)(list[index]))->getFont().family();
+
+            switch(((myStd::Text*)(list[index]))->getFont().style())
+            {
+                case 0: currentStyle = "StyleNormal";
+                        break;
+                case 1: currentStyle = "StyleItalic";
+                        break;
+                case 2: currentStyle = "StyleOblique";
+            }
+
+            out << "\nTextFontStyle: "  << currentStyle;
+
+            switch(((myStd::Text*)(list[index]))->getFont().weight())
+            {
+                case 100: currentStyle = "Thin";
+                          break;
+                case 200: currentStyle = "ExtraLight";
+                          break;
+                case 300: currentStyle = "Light";
+                          break;
+                case 400: currentStyle = "Normal";
+                          break;
+                case 500: currentStyle = "Medium";
+                          break;
+                case 600: currentStyle = "DemiBold";
+                          break;
+                case 700: currentStyle = "Bold";
+                          break;
+                case 800: currentStyle = "ExtraBold";
+                          break;
+                case 900: currentStyle = "Black";
+            }
+
+            out << "\nTextFontWeight: " << currentStyle << '\n';
         }
     }       // END - primary loop
 

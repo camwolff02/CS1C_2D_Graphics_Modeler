@@ -54,6 +54,7 @@ HEADERS += \
     polyline.h \
     read_data.h \
     rectangle.h \
+    serializer.h \
     shape.h \
     shapes.h \
     text.h
