@@ -11,7 +11,7 @@ PenJoinStyle: MiterJoin
 ShapeId: 2
 ShapeType: Polyline
 ShapeDimensions: 460, 90, 470, 20, 530, 40, 540, 80
-PenColor: green
+PenColor: blue
 PenWidth: 6
 PenStyle: SolidLine
 PenCapStyle: FlatCap
@@ -22,7 +22,7 @@ ShapeType: Polygon
 ShapeDimensions: 900, 90, 910, 20, 970, 40, 980, 80
 PenColor: cyan
 PenWidth: 6
-PenStyle: DashDotDotLine
+PenStyle: NoPen
 PenCapStyle: FlatCap
 PenJoinStyle: MiterJoin
 BrushColor: yellow
@@ -40,8 +40,8 @@ BrushColor: red
 BrushStyle: VerPattern
 
 ShapeId: 5
-ShapeType: Square
-ShapeDimensions: 250, 150, 200
+ShapeType: Rectangle
+ShapeDimensions: 250, 150, 200, 200
 PenColor: red
 PenWidth: 0
 PenStyle: SolidLine
@@ -62,8 +62,8 @@ BrushColor: white
 BrushStyle: NoBrush
 
 ShapeId: 7
-ShapeType: Circle
-ShapeDimensions: 750, 150, 200
+ShapeType: Ellipse
+ShapeDimensions: 750, 150, 200, 200
 PenColor: black
 PenWidth: 12
 PenStyle: SolidLine
@@ -76,9 +76,20 @@ ShapeId: 8
 ShapeType: Text
 ShapeDimensions: 250, 425, 500, 50
 TextString: Class Project 2 - 2D Graphics Modeler
-TextColor: blue
+TextColor: : Black
 TextAlignment: AlignCenter
 TextPointSize: 10
 TextFontFamily: Comic Sans MS
 TextFontStyle: StyleItalic
 TextFontWeight: Normal
+
+ShapeId: 9
+ShapeType: Rectangle
+ShapeDimensions: 20, 20, 50, 50
+PenColor: blue
+PenWidth: 4
+PenStyle: DashLine
+PenCapStyle: SquareCap
+PenJoinStyle: BevelJoin
+BrushColor: red
+BrushStyle: VerPattern
