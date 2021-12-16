@@ -82,14 +82,3 @@ TextPointSize: 10
 TextFontFamily: Comic Sans MS
 TextFontStyle: StyleItalic
 TextFontWeight: Normal
-
-ShapeId: 9
-ShapeType: Rectangle
-ShapeDimensions: 20, 20, 50, 50
-PenColor: blue
-PenWidth: 4
-PenStyle: DashLine
-PenCapStyle: SquareCap
-PenJoinStyle: BevelJoin
-BrushColor: red
-BrushStyle: VerPattern
